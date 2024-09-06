@@ -7,6 +7,7 @@ import numpy as np
 
 
 class GridWorldEnv(gym.Env):
+    
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 2}
 
     def __init__(self, render_mode=None, size=5, grid_info=None, agent_pos=None, target_pos=None):
@@ -25,7 +26,7 @@ class GridWorldEnv(gym.Env):
             }
         )
 
-        # We have 4 actions, corresponding to "right", "up", "left", "down", "wait" and "grip".
+        # We have 5 actions, corresponding to "right", "up", "left", "down", "wait" and "grip".
         self.action_space = spaces.Discrete(6)
 
         """
@@ -34,10 +35,10 @@ class GridWorldEnv(gym.Env):
         I.e. 0 corresponds to "right", 1 to "up" etc.
         """
         self._action_to_direction = {
-            0: np.array([1, 0]),
-            1: np.array([0, 1]),
-            2: np.array([-1, 0]),
-            3: np.array([0, -1]),
+            0: np.array([1, 0]), # Right
+            1: np.array([0, 1]), # Down
+            2: np.array([-1, 0]), # Left
+            3: np.array([0, -1]), # Up
             4: np.array([0, 0]),
             5: np.array([1, 1])
         }
@@ -65,15 +66,8 @@ class GridWorldEnv(gym.Env):
         # We need the following line to seed self.np_random
         # super().reset(seed=seed)
 
-        # Fix initial Agent location at [0, 0]
-        # No pentomino piece is placed at [0, 0]
-
-        # self._agent_location = np.array([0, 0])
-        self._agent_location = np.array([10, 10])
-
-        # We will sample the target's location randomly until it does not coincide with the agent's location
-        # self._target_location = np.array([10, 10])
-        self._target_location = np.array([0, 0])
+        self._agent_location = self.agent_pos
+        self._target_location = self.target_pos
 
         observation = self._get_obs()
         info = self._get_info()
@@ -141,7 +135,7 @@ class GridWorldEnv(gym.Env):
         # Now we draw the agent
         pygame.draw.circle(
             canvas,
-            (42, 42, 25),
+            (0, 0, 0),
             (self._agent_location + 0.5) * pix_square_size,
             pix_square_size / 3,
         )
@@ -165,5 +159,8 @@ class GridWorldEnv(gym.Env):
             pygame.display.quit()
             pygame.quit()
 
-
-
+if __name__ == '__main__':
+    env = GridWorldEnv(size=20)
+    env.reset()
+    env.render()
+    env.close()
