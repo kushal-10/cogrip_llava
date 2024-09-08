@@ -89,10 +89,10 @@ class BoardLayout():
                 if target_colour:
                     colour_name = target_colour  # Overwrite target colour if specified
 
-            if level == "easy":
+            if level == "easy" or level == "sample":
                 available_shapes.remove(piece_shape)  # Remove the selected shape from the available shapes
                 available_colours.remove(colour_name)  # Remove the selected colour from the available colours
-                piece_rotation = 0  # No rotation for now
+                piece_rotation = 0  # No rotation
             elif level == "medium":
                 # Introduce rotation for medium level
                 available_shapes.remove(piece_shape)  # Remove the selected shape from the available shapes

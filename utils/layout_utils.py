@@ -9,7 +9,6 @@ def valid(N: int, selected_position: list[int], spawned_positions: list[list[int
         selected_position - The center grid point of a piece
         spawned_position - A list of center grid points of previously spawned pieces
     '''
-    print(spawned_positions, selected_position)
     piece_size = 3 # Each piece is a 3x3 grid
 
     if len(spawned_positions) == 0:

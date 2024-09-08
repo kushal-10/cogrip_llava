@@ -87,10 +87,8 @@ class PentominoPiece():
         '''
         
         default_piece_grid = pieces_dict[self.symbol]
-        print(default_piece_grid)
         rotated_piece_grid = np.rot90(default_piece_grid, self.rotation)
-        print(rotated_piece_grid)
-
+     
         # Get the grid marks for the piece accoding to the Gym coordinate system = Inverted Y - axis
         grid_marks = []
         for i in range(rotated_piece_grid.shape[0]):
