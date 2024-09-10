@@ -8,11 +8,18 @@ from tqdm import tqdm
 import os
 import numpy as np
 import argparse
-from PIL import Image
+from PIL import Image, ImageFilter
 
 from grip_env.environment import GridWorldEnv
 from grip_env.layout import BoardLayout
 from grip_env.pieces import PIECE_NAMES, COLOUR_NAMES
+
+# Additonal handler class for numpy arrays
+class NumpyArrayEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super(NumpyArrayEncoder, self).default(obj)
 
 def boards(board_size, num_pieces, shapes, colours, num_boards, level, path):
     
@@ -43,6 +50,7 @@ def boards(board_size, num_pieces, shapes, colours, num_boards, level, path):
                     os.makedirs(save_path)
 
                 image = Image.fromarray(image)  # Convert to PIL Image if using numpy array
+                #image = image.filter(ImageFilter.GaussianBlur(radius=2))  # Adjust radius as needed
                 image.save(os.path.join(save_path, f'board_{board_count}.png'))  # Save the image
                 
                 # Collect metadata
@@ -59,7 +67,7 @@ def boards(board_size, num_pieces, shapes, colours, num_boards, level, path):
 
     # Save metadata to JSON file
     with open(os.path.join(save_path, 'metadata.json'), 'w') as json_file:
-        json.dump(metadata_list, json_file)  # Write metadata to JSON file
+        json.dump(metadata_list, json_file, cls=NumpyArrayEncoder, indent=4)  # Write metadata to JSON file
 
 
 if __name__ == '__main__':

@@ -41,24 +41,46 @@ class BoardLayout():
         # all_start_positions = np.array([agent_start_pos]) # Initialize with agent start position, so atleast one step is taken
         
 
-        all_start_positions = [] # Initialize with empty list - Piece can be spawned on center gird as well, overlapping with agent
 
-        for i in range(self.num_pieces):
+        max_tries = 100  # Maximum number of tries
+        tries = 0  # Counter for tries
+        flag = True
+        while flag:
+            all_start_positions = [] # Initialize with empty list - Piece can be spawned on center gird as well, overlapping with agent
+
             # Select a random start position for each piece
+            tries += 1  # Increment the try counter
+            if tries > max_tries:  # Check if max tries exceeded
+                print("Max tries exceeded - Restart Board Layout - Try increasing the board size or reducing the number of piecess")
+                break  # Exit the main while loop
+
             spawn_choices = [[x, y] for x in range(self.board_size) for y in range(self.board_size)] # Get possible spawn locations across the board
+            for i in range(self.num_pieces):
+                random_choice = np.random.randint(0, len(spawn_choices)) # Select a random index
+                piece_start_pos = spawn_choices[random_choice] # Random grid mark in the specified region
 
-            random_choice = np.random.randint(0, len(spawn_choices)) # Select a random index
-            piece_start_pos = spawn_choices[random_choice] # Random grid mark in the specified region
+                # Draw randomly, until a valid value is found
+                # This ensures no overlaps between pieces and center grid (central 3x3 will always be empty) 
+                while not layout_utils.valid(self.board_size, piece_start_pos, all_start_positions):
+                    # Remove invalid starting position and select a start position again
+                    spawn_choices.remove(piece_start_pos) 
+                    if not spawn_choices:  # Check if all positions are exhausted
+                        flag = False
+                        break  # Exit the inner while loop
+                    random_choice = np.random.randint(0, len(spawn_choices)) 
+                    piece_start_pos = spawn_choices[random_choice] 
+                
+                all_start_positions.append(piece_start_pos)
+                if not flag:
+                    break
+                
 
-            # Draw randomly, until a valid value is found
-            # This ensures no overlaps between pieces and center grid (central 3x3 will always be empty) 
-            while not layout_utils.valid(self.board_size, piece_start_pos, all_start_positions):
-                # Remove invalid starting position and select a start position again
-                spawn_choices.remove(piece_start_pos) 
-                random_choice = np.random.randint(0, len(spawn_choices)) 
-                piece_start_pos = spawn_choices[random_choice] 
-            all_start_positions.append(piece_start_pos)
+            # The search space is not exhausted and all pieces have been spawned successfully
+            if flag:
+                break
+            # else try again
 
+        assert len(all_start_positions) == self.num_pieces, "Number of pieces spawned is not equal to the number of pieces specified"
         return all_start_positions
 
     def set_board_layout(self, target_shape=None, target_colour=None, level=None):
