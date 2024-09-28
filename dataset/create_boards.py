@@ -49,9 +49,10 @@ def boards(board_size, num_pieces, shapes, colours, num_boards, level, path):
                 if not os.path.exists(save_path):
                     os.makedirs(save_path)
 
-                image = Image.fromarray(image)  # Convert to PIL Image if using numpy array
-                #image = image.filter(ImageFilter.GaussianBlur(radius=2))  # Adjust radius as needed
-                image.save(os.path.join(save_path, f'board_{board_count}.png'))  # Save the image
+                ## Uncomment the following block to save initial images/Not required
+                # image = Image.fromarray(image)  # Convert to PIL Image if using numpy array
+                # #image = image.filter(ImageFilter.GaussianBlur(radius=2))  # Adjust radius as needed
+                # image.save(os.path.join(save_path, f'board_{board_count}.png'))  # Save the image
                 
                 # Collect metadata
                 metadata = {
