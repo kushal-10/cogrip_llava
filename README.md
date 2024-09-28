@@ -25,7 +25,7 @@ cogrip_llava/
 ├── README.md
 └── requirements.txt
 
-#### Usage
+#### Initial Setup
 **Clone the Repository**:
    ```bash
    git clone https://github.com/kushal-10/cogrip_llava.git
@@ -61,5 +61,22 @@ The `dataset/create_boards.py` script is responsible for generating data boards 
    python dataset/create_boards.py --board_size 18 --num_pieces 4 --shapes "P T X Z U W" --colours "red blue green yellow magenta cyan" --num_boards 100 --level 'easy' --path 'data'
    ```
 
+##### 2) Generate Paths from `agent_start_pos` to `target_pos`
+Set variables under `dataset/generate_paths`, then run
+
+```bash
+python3 dataset/generate_paths.py
+```
+
+This will create a `data/level/metadata_path.json` that saves an additional field/key of `path` in the `metadata.json` file
 
 
+##### 3) Now with the paths generated, create the whole training/finetuning dataset that will be used for the llava models
+
+Run the follwing script with additional arguments, if required( level, size) from step1 - Create boards. This will create a folder `training_data/level/boards` and a meta data file that contains `image_path`, `prompt` and `response` for each instance under `training_data/level/training_metadata.json`
+
+```bash
+python3 dataset/generate_episodes.py
+```
+
+#### Finetuning
