@@ -105,8 +105,9 @@ class GridWorldEnv(gym.Env):
 
     def _draw_rect(self, canvas, color, pos, pix_square_size):
         # Ensure pos is a tuple of integers
-        if not isinstance(pos, (tuple, list)) or len(pos) != 2:
-            raise ValueError("Position must be a tuple or list of two integers.")
+        if not isinstance(pos, (tuple, list)):
+            pos = list(pos)
+            
         
         pygame.draw.rect(
             canvas,
