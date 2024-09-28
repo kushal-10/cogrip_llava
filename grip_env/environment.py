@@ -84,7 +84,7 @@ class GridWorldEnv(gym.Env):
         self._agent_location = np.clip(
             self._agent_location + direction, 0, self.size - 1
         )
-        # An episode is done iff the agent has reached the target
+        # An episode is done if the agent has reached the target
         # terminated = np.array_equal(self._agent_location, self._target_location)
         terminated = 0
         for i in range(len(self.target_pos)):
@@ -104,11 +104,15 @@ class GridWorldEnv(gym.Env):
             return self._render_frame()
 
     def _draw_rect(self, canvas, color, pos, pix_square_size):
+        # Ensure pos is a tuple of integers
+        if not isinstance(pos, (tuple, list)) or len(pos) != 2:
+            raise ValueError("Position must be a tuple or list of two integers.")
+        
         pygame.draw.rect(
             canvas,
             color,
             pygame.Rect(
-                pix_square_size * pos,
+                pix_square_size * np.array(pos),  # Ensure pos is multiplied correctly
                 (pix_square_size, pix_square_size),
             ),
         )
