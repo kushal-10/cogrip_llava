@@ -13,3 +13,4 @@ peft==0.11.1
 accelerate==0.31.0
 transformers
 wandb==0.17.2
+bitsandbytes
