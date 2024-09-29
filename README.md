@@ -25,7 +25,7 @@ cogrip_llava/
 ├── README.md
 └── requirements.txt
 
-#### Initial Setup
+#### Usage
 **Clone the Repository**:
    ```bash
    git clone https://github.com/kushal-10/cogrip_llava.git
@@ -79,4 +79,18 @@ Run the follwing script with additional arguments, if required( level, size) fro
 python3 dataset/generate_episodes.py
 ```
 
-#### Finetuning
+##### 4) Create splits
+
+```bash
+python3 dataset/create_splits.py
+```
+This saves `train_data.json` and `test_data.json` under `training_data/level`. Set the level parameter in the script accordingly
+
+
+##### 5) Finetuning
+
+```bash
+python3 train_utils/train_llava.py
+```
+
+Setup WandB, HF repo credentials accordingly
