@@ -20,7 +20,7 @@ MAX_LENGTH = 384
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
 REPO_ID = "Koshti10/llava-1.5-7b-ft-sample"
 WANDB_PROJECT = "individual-module"
-WANDB_NAME = "Finetuned"
+WANDB_NAME = "samplerun1"
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
@@ -81,13 +81,13 @@ model = get_peft_model(model, lora_config)
 CONFIG
 """
 print("Setting Up CONFIG.............")
-config = {"max_epochs": 10,
+config = {"max_epochs": 1,
           # "val_check_interval": 0.2, # how many times we want to validate during an epoch
           "check_val_every_n_epoch": 1,
           "gradient_clip_val": 1.0,
           "accumulate_grad_batches": 8,
           "lr": 1e-4,
-          "batch_size": 2,
+          "batch_size": 8,
           # "seed":2022,
           "num_nodes": 1,
           "warmup_steps": 50,
