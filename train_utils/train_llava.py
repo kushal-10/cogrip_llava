@@ -11,11 +11,6 @@ from huggingface_hub import HfApi
 
 from train_utils.lightning_cls import LlavaModelPLModule
 
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"  
-torch.cuda.set_per_process_memory_fraction(0.8, device=0)
-torch.cuda.set_per_process_memory_fraction(0.8, device=1)
-
 """
 Refer - https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LLaVa/Fine_tune_LLaVa_on_a_custom_dataset_(with_PyTorch_Lightning).ipynb
 """
@@ -86,13 +81,13 @@ model = get_peft_model(model, lora_config)
 CONFIG
 """
 print("Setting Up CONFIG.............")
-config = {"max_epochs": 10,
+config = {"max_epochs": 5,
           # "val_check_interval": 0.2, # how many times we want to validate during an epoch
           "check_val_every_n_epoch": 1,
           "gradient_clip_val": 1.0,
-          "accumulate_grad_batches": 4,
+          "accumulate_grad_batches": 2,
           "lr": 1e-4,
-          "batch_size": 4,
+          "batch_size": 2,
           # "seed":2022,
           "num_nodes": 1,
           "warmup_steps": 50,
@@ -123,7 +118,7 @@ wandb_logger = WandbLogger(project=WANDB_PROJECT, name=WANDB_NAME)
 
 trainer = L.Trainer(
         accelerator="gpu",
-        devices=2,
+        devices=[0],
         max_epochs=config.get("max_epochs"),
         accumulate_grad_batches=config.get("accumulate_grad_batches"),
         check_val_every_n_epoch=config.get("check_val_every_n_epoch"),
