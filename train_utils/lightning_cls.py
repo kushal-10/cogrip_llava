@@ -28,10 +28,10 @@ def train_collate_fn(examples):
     texts = []
     for example in examples:
         image, prompt_str, ground_truth = example
-        print(f"Unloaded values - GT - {ground_truth}")
-        images.append(image)
+        print(f"Unloaded values - GT - {example[ground_truth]}")
+        images.append(example[image])
 
-        prompt = f"USER: <image>\n{prompt_str}\nASSISTANT: {ground_truth}"
+        prompt = f"USER: <image>\n{example[prompt_str]}\nASSISTANT: {example[ground_truth]}"
         texts.append(prompt)
 
     batch = processor(text=texts, images=images, padding=True, truncation=True, max_length=MAX_LENGTH, return_tensors="pt")
@@ -54,11 +54,11 @@ def eval_collate_fn(examples):
     answers = []
     for example in examples:
         image, prompt_str, ground_truth = example
-        images.append(image)
+        images.append(example[image])
         # TODO: in the future we can replace this by processor.apply_chat_template
-        prompt = f"USER: <image>\n{prompt_str}\nASSISTANT:"
+        prompt = f"USER: <image>\n{example[prompt_str]}\nASSISTANT:"
         texts.append(prompt)
-        answers.append(ground_truth)
+        answers.append(example[ground_truth])
 
     batch = processor(text=texts, images=images, return_tensors="pt", padding=True)
 
