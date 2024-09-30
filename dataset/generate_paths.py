@@ -2,11 +2,7 @@ import os
 import json
 import random
 from tqdm import tqdm
-
-LEVEL = "easy"
-
-metadata_path = os.path.join('data', LEVEL, 'metadata.json')
-save_path = os.path.join('data', LEVEL, 'metadata_path.json')
+import argparse
 
 # Generate random shortest path
 def generate_random_path(start, end):
@@ -33,24 +29,39 @@ def generate_random_path(start, end):
     random.shuffle(moves)
     return moves
 
-with open(metadata_path, 'r') as f:
-    data = json.load(f)
+def paths(level='sample'):
+
+    LEVEL = level
+    metadata_path = os.path.join('data', LEVEL, 'metadata.json')
+    save_path = os.path.join('data', LEVEL, 'metadata_path.json')
+
+    with open(metadata_path, 'r') as f:
+        data = json.load(f)
 
 
-paths_data = []    
-for i in tqdm(range(len(data)), desc="Generating paths for the dataset"):
-    data_obj = data[i]
-    point1 = list(data[i]['agent_start_pos'])
-    point2 = list(data[i]['target_pos'])
+    paths_data = []    
+    for i in tqdm(range(len(data)), desc="Generating paths for the dataset"):
+        data_obj = data[i]
+        point1 = list(data[i]['agent_start_pos'])
+        point2 = list(data[i]['target_pos'])
 
-    path = generate_random_path(point1, point2)
+        path = generate_random_path(point1, point2)
+        
+        data_obj['path'] = path
+
+        paths_data.append(data_obj)
+
+    with open(save_path, 'w') as f:
+        json.dump(paths_data, f, indent=4)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
     
-    data_obj['path'] = path
-
-    paths_data.append(data_obj)
-
-with open(save_path, 'w') as f:
-    json.dump(paths_data, f, indent=4)
+    parser.add_argument('--level', type=str, default='sample', help='Difficulty level - String - "sample", "easy", "medium", "hard"')
+    
+    args = parser.parse_args()
+    paths(level=args.level)
 
 
 

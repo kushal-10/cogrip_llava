@@ -65,7 +65,7 @@ The `dataset/create_boards.py` script is responsible for generating data boards 
 Set variables under `dataset/generate_paths`, then run
 
 ```bash
-python3 dataset/generate_paths.py
+python3 dataset/generate_paths.py --level 'easy'
 ```
 
 This will create a `data/level/metadata_path.json` that saves an additional field/key of `path` in the `metadata.json` file
@@ -82,7 +82,7 @@ python3 dataset/generate_episodes.py --size 18 --level 'easy'
 ##### 4) Create splits
 
 ```bash
-python3 dataset/create_hf_dataset.py
+python3 dataset/create_hf_dataset.py --level 'easy'
 ```
 This saves `hf_dataset_{level}` under `training_data`. Set the level parameter in the script accordingly
 

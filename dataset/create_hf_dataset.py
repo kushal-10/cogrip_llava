@@ -2,62 +2,71 @@ import json
 import os
 import random
 from datasets import Dataset, DatasetDict, Features, Value, Image as HfImage
+import argparse
 
-# Set variables
-level = "easy"
-metadata_path = os.path.join('training_data', level, 'training_metadata.json')
+def gen_hf_data(level="easy"):
 
-# Load the metadata from JSON
-with open(metadata_path, 'r') as f:
-    json_data = json.load(f)
+    metadata_path = os.path.join('training_data', level, 'training_metadata.json')
 
-# Shuffle and split data into training, validation, and test sets
-random.shuffle(json_data)  # Shuffle the data for randomness
-train_size = int(len(json_data) * 0.7)  # 70% for training
-val_size = int(len(json_data) * 0.15)    # 15% for validation
-test_size = len(json_data) - train_size - val_size  # Remaining 15% for testing
+    # Load the metadata from JSON
+    with open(metadata_path, 'r') as f:
+        json_data = json.load(f)
 
-# Convert list of lists
-train_data = [item for sublist in json_data[:train_size] for item in sublist]
-val_data = [item for sublist in json_data[train_size:train_size + val_size] for item in sublist]
-test_data = [item for sublist in json_data[train_size + val_size:] for item in sublist]
+    # Shuffle and split data into training, validation, and test sets
+    random.shuffle(json_data)  # Shuffle the data for randomness
+    train_size = int(len(json_data) * 0.7)  # 70% for training
+    val_size = int(len(json_data) * 0.15)    # 15% for validation
+    test_size = len(json_data) - train_size - val_size  # Remaining 15% for testing
 
-# Debugging: Print the sizes of each split
-print(f"Train size: {len(train_data)}, Validation size: {len(val_data)}, Test size: {len(test_data)}")
+    # Convert list of lists
+    train_data = [item for sublist in json_data[:train_size] for item in sublist]
+    val_data = [item for sublist in json_data[train_size:train_size + val_size] for item in sublist]
+    test_data = [item for sublist in json_data[train_size + val_size:] for item in sublist]
 
-# Define dataset features
-features = Features({
-    'image': HfImage(),
-    'prompt': Value(dtype='string'),
-    'ground_truth': Value(dtype='string'),
-})
+    # Debugging: Print the sizes of each split
+    print(f"Train size: {len(train_data)}, Validation size: {len(val_data)}, Test size: {len(test_data)}")
 
-# Create datasets using from_dict
-train_dataset = Dataset.from_dict({
-    'image': [item['image'] for item in train_data],
-    'prompt': [item['prompt'] for item in train_data],
-    'ground_truth': [item['ground_truth'] for item in train_data],
-}, features=features)
+    # Define dataset features
+    features = Features({
+        'image': HfImage(),
+        'prompt': Value(dtype='string'),
+        'ground_truth': Value(dtype='string'),
+    })
 
-val_dataset = Dataset.from_dict({
-    'image': [item['image'] for item in val_data],
-    'prompt': [item['prompt'] for item in val_data],
-    'ground_truth': [item['ground_truth'] for item in val_data],
-}, features=features)
+    # Create datasets using from_dict
+    train_dataset = Dataset.from_dict({
+        'image': [item['image'] for item in train_data],
+        'prompt': [item['prompt'] for item in train_data],
+        'ground_truth': [item['ground_truth'] for item in train_data],
+    }, features=features)
 
-test_dataset = Dataset.from_dict({
-    'image': [item['image'] for item in test_data],
-    'prompt': [item['prompt'] for item in test_data],
-    'ground_truth': [item['ground_truth'] for item in test_data],
-}, features=features)
+    val_dataset = Dataset.from_dict({
+        'image': [item['image'] for item in val_data],
+        'prompt': [item['prompt'] for item in val_data],
+        'ground_truth': [item['ground_truth'] for item in val_data],
+    }, features=features)
 
-# Create DatasetDict for easy handling of splits
-dataset_dict = DatasetDict({
-    'train': train_dataset,
-    'validation': val_dataset,
-    'test': test_dataset,
-})
+    test_dataset = Dataset.from_dict({
+        'image': [item['image'] for item in test_data],
+        'prompt': [item['prompt'] for item in test_data],
+        'ground_truth': [item['ground_truth'] for item in test_data],
+    }, features=features)
 
-# Save the dataset
-dataset_dict.save_to_disk(os.path.join('training_data', f'hf_dataset_{level}'))
+    # Create DatasetDict for easy handling of splits
+    dataset_dict = DatasetDict({
+        'train': train_dataset,
+        'validation': val_dataset,
+        'test': test_dataset,
+    })
 
+    # Save the dataset
+    dataset_dict.save_to_disk(os.path.join('training_data', f'hf_dataset_{level}'))
+
+
+if __name__=='__main__':
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument('--level', type=str, default='sample', help='Difficulty level - String - "sample", "easy", "medium", "hard"')
+    
+    args = parser.parse_args()
+    gen_hf_data(level=args.level)
