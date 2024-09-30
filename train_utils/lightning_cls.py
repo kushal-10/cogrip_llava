@@ -28,7 +28,6 @@ def train_collate_fn(examples):
     texts = []
     for example in examples:
         image, prompt_str, ground_truth = example
-        print(f"Unloaded values - GT - {example[ground_truth]}")
         images.append(example[image])
 
         prompt = f"USER: <image>\n{example[prompt_str]}\nASSISTANT: {example[ground_truth]}"
