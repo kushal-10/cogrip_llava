@@ -4,7 +4,7 @@ import random
 from datasets import Dataset, DatasetDict, Features, Value, Image as HfImage
 
 # Set variables
-level = 'sample'
+level = "easy"
 metadata_path = os.path.join('training_data', level, 'training_metadata.json')
 
 # Load the metadata from JSON
@@ -59,5 +59,5 @@ dataset_dict = DatasetDict({
 })
 
 # Save the dataset
-dataset_dict.save_to_disk(os.path.join('training_data', 'hf_dataset_sample'))
+dataset_dict.save_to_disk(os.path.join('training_data', f'hf_dataset_{level}'))
 

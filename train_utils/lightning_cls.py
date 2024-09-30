@@ -12,10 +12,11 @@ import os
 """
 Setup - collate functions
 """
+LEVEL = "easy"
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
 MAX_LENGTH = 384
 print("Loading the dataset")
-hf_dataset = load_from_disk(os.path.join('training_data', 'hf_dataset_sample'))
+hf_dataset = load_from_disk(os.path.join('training_data', f'hf_dataset_{LEVEL}'))
 train_dataset = hf_dataset['train']
 val_dataset = hf_dataset['validation']
 

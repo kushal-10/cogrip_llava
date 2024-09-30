@@ -16,11 +16,12 @@ Refer - https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LLaVa/F
 """
 
 # Set Parameters #
+LEVEL='easy'
 MAX_LENGTH = 384
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
-REPO_ID = "Koshti10/llava-1.5-7b-ft-sample"
+REPO_ID = f"Koshti10/llava-1.5-7b-ft-{LEVEL}"
 WANDB_PROJECT = "individual-module"
-WANDB_NAME = "samplerunfinal"
+WANDB_NAME = f"{LEVEL}_run_1"
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right

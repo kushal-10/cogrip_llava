@@ -76,7 +76,7 @@ This will create a `data/level/metadata_path.json` that saves an additional fiel
 Run the follwing script with additional arguments, if required( level, size) from step1 - Create boards. This will create a folder `training_data/level/boards` and a meta data file that contains `image_path`, `prompt` and `response` for each instance under `training_data/level/training_metadata.json`
 
 ```bash
-python3 dataset/generate_episodes.py
+python3 dataset/generate_episodes.py --size 18 --level 'easy'
 ```
 
 ##### 4) Create splits

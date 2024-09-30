@@ -3,8 +3,10 @@ import json
 import random
 from tqdm import tqdm
 
-metadata_path = os.path.join('data', 'sample', 'metadata.json')
-save_path = os.path.join('data', 'sample', 'metadata_path.json')
+LEVEL = "easy"
+
+metadata_path = os.path.join('data', LEVEL, 'metadata.json')
+save_path = os.path.join('data', LEVEL, 'metadata_path.json')
 
 # Generate random shortest path
 def generate_random_path(start, end):
