@@ -28,6 +28,8 @@ processor.tokenizer.padding_side = "right" # during training, one always uses pa
 USE_LORA = False
 USE_QLORA = True
 
+print("Loading the model.................")
+
 """
 Load model
 """
@@ -78,7 +80,7 @@ model = get_peft_model(model, lora_config)
 """
 CONFIG
 """
-
+print("Setting Up CONFIG.............")
 config = {"max_epochs": 10,
           # "val_check_interval": 0.2, # how many times we want to validate during an epoch
           "check_val_every_n_epoch": 1,
@@ -127,5 +129,5 @@ trainer = L.Trainer(
         logger=wandb_logger,
         callbacks=[PushToHubCallback(), early_stop_callback],
 )
-
+print("Start Training")
 trainer.fit(model_module)
