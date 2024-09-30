@@ -2,7 +2,7 @@ torch
 gym==0.26.2
 stable-baselines3
 sentence-transformers
-tqdm==4.65.0
+tqdm
 rich==13.4.2
 pygame==2.5.2
 progressbar==2.5
