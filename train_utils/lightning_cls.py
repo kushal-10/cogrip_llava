@@ -14,12 +14,12 @@ Setup - collate functions
 """
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
 MAX_LENGTH = 384
-hf_dataset = load_dataset(os.path.join('hf_dataset'))
+hf_dataset = load_dataset(os.path.join('training_data', 'hf_dataset'))
+train_dataset = load_dataset(os.path.join('training_data', 'hf_dataset'), split='train')
+val_dataset = load_dataset(os.path.join('training_data', 'hf_dataset'), split='validation')
 
-print(hf_dataset)
-
-# processor = AutoProcessor.from_pretrained(MODEL_ID)
-# processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
+processor = AutoProcessor.from_pretrained(MODEL_ID)
+processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
 
 
 def train_collate_fn(examples):

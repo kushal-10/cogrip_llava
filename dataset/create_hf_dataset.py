@@ -28,26 +28,26 @@ print(f"Train size: {len(train_data)}, Validation size: {len(val_data)}, Test si
 # Define dataset features
 features = Features({
     'image': HfImage(),
-    'prompt': Value(dtype='string'),
+    # 'prompt': Value(dtype='string'),
     'ground_truth': Value(dtype='string'),
 })
 
 # Create datasets using from_dict
 train_dataset = Dataset.from_dict({
     'image': [item['image'] for item in train_data],
-    'prompt': [item['prompt'] for item in train_data],
+    # 'prompt': [item['prompt'] for item in train_data],
     'ground_truth': [item['ground_truth'] for item in train_data],
 }, features=features)
 
 val_dataset = Dataset.from_dict({
     'image': [item['image'] for item in val_data],
-    'prompt': [item['prompt'] for item in val_data],
+    # 'prompt': [item['prompt'] for item in val_data],
     'ground_truth': [item['ground_truth'] for item in val_data],
 }, features=features)
 
 test_dataset = Dataset.from_dict({
     'image': [item['image'] for item in test_data],
-    'prompt': [item['prompt'] for item in test_data],
+    # 'prompt': [item['prompt'] for item in test_data],
     'ground_truth': [item['ground_truth'] for item in test_data],
 }, features=features)
 

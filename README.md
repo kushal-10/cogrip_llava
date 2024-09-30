@@ -82,9 +82,9 @@ python3 dataset/generate_episodes.py
 ##### 4) Create splits
 
 ```bash
-python3 dataset/create_splits.py
+python3 dataset/create_hf_dataset.py
 ```
-This saves `train_data.json` and `test_data.json` under `training_data/level`. Set the level parameter in the script accordingly
+This saves `hf_dataset_{level}` under `training_data`. Set the level parameter in the script accordingly
 
 
 ##### 5) Finetuning
