@@ -118,7 +118,8 @@ wandb_logger = WandbLogger(project=WANDB_PROJECT, name=WANDB_NAME)
 
 trainer = L.Trainer(
         accelerator="gpu",
-        devices=[0],
+        devices=2,
+        strategy="ddp",
         max_epochs=config.get("max_epochs"),
         accumulate_grad_batches=config.get("accumulate_grad_batches"),
         check_val_every_n_epoch=config.get("check_val_every_n_epoch"),
