@@ -15,8 +15,9 @@ Setup - collate functions
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
 MAX_LENGTH = 384
 print("Loading the dataset")
-train_dataset = load_from_disk(os.path.join('training_data', 'hf_dataset_sample'), split='train')
-val_dataset = load_from_disk(os.path.join('training_data', 'hf_dataset_sample'), split='validation')
+hf_dataset = load_from_disk(os.path.join('training_data', 'hf_dataset_sample'))
+train_dataset = hf_dataset['train']
+val_dataset = hf_dataset['validation']
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
@@ -27,6 +28,7 @@ def train_collate_fn(examples):
     texts = []
     for example in examples:
         image, prompt_str, ground_truth = example
+        print(f"Unloaded values - GT - {ground_truth}")
         images.append(image)
 
         prompt = f"USER: <image>\n{prompt_str}\nASSISTANT: {ground_truth}"
