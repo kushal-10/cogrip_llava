@@ -15,3 +15,4 @@ transformers
 wandb==0.17.2
 bitsandbytes
 datasets==3.0.1
+lightning
