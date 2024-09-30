@@ -76,14 +76,14 @@ def episodes(level='sample', board_size=15):
         image = Image.fromarray(image)  # Convert to PIL Image if using numpy array
         image_save_path = os.path.join(board_dir, f'step_{0}.png')
         image.save(image_save_path)  # Save the image
-        instance_object['image_path'] = image_save_path
+        instance_object['image'] = image_save_path
         instance_object['prompt'] = prompt
         
 
         for k in range(len(paths)):
             step = paths[k]
             # The next step, is the output for prev response
-            instance_object['response'] = step
+            instance_object['ground_truth'] = step
             episode_obj.append(instance_object)
             instance_object = {} # Reset instance obj after saving prev one
 
@@ -94,11 +94,11 @@ def episodes(level='sample', board_size=15):
             image = Image.fromarray(image) 
             image_save_path = os.path.join(board_dir, f'step_{k+1}.png')
             image.save(image_save_path)
-            instance_object['image_path'] = image_save_path
+            instance_object['image'] = image_save_path
             instance_object['prompt'] = prompt
         
         
-        instance_object['response'] = 'grip'
+        instance_object['ground_truth'] = 'grip'
         episode_obj.append(instance_object)
 
         metadata.append(episode_obj)

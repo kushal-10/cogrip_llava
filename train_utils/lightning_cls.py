@@ -6,6 +6,7 @@ from nltk import edit_distance
 import numpy as np
 from transformers import AutoProcessor
 from datasets import load_dataset
+import os
 
 
 """
@@ -13,12 +14,12 @@ Setup - collate functions
 """
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
 MAX_LENGTH = 384
-train_dataset = load_dataset('json', data_files='training_data/sample/train_dataset.json', split='train')
-val_dataset = load_dataset('json', data_files='training_data/sample/val_dataset.json', split='train')
+hf_dataset = load_dataset(os.path.join('hf_dataset'))
 
+print(hf_dataset)
 
-processor = AutoProcessor.from_pretrained(MODEL_ID)
-processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
+# processor = AutoProcessor.from_pretrained(MODEL_ID)
+# processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
 
 
 def train_collate_fn(examples):
