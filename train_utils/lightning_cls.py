@@ -5,7 +5,7 @@ import re
 from nltk import edit_distance
 import numpy as np
 from transformers import AutoProcessor
-from datasets import load_dataset
+from datasets import load_dataset, load_from_disk
 import os
 
 
@@ -15,9 +15,8 @@ Setup - collate functions
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
 MAX_LENGTH = 384
 print("Loading the dataset")
-hf_dataset = load_dataset(os.path.join('training_data', 'hf_dataset_sample'))
-train_dataset = load_dataset(os.path.join('training_data', 'hf_dataset_sample'), split='train')
-val_dataset = load_dataset(os.path.join('training_data', 'hf_dataset_sample'), split='validation')
+train_dataset = load_from_disk(os.path.join('training_data', 'hf_dataset_sample'), split='train')
+val_dataset = load_from_disk(os.path.join('training_data', 'hf_dataset_sample'), split='validation')
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
