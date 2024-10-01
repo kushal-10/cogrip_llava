@@ -24,22 +24,31 @@ model = LlavaForConditionalGeneration.from_pretrained(
     quantization_config=quantization_config,
 )
 
-for i in range(10):
+count = 0
+
+for i in range(len(test_dataset)):
     example = test_dataset[i]
     test_image = example['image']
 
     prompt = f"USER: <image>\n{example['prompt']}\nASSISTANT:"
     inputs = processor(text=prompt, images=[test_image], return_tensors="pt").to("cuda")
-    for k,v in inputs.items():
-        print(k,v.shape)
 
     generated_ids = model.generate(**inputs, max_new_tokens=MAX_LENGTH)
 
     # Decode back into text
     generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
 
-    print("Generated Text:")
-    print(generated_texts)
-    print("GT:")
-    print(example['ground_truth'])
+    # Extract move
+    move = generated_texts[0].split('ASSISTANT:')[-1].strip()
+   
+
+    # print("Generated Text:")
+    # print(generated_texts)
+    # print("GT:")
+    # print(example['ground_truth'])
+
+    if example['ground_truth'] == move:
+        count += 1
     
+
+print(count/len(test_dataset))
