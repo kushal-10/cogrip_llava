@@ -37,7 +37,7 @@ for i in tqdm(range(steps), desc="Evaluating"):
     example = test_dataset[i]
     test_image = example['image']
 
-    prompt = f"USER: <image>\n{example['prompt']}\nASSISTANT:"
+    prompt = f"USER: <image>\n{example['prompt'] + "Answer in one word only."}\nASSISTANT:"
     inputs = processor(text=prompt, images=[test_image], return_tensors="pt").to("cuda")
 
     generated_ids = model.generate(**inputs, max_new_tokens=MAX_LENGTH)
