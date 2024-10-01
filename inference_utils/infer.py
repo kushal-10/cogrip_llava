@@ -57,5 +57,5 @@ for i in tqdm(range(steps), desc="Evaluating"):
     if example['ground_truth'] == move.lower():
         count += 1
     
-print(count)
-print(count/steps)
+    print(count/(i+1))
+    print(count, i+1)
