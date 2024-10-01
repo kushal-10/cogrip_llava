@@ -49,10 +49,10 @@ for i in tqdm(range(steps), desc="Evaluating"):
     move = generated_texts[0].split('ASSISTANT:')[-1].strip()
    
 
-    # print("Generated Text:")
-    # print(generated_texts)
-    # print("GT:")
-    # print(example['ground_truth'])
+    print("Generated Text:")
+    print(generated_texts)
+    print("GT:")
+    print(example['ground_truth'])
 
     if example['ground_truth'] == move:
         count += 1
