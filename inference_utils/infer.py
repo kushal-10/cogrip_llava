@@ -5,12 +5,17 @@ import os
 from tqdm import tqdm
 
 LEVEL = "easy"
+eval_base = True
 
 MAX_LENGTH = 384
-REPO_ID = f"Koshti10/llava-1.5-7b-ft-{LEVEL}"
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
+REPO_ID = MODEL_ID
 hf_dataset = load_from_disk(os.path.join('training_data', f'hf_dataset_{LEVEL}'))
 test_dataset = hf_dataset['test']
+
+if not eval_base:
+    REPO_ID = f"Koshti10/llava-1.5-7b-ft-{LEVEL}"
+
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 
@@ -18,6 +23,7 @@ processor = AutoProcessor.from_pretrained(MODEL_ID)
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16
 )
+
 # Load the base model with adapters on top
 model = LlavaForConditionalGeneration.from_pretrained(
     REPO_ID,
@@ -26,8 +32,8 @@ model = LlavaForConditionalGeneration.from_pretrained(
 )
 
 count = 0
-
-for i in tqdm(range(1000), desc="Evaluating"):
+steps = 500
+for i in tqdm(range(steps), desc="Evaluating"):
     example = test_dataset[i]
     test_image = example['image']
 
@@ -51,5 +57,5 @@ for i in tqdm(range(1000), desc="Evaluating"):
     if example['ground_truth'] == move:
         count += 1
     
-
-print(count/len(test_dataset))
+print(count)
+print(count/steps)
