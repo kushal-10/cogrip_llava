@@ -2,6 +2,7 @@ from transformers import AutoProcessor, BitsAndBytesConfig, LlavaForConditionalG
 import torch
 from datasets import load_from_disk
 import os
+from tqdm import tqdm
 
 LEVEL = "easy"
 
@@ -26,7 +27,7 @@ model = LlavaForConditionalGeneration.from_pretrained(
 
 count = 0
 
-for i in range(len(test_dataset)):
+for i in tqdm(range(len(test_dataset)), desc="Evaluating"):
     example = test_dataset[i]
     test_image = example['image']
 
