@@ -27,7 +27,7 @@ model = LlavaForConditionalGeneration.from_pretrained(
 
 count = 0
 
-for i in tqdm(range(len(test_dataset)), desc="Evaluating"):
+for i in tqdm(range(1000), desc="Evaluating"):
     example = test_dataset[i]
     test_image = example['image']
 
