@@ -107,7 +107,7 @@ def episodes(level='sample', board_size=15):
     with open(training_metadata_path, 'w') as f:
         json.dump(metadata, f, indent=4)
 
-    print(f'Generated and saved instances for Level: {level}')
+    print(f"Generated and saved instances for Level: {level}")
 
 
 if __name__ == '__main__':
