@@ -64,7 +64,7 @@ def objective(trial):  # Define the objective function for Optuna
     # Suggest hyperparameters
     max_epochs = trial.suggest_int("max_epochs", 3, 10)
     lr = trial.suggest_loguniform("lr", 1e-5, 1e-2)
-    batch_size = trial.suggest_categorical("batch_size", [2, 4, 8])
+    batch_size = trial.suggest_categorical("batch_size", [2, 4])
     
     # Add hyperparameters for LoRA
     r = trial.suggest_int("r", 4, 16)  # Suggest a range for r
