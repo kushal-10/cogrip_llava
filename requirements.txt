@@ -1,18 +1,19 @@
 torch
-gym==0.26.2
+lightning
 stable-baselines3
 sentence-transformers
 tqdm
+adapters
+transformers
+gym==0.26.2
 rich==13.4.2
 pygame==2.5.2
 progressbar==2.5
 protobuf==5.27.0
 # flash-attn
-adapters
 peft==0.11.1
 accelerate==0.31.0
-transformers
 wandb==0.17.2
 bitsandbytes
 datasets==3.0.1
-lightning
+optuna==4.0.0
