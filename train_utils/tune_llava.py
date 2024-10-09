@@ -35,6 +35,7 @@ if USE_QLORA:
         load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16
     )
 
+
 model = LlavaForConditionalGeneration.from_pretrained(
     MODEL_ID,
     torch_dtype=torch.float16,
@@ -64,25 +65,8 @@ CONFIG
 """
 print("Setting Up CONFIG.............")
 
-api = HfApi()
-
-# class PushToHubCallback(Callback):
-#     def on_train_epoch_end(self, trainer, pl_module):
-#         print(f"Pushing model to the hub, epoch {trainer.current_epoch}")
-#         pl_module.model.push_to_hub(REPO_ID,
-#                                     commit_message=f"Training in progress, epoch {trainer.current_epoch}")
-
-#     def on_train_end(self, trainer, pl_module):
-#         print(f"Pushing model to the hub after training")
-#         pl_module.processor.push_to_hub(REPO_ID,
-#                                     commit_message=f"Training done")
-#         pl_module.model.push_to_hub(REPO_ID,
-#                                     commit_message=f"Training done")
-
 early_stop_callback = EarlyStopping(monitor="val_edit_distance", patience=3, verbose=False, mode="min")
-
 wandb_logger = WandbLogger(project=WANDB_PROJECT, name=WANDB_NAME)
-
 
 def objective(trial):  # Define the objective function for Optuna
     # Suggest hyperparameters
@@ -113,6 +97,9 @@ def objective(trial):  # Define the objective function for Optuna
         }
     }
 
+    # Prepare the model with the updated lora_config
+    model = get_peft_model(model, lora_config)
+
     model_module = LlavaModelPLModule(config, processor, model)
 
     # Update the lora_config with the suggested parameters
@@ -123,9 +110,6 @@ def objective(trial):  # Define the objective function for Optuna
         target_modules=find_all_linear_names(model),
         init_lora_weights="gaussian",
     )
-
-    # Prepare the model with the updated lora_config
-    model = get_peft_model(model, lora_config)
 
     trainer = L.Trainer(
         accelerator="gpu",
