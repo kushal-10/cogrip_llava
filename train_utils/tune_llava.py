@@ -36,14 +36,6 @@ if USE_QLORA:
     )
 
 
-model = LlavaForConditionalGeneration.from_pretrained(
-    MODEL_ID,
-    torch_dtype=torch.float16,
-    quantization_config=bnb_config,
-)
-model = prepare_model_for_kbit_training(model)
-
-
 def find_all_linear_names(model):
     cls = torch.nn.Linear
     lora_module_names = set()
@@ -98,11 +90,6 @@ def objective(trial):  # Define the objective function for Optuna
     }
 
     # Prepare the model with the updated lora_config
-    model = get_peft_model(model, lora_config)
-
-    model_module = LlavaModelPLModule(config, processor, model)
-
-    # Update the lora_config with the suggested parameters
     lora_config = LoraConfig(
         r=config["lora_config"]["r"],
         lora_alpha=config["lora_config"]["lora_alpha"],
@@ -110,6 +97,19 @@ def objective(trial):  # Define the objective function for Optuna
         target_modules=find_all_linear_names(model),
         init_lora_weights="gaussian",
     )
+
+    # Load the model here to ensure it's defined before use
+    model = LlavaForConditionalGeneration.from_pretrained(
+        MODEL_ID,
+        torch_dtype=torch.float16,
+        quantization_config=bnb_config,
+    )
+    model = prepare_model_for_kbit_training(model)
+
+    # Now you can use the model variable
+    model = get_peft_model(model, lora_config)
+
+    model_module = LlavaModelPLModule(config, processor, model)
 
     trainer = L.Trainer(
         accelerator="gpu",
