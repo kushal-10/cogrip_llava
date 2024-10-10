@@ -18,9 +18,9 @@ Refer - https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LLaVa/F
 # Set Parameters #
 LEVEL='easy'
 # MAX_LENGTH = 384
-MODEL_ID = "llava-hf/llava-1.5-7b-hf"
-REPO_ID = f"Koshti10/llava-1.5-7b-ft-pentomino-{LEVEL}"
-WANDB_PROJECT = "individual-module-paper"
+MODEL_ID = "llava-hf/llava-1.5-13b-hf"
+REPO_ID = f"Koshti10/llava-1.5-13b-ft-pentomino-{LEVEL}"
+WANDB_PROJECT = "individual-module"
 WANDB_NAME = f"{LEVEL}_run_1_{MODEL_ID}"
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
@@ -63,9 +63,9 @@ def find_all_linear_names(model):
 
 
 lora_config = LoraConfig(
-    r=12,
-    lora_alpha=16,
-    lora_dropout=0.1,
+    r=10,
+    lora_alpha=18,
+    lora_dropout=0.2,
     target_modules=find_all_linear_names(model),
     init_lora_weights="gaussian",
 )
@@ -82,7 +82,7 @@ config = {"max_epochs": 5,
           "check_val_every_n_epoch": 1,
           "gradient_clip_val": 1.0,
           "accumulate_grad_batches": 4,
-          "lr": 5e-4,
+          "lr": 1e-3,
           "batch_size": 4,
           # "seed":2022,
           "num_nodes": 1,
@@ -114,7 +114,7 @@ wandb_logger = WandbLogger(project=WANDB_PROJECT, name=WANDB_NAME)
 
 trainer = L.Trainer(
         accelerator="gpu",
-        devices=[0,1],
+        devices=[1],
         max_epochs=config.get("max_epochs"),
         accumulate_grad_batches=config.get("accumulate_grad_batches"),
         check_val_every_n_epoch=config.get("check_val_every_n_epoch"),
