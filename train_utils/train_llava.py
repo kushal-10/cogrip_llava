@@ -7,7 +7,8 @@ from lightning.pytorch.callbacks import Callback
 from lightning.pytorch.callbacks.early_stopping import EarlyStopping
 from lightning.pytorch.loggers import WandbLogger
 from huggingface_hub import HfApi
-
+import json 
+import os
 
 from train_utils.lightning_cls import LlavaModelPLModule
 
@@ -15,13 +16,25 @@ from train_utils.lightning_cls import LlavaModelPLModule
 Refer - https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LLaVa/Fine_tune_LLaVa_on_a_custom_dataset_(with_PyTorch_Lightning).ipynb
 """
 
-# Set Parameters #
-LEVEL='easy'
-# MAX_LENGTH = 384
-MODEL_ID = "llava-hf/llava-1.5-13b-hf"
-REPO_ID = f"Koshti10/llava-1.5-13b-ft-pentomino-{LEVEL}"
-WANDB_PROJECT = "individual-module"
-WANDB_NAME = f"{LEVEL}_run_1.5_13b"
+# Load configuration from JSON file
+with open(os.path.join('train_utils', 'train_config.json'), 'r') as f:
+    train_config = json.load(f)
+
+# Set Parameters for logging
+LEVEL = train_config.get("LEVEL", "easy")
+MODEL_ID = train_config.get("MODEL_ID", "llava-hf/llava-1.5-13b-hf")
+REPO_ID = train_config.get("REPO_ID", "Koshti10/llava-1.5-13b-ft-pentomino-easy")
+WANDB_PROJECT = train_config.get("WANDB_PROJECT", "individual-module")
+WANDB_NAME = train_config.get("WANDB_NAME", "easy_run_1.5_13b")
+
+# Lora and Lightning parameters
+LORA_R = train_config.get("R", 8)
+LORA_ALPHA = train_config.get("ALPHA", 16)
+LORA_DROPOUT = train_config.get("DROPOUT", 0.1)
+EPOCHS = train_config.get("EPOCHS", 5)
+LR = train_config.get("LR", 1e-3)
+BATCH_SIZE = train_config.get("BATCH_SIZE", 2)
+
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
@@ -63,9 +76,9 @@ def find_all_linear_names(model):
 
 
 lora_config = LoraConfig(
-    r=10,
-    lora_alpha=18,
-    lora_dropout=0.2,
+    r=LORA_R,
+    lora_alpha=LORA_ALPHA,
+    lora_dropout=LORA_DROPOUT,
     target_modules=find_all_linear_names(model),
     init_lora_weights="gaussian",
 )
@@ -77,13 +90,13 @@ model = get_peft_model(model, lora_config)
 CONFIG
 """
 print("Setting Up CONFIG.............")
-config = {"max_epochs": 5,
+config = {"max_epochs": EPOCHS,
           # "val_check_interval": 0.2, # how many times we want to validate during an epoch
           "check_val_every_n_epoch": 1,
           "gradient_clip_val": 1.0,
           "accumulate_grad_batches": 2,
-          "lr": 1e-3,
-          "batch_size": 2,
+          "lr": LR,
+          "batch_size": BATCH_SIZE,
           # "seed":2022,
           "num_nodes": 1,
           "warmup_steps": 50,

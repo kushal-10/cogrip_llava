@@ -7,14 +7,20 @@ import numpy as np
 from transformers import AutoProcessor
 from datasets import load_dataset, load_from_disk
 import os
-
+import json  # Add this import
 
 """
 Setup - collate functions
 """
-LEVEL = "easy"
-MODEL_ID = "llava-hf/llava-1.5-7b-hf"
-MAX_LENGTH = 384
+# Load configuration from JSON file
+with open(os.path.join('train_utils', 'train_config.json'), 'r') as f:
+    train_config = json.load(f)
+
+LEVEL = train_config.get("LEVEL", "easy") 
+MODEL_ID = train_config.get("MODEL_ID", "llava-hf/llava-1.5-13b-hf") 
+MAX_LENGTH = train_config.get("MAX_LENGTH", 50)
+NUM_WORKERS = train_config.get("WORKERS", 0)
+
 print("Loading the dataset")
 hf_dataset = load_from_disk(os.path.join('training_data', f'hf_dataset_{LEVEL}'))
 train_dataset = hf_dataset['train']
@@ -118,13 +124,12 @@ class LlavaModelPLModule(L.LightningModule):
         return scores
     
     def configure_optimizers(self):
-        # you could also add a learning rate scheduler if you want
         optimizer = torch.optim.AdamW(self.parameters(), lr=self.config.get("lr"))
 
         return optimizer
 
     def train_dataloader(self):
-        return DataLoader(train_dataset, collate_fn=train_collate_fn, batch_size=self.batch_size, shuffle=True, num_workers=4)
+        return DataLoader(train_dataset, collate_fn=train_collate_fn, batch_size=self.batch_size, shuffle=True, num_workers=NUM_WORKERS)
 
     def val_dataloader(self):
-        return DataLoader(val_dataset, collate_fn=eval_collate_fn, batch_size=self.batch_size, shuffle=False, num_workers=4)
+        return DataLoader(val_dataset, collate_fn=eval_collate_fn, batch_size=self.batch_size, shuffle=False, num_workers=NUM_WORKERS)
