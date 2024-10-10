@@ -1,6 +1,6 @@
 from transformers import AutoProcessor
 from peft import LoraConfig, prepare_model_for_kbit_training, get_peft_model
-from transformers import BitsAndBytesConfig, LlavaForConditionalGeneration
+from transformers import BitsAndBytesConfig, LlavaForConditionalGeneration, AutoModelForVision2Seq
 import torch
 import lightning as L
 from lightning.pytorch.callbacks import Callback
@@ -53,7 +53,7 @@ if USE_QLORA:
         load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16
     )
 
-model = LlavaForConditionalGeneration.from_pretrained(
+model = AutoModelForVision2Seq.from_pretrained(
     MODEL_ID,
     torch_dtype=torch.float16,
     quantization_config=bnb_config,
