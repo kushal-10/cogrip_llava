@@ -16,12 +16,22 @@ def gen_hf_data(level="easy"):
     random.shuffle(json_data)  # Shuffle the data for randomness
     train_size = int(len(json_data) * 0.7)  # 70% for training
     val_size = int(len(json_data) * 0.15)    # 15% for validation
-    test_size = len(json_data) - train_size - val_size  # Remaining 15% for testing
+    # test_size = len(json_data) - train_size - val_size  # Remaining 15% for testing
 
     # Convert list of lists
     train_data = [item for sublist in json_data[:train_size] for item in sublist]
     val_data = [item for sublist in json_data[train_size:train_size + val_size] for item in sublist]
     test_data = [item for sublist in json_data[train_size + val_size:] for item in sublist]
+
+    os.makedirs(os.path.join('training_data', f'hf_metadata_{level}'), exist_ok=True)
+    # Save the datasets as JSON files
+    with open(os.path.join('training_data', f'hf_metadata_{level}', 'train.json'), 'w') as f:
+        json.dump(train_data, f)
+    with open(os.path.join('training_data', f'hf_metadata_{level}', 'val.json'), 'w') as f:
+        json.dump(val_data, f)
+    with open(os.path.join('training_data', f'hf_metadata_{level}', 'test.json'), 'w') as f:
+        json.dump(test_data, f)
+
 
     # Debugging: Print the sizes of each split
     print(f"Train size: {len(train_data)}, Validation size: {len(val_data)}, Test size: {len(test_data)}")

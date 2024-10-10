@@ -17,7 +17,7 @@ Refer - https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LLaVa/F
 
 # Set Parameters #
 LEVEL='easy'
-MAX_LENGTH = 384
+# MAX_LENGTH = 384
 MODEL_ID = "llava-hf/llava-1.5-7b-hf"
 REPO_ID = f"Koshti10/llava-1.5-7b-ft-{LEVEL}"
 WANDB_PROJECT = "individual-module"
@@ -34,11 +34,6 @@ print("Loading the model.................")
 """
 Load model
 """
-# Three options for training, from the lowest precision training to the highest precision training:
-# - QLora
-# - Standard Lora
-# - Full fine-tuning
-
 
 if USE_QLORA:
     bnb_config = BitsAndBytesConfig(
