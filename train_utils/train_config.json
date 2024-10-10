@@ -9,7 +9,7 @@
     "R": 10,
     "ALPHA": 18,
     "DROPOUT": 0.2,
-    "EPOCHS": 5,
+    "EPOCHS": 1,
     "LR": 1e-3,
     "BATCH_SIZE": 2
 
