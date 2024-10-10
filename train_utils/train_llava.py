@@ -21,19 +21,19 @@ with open(os.path.join('train_utils', 'train_config.json'), 'r') as f:
     train_config = json.load(f)
 
 # Set Parameters for logging
-LEVEL = train_config.get("LEVEL", "easy")
-MODEL_ID = train_config.get("MODEL_ID", "llava-hf/llava-1.5-13b-hf")
-REPO_ID = train_config.get("REPO_ID", "Koshti10/llava-1.5-13b-ft-pentomino-easy")
-WANDB_PROJECT = train_config.get("WANDB_PROJECT", "individual-module")
-WANDB_NAME = train_config.get("WANDB_NAME", "easy_run_1.5_13b")
+LEVEL = train_config.get("LEVEL")
+MODEL_ID = train_config.get("MODEL_ID")
+REPO_ID = train_config.get("REPO_ID")
+WANDB_PROJECT = train_config.get("WANDB_PROJECT")
+WANDB_NAME = train_config.get("WANDB_NAME")
 
 # Lora and Lightning parameters
-LORA_R = train_config.get("R", 8)
-LORA_ALPHA = train_config.get("ALPHA", 16)
-LORA_DROPOUT = train_config.get("DROPOUT", 0.1)
-EPOCHS = train_config.get("EPOCHS", 5)
-LR = train_config.get("LR", 1e-3)
-BATCH_SIZE = train_config.get("BATCH_SIZE", 2)
+LORA_R = train_config.get("R")
+LORA_ALPHA = train_config.get("ALPHA")
+LORA_DROPOUT = train_config.get("DROPOUT")
+EPOCHS = train_config.get("EPOCHS")
+LR = train_config.get("LR")
+BATCH_SIZE = train_config.get("BATCH_SIZE")
 
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)

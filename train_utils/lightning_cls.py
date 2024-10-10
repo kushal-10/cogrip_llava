@@ -16,10 +16,10 @@ Setup - collate functions
 with open(os.path.join('train_utils', 'train_config.json'), 'r') as f:
     train_config = json.load(f)
 
-LEVEL = train_config.get("LEVEL", "easy") 
-MODEL_ID = train_config.get("MODEL_ID", "llava-hf/llava-1.5-13b-hf") 
-MAX_LENGTH = train_config.get("MAX_LENGTH", 50)
-NUM_WORKERS = train_config.get("WORKERS", 0)
+LEVEL = train_config.get("LEVEL") 
+MODEL_ID = train_config.get("MODEL_ID") 
+MAX_LENGTH = train_config.get("MAX_LENGTH")
+NUM_WORKERS = train_config.get("WORKERS") #0
 
 print("Loading the dataset")
 hf_dataset = load_from_disk(os.path.join('training_data', f'hf_dataset_{LEVEL}'))
