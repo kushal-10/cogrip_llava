@@ -21,7 +21,7 @@ LEVEL='easy'
 MODEL_ID = "llava-hf/llava-1.5-13b-hf"
 REPO_ID = f"Koshti10/llava-1.5-13b-ft-pentomino-{LEVEL}"
 WANDB_PROJECT = "individual-module"
-WANDB_NAME = f"{LEVEL}_run_1_{MODEL_ID}"
+WANDB_NAME = f"{LEVEL}_run_1.5_13b"
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
