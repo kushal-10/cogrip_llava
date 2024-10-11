@@ -37,6 +37,7 @@ BATCH_SIZE = train_config.get("BATCH_SIZE")
 
 torch.set_float32_matmul_precision('high')
 
+
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
 
@@ -58,10 +59,7 @@ model = AutoModelForVision2Seq.from_pretrained(
     MODEL_ID,
     torch_dtype=torch.float16,
     quantization_config=bnb_config,
-    device_map="auto"
 )
-
-model.to("cuda")
 
 def find_all_linear_names(model):
     cls = torch.nn.Linear
@@ -130,8 +128,7 @@ wandb_logger = WandbLogger(project=WANDB_PROJECT, name=WANDB_NAME)
 
 trainer = L.Trainer(
         accelerator="gpu",
-        strategy="ddp",
-        devices=[0,1],
+        devices=[0],
         max_epochs=config.get("max_epochs"),
         accumulate_grad_batches=config.get("accumulate_grad_batches"),
         check_val_every_n_epoch=config.get("check_val_every_n_epoch"),

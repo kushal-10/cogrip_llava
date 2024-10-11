@@ -11,5 +11,5 @@
     "DROPOUT": 0.1,
     "EPOCHS": 5,
     "LR": 1e-4,
-    "BATCH_SIZE": 8
+    "BATCH_SIZE": 6
 }
