@@ -91,13 +91,12 @@ CONFIG
 """
 print("Setting Up CONFIG.............")
 config = {"max_epochs": EPOCHS,
-          # "val_check_interval": 0.2, # how many times we want to validate during an epoch
+          "val_check_interval": 0.2,
           "check_val_every_n_epoch": 1,
           "gradient_clip_val": 1.0,
           "accumulate_grad_batches": 2,
           "lr": LR,
           "batch_size": BATCH_SIZE,
-          # "seed":2022,
           "num_nodes": 1,
           "warmup_steps": 50,
           "result_path": "./result",

@@ -1,15 +1,15 @@
 {
     "LEVEL": "easy",
-    "REPO_ID": "Koshti10/llava-1.5-7b-ft-pentomino-easy-2",
+    "REPO_ID": "Koshti10/llava-1.5-7b-hf-ft",
     "MODEL_ID": "llava-hf/llava-1.5-7b-hf",
-    "MAX_LENGTH": 50,
+    "MAX_LENGTH": 128,
     "WANDB_PROJECT": "individual-module",
-    "WANDB_NAME": "run_1.5_7b_easy_3ep",
+    "WANDB_NAME": "ft_1.5_7b",
     "WORKERS": 0,
-    "R": 16,
-    "ALPHA": 16,
-    "DROPOUT": 0.2,
-    "EPOCHS": 3,
-    "LR": 1e-3,
+    "R": 8,
+    "ALPHA": 8,
+    "DROPOUT": 0.1,
+    "EPOCHS": 5,
+    "LR": 1e-4,
     "BATCH_SIZE": 4
 }

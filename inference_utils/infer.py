@@ -73,8 +73,3 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     evaluate(args.level, args.model, args.type)
-
-"""
-python3 inference_utils/infer.py --level easy --model Koshti10/llava-1.5-7b-ft-pentomino-easy --type raw
-"""
-    
