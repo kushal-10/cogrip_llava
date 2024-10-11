@@ -34,7 +34,7 @@ def train_collate_fn(examples):
     images = []
     texts = []
     for example in examples:
-        image, prompt_str, ground_truth = example
+        image, image_id, prompt_str, ground_truth = example
         images.append(example[image])
 
         prompt = f"USER: <image>\n{example[prompt_str]}\nASSISTANT: {example[ground_truth]}"
@@ -59,7 +59,7 @@ def eval_collate_fn(examples):
     texts = []
     answers = []
     for example in examples:
-        image, prompt_str, ground_truth = example
+        image, image_id, prompt_str, ground_truth = example
         images.append(example[image])
         # TODO: in the future we can replace this by processor.apply_chat_template
         prompt = f"USER: <image>\n{example[prompt_str]}\nASSISTANT:"
