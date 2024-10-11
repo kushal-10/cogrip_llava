@@ -54,13 +54,14 @@ def evaluate(level, model, type='raw'):
             # Extract move
             move = generated_texts[0].split('ASSISTANT:')[-1].strip()
         
-            print(move.lower(), example['ground_truth'])
+            print(f"Prideiction : {move.lower()} \n\n")
+            print(f"GT : {example['ground_truth']} \n\n")
 
             if example['ground_truth'] == move.lower():
                 count += 1
             
-            print(count/(i+1))
-            print(count, i+1)
+            # print(count/(i+1))
+            # print(count, i+1)
 
 
 if __name__ == "__main__":
