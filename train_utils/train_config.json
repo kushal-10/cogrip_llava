@@ -1,10 +1,10 @@
 {
     "LEVEL": "easy",
-    "REPO_ID": "Koshti10/llava-1.5-7b-hf-ft",
-    "MODEL_ID": "llava-hf/llava-1.5-7b-hf",
+    "REPO_ID": "Koshti10/llava-1.5-13b-hf-ft",
+    "MODEL_ID": "llava-hf/llava-1.5-13b-hf",
     "MAX_LENGTH": 128,
     "WANDB_PROJECT": "individual-module",
-    "WANDB_NAME": "ft_1.5_7b",
+    "WANDB_NAME": "ft_1.5_13b",
     "WORKERS": 0,
     "R": 8,
     "ALPHA": 8,
