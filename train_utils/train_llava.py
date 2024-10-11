@@ -61,6 +61,8 @@ model = AutoModelForVision2Seq.from_pretrained(
     device_map="auto"
 )
 
+model.to("cuda")
+
 def find_all_linear_names(model):
     cls = torch.nn.Linear
     lora_module_names = set()
@@ -128,6 +130,7 @@ wandb_logger = WandbLogger(project=WANDB_PROJECT, name=WANDB_NAME)
 
 trainer = L.Trainer(
         accelerator="gpu",
+        strategy="ddp",
         devices=[0,1],
         max_epochs=config.get("max_epochs"),
         accumulate_grad_batches=config.get("accumulate_grad_batches"),
