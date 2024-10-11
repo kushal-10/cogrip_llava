@@ -35,6 +35,7 @@ EPOCHS = train_config.get("EPOCHS")
 LR = train_config.get("LR")
 BATCH_SIZE = train_config.get("BATCH_SIZE")
 
+torch.set_float32_matmul_precision('high')
 
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
@@ -57,6 +58,7 @@ model = AutoModelForVision2Seq.from_pretrained(
     MODEL_ID,
     torch_dtype=torch.float16,
     quantization_config=bnb_config,
+    device_map="auto"
 )
 
 def find_all_linear_names(model):
