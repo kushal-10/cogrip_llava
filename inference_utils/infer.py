@@ -70,9 +70,10 @@ def evaluate(level, model, type='raw'):
 
         if i % 50 == 0:
             logging.info(f'Accuracy at step {i}: {check_acc/(i+1)}')
+            break
 
     
-    save_name =model.split('/')[-1] + ".csv"
+    save_name =MODEL_ID.split('/')[-1] + ".csv"
     infer_data = {
         "predictions": predictions,
         "gts": ground_truths,
