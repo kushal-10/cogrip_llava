@@ -58,7 +58,7 @@ def evaluate(level, model):
         image_id = example['image_string']
 
         if "-ft" in MODEL_ID:
-            prompt = example['prompt']
+            prompt = f"USER: <image>\n{example['prompt']}.\nASSISTANT:"
         else:
             prompt = f"USER: <image>\n{example['prompt']}. Answer in one word only.\nASSISTANT:"
 
