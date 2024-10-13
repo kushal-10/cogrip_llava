@@ -64,7 +64,7 @@ def evaluate_gpt(LEVEL='easy'):
             ]
             }
         ],
-        "max_tokens": 10
+        "max_tokens": 5
         }
 
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
@@ -85,4 +85,4 @@ def evaluate_gpt(LEVEL='easy'):
 
 if __name__ == '__main__':
 
-    evaluate_gpt('sample')
+    evaluate_gpt('easy')
