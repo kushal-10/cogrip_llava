@@ -1,10 +1,10 @@
 {
     "LEVEL": "easy",
-    "REPO_ID": "Koshti10/llava-v1.6-vicuna-13b-hf-ft",
-    "MODEL_ID": "llava-hf/llava-v1.6-vicuna-13b-hf",
+    "REPO_ID": "Koshti10/llava-v1.6-mistral-7b-hf-ft",
+    "MODEL_ID": "llava-hf/llava-v1.6-mistral-7b-hf",
     "MAX_LENGTH": 128,
     "WANDB_PROJECT": "individual-module",
-    "WANDB_NAME": "ft_1.6_13b_vic",
+    "WANDB_NAME": "ft_1.6_7b_mist",
     "WORKERS": 0,
     "R": 8,
     "ALPHA": 8,
