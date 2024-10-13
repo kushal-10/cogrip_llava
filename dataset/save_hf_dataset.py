@@ -26,18 +26,13 @@ def upload_to_hub(dataset, repo_name, token):
         repo_id=repo_name,
         token=token
     )
-    
-    # # Clean up the temporary directory
-    # for filename in os.listdir(temp_dir):
-    #     os.remove(os.path.join(temp_dir, filename))
-    # os.rmdir(temp_dir)
 
 if __name__ == "__main__":
     
     dataset_path = "training_data/hf_dataset_easy"
     
     # Specify your Hugging Face Hub repo name and token
-    repo_name = "Koshti10/pentomino-easy"
+    repo_name = "Koshti10/llava-pentomino-easy"
     token = HfFolder.get_token() 
     
     # Load and upload the dataset
