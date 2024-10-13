@@ -41,6 +41,7 @@ def evaluate(level, model):
             MODEL_ID,
             torch_dtype=torch.float16,
         )
+        model.to("cuda")
 
 
     if not os.path.exists('results'):
@@ -60,6 +61,7 @@ def evaluate(level, model):
             prompt = example['prompt']
         else:
             prompt = f"USER: <image>\n{example['prompt']}. Answer in one word only.\nASSISTANT:"
+
         inputs = processor(text=prompt, images=[test_image], return_tensors="pt").to("cuda")
 
         generated_ids = model.generate(**inputs, max_new_tokens=MAX_LENGTH)
