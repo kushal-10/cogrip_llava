@@ -27,10 +27,10 @@ def upload_to_hub(dataset, repo_name, token):
         token=token
     )
     
-    # Clean up the temporary directory
-    for filename in os.listdir(temp_dir):
-        os.remove(os.path.join(temp_dir, filename))
-    os.rmdir(temp_dir)
+    # # Clean up the temporary directory
+    # for filename in os.listdir(temp_dir):
+    #     os.remove(os.path.join(temp_dir, filename))
+    # os.rmdir(temp_dir)
 
 if __name__ == "__main__":
     
