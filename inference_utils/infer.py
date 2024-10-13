@@ -11,7 +11,7 @@ logging.basicConfig(filename=os.path.join('results', 'evaluation.log'), level=lo
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def evaluate(level, model, type='raw'):
+def evaluate(level, model):
     """
     Function to evaluate the Finetuned and base models
     """
@@ -23,19 +23,25 @@ def evaluate(level, model, type='raw'):
     test_dataset = hf_dataset['test']
     steps = len(test_dataset)
 
-    processor = AutoProcessor.from_pretrained(MODEL_ID)
+    if "-ft" in MODEL_ID:
+        processor = AutoProcessor.from_pretrained(MODEL_ID)
+        # Define quantization config
+        quantization_config = BitsAndBytesConfig(
+            load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16
+        )
+        # Load the base model with adapters on top
+        model = AutoModelForVision2Seq.from_pretrained(
+            MODEL_ID,
+            torch_dtype=torch.float16,
+            quantization_config=quantization_config,
+        )
+    else:
+        processor = AutoProcessor.from_pretrained(MODEL_ID)
+        model = AutoModelForVision2Seq.from_pretrained(
+            MODEL_ID,
+            torch_dtype=torch.float16,
+        )
 
-    # Define quantization config
-    quantization_config = BitsAndBytesConfig(
-        load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16
-    )
-
-    # Load the base model with adapters on top
-    model = AutoModelForVision2Seq.from_pretrained(
-        MODEL_ID,
-        torch_dtype=torch.float16,
-        quantization_config=quantization_config,
-    )
 
     if not os.path.exists('results'):
         os.makedirs('results')
@@ -50,7 +56,10 @@ def evaluate(level, model, type='raw'):
         test_image = example['image']
         image_id = example['image_string']
 
-        prompt = f"USER: <image>\n{example['prompt']}. Answer in one word only.\nASSISTANT:"
+        if "-ft" in MODEL_ID:
+            prompt = example['prompt']
+        else:
+            prompt = f"USER: <image>\n{example['prompt']}. Answer in one word only.\nASSISTANT:"
         inputs = processor(text=prompt, images=[test_image], return_tensors="pt").to("cuda")
 
         generated_ids = model.generate(**inputs, max_new_tokens=MAX_LENGTH)
