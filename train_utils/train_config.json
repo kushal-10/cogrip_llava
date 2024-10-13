@@ -5,11 +5,11 @@
     "MAX_LENGTH": 128,
     "WANDB_PROJECT": "individual-module",
     "WANDB_NAME": "ft_1.6_13b_vic",
-    "WORKERS": 0,
+    "WORKERS": 8,
     "R": 8,
     "ALPHA": 8,
     "DROPOUT": 0.1,
     "EPOCHS": 2,
     "LR": 1e-4,
-    "BATCH_SIZE": 2
+    "BATCH_SIZE": 1
 }
