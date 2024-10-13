@@ -115,14 +115,16 @@ api = HfApi()
 
 class PushToHubCallback(Callback):
     def on_train_epoch_end(self, trainer, pl_module):
-        print(f"Pushing model to the hub, epoch {trainer.current_epoch}")
-        pl_module.model.push_to_hub(REPO_ID,
-                                    commit_message=f"Training in progress, epoch {trainer.current_epoch}")
+        # Push model to the hub every 0.2 epochs
+        if trainer.current_epoch % 0.1 == 0:
+            print(f"Pushing model to the hub, epoch {trainer.current_epoch}")
+            pl_module.model.push_to_hub(REPO_ID,
+                                        commit_message=f"Training in progress, epoch {trainer.current_epoch}")
 
     def on_train_end(self, trainer, pl_module):
         print(f"Pushing model to the hub after training")
         pl_module.processor.push_to_hub(REPO_ID,
-                                    commit_message=f"Training done")
+                                        commit_message=f"Training done")
         pl_module.model.push_to_hub(REPO_ID,
                                     commit_message=f"Training done")
 
