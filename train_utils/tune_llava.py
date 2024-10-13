@@ -137,5 +137,3 @@ study.optimize(objective, n_trials=10)  # Optimize the objective function
 # Get the best hyperparameters
 best_params = study.best_params
 print("Best hyperparameters: ", best_params)
-
-# Use best_params to set up your final model training if needed

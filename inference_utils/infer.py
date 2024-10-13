@@ -7,6 +7,9 @@ import argparse
 import pandas as pd
 import logging
 
+logging.basicConfig(filename=os.path.join('results', 'evaluation.log'), level=logging.INFO, 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 def evaluate(level, model, type='raw'):
     """
