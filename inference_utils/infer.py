@@ -81,7 +81,6 @@ def evaluate(level, model):
 
         if i % 50 == 0:
             logging.info(f'Accuracy at step {i}: {check_acc/(i+1)}')
-            break
 
     
     save_name =MODEL_ID.split('/')[-1] + ".csv"
