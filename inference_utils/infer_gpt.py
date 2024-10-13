@@ -34,9 +34,6 @@ def evaluate_gpt(LEVEL='easy'):
         cleaned_image_path = example[image_path].strip('"')
         # print(os.path.exists(cleaned_image_path))
 
-        image_ids.append(cleaned_image_path)
-        gts.append(example[gt])
-
         # Getting the base64 string
         base64_image = encode_image(cleaned_image_path)
 
@@ -64,14 +61,19 @@ def evaluate_gpt(LEVEL='easy'):
             ]
             }
         ],
-        "max_tokens": 5
+        "max_tokens": 10
         }
 
         response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
 
-        generated_text = response.json()['choices'][0]['message']['content']
+        if response:
+            generated_text = response.json()['choices'][0]['message']['content']
 
-        predictions.append(generated_text.lower())
+            predictions.append(generated_text.lower())
+            image_ids.append(cleaned_image_path)
+            gts.append(example[gt])
+        else:
+            print("No response")
         
     gpt_responses = {
         'predictions': predictions,
