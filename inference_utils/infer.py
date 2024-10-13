@@ -77,7 +77,7 @@ def evaluate(level, model, type='raw'):
     }    
     infer_df = pd.DataFrame(infer_data)
     infer_df.to_csv(os.path.join('results', save_name), index=False)
-    logging.info(f'Saved dataframe to {os.path.join('results', save_name)}')
+    logging.info(f'Saved dataframe to {os.path.join("results", save_name)}')
 
 
 if __name__ == "__main__":
