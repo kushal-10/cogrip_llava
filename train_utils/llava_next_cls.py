@@ -1,6 +1,6 @@
 import lightning as L
 import torch
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, DistributedSampler
 import re
 from nltk import edit_distance
 import numpy as np
@@ -108,12 +108,13 @@ class LlavaNextModelPLModule(L.LightningModule):
         self.config = config
         self.processor = processor
         self.model = model
+        self.device = 'cuda'
 
         self.batch_size = config.get("batch_size")
 
     def training_step(self, batch, batch_idx):
-
-        input_ids, attention_mask, pixel_values, image_sizes, labels = batch
+        # Move inputs to the correct device
+        input_ids, attention_mask, pixel_values, image_sizes, labels = [x.to(self.device) for x in batch]
 
         outputs = self.model(input_ids=input_ids,
                             attention_mask=attention_mask,
@@ -128,8 +129,8 @@ class LlavaNextModelPLModule(L.LightningModule):
         return loss
     
     def validation_step(self, batch, batch_idx, dataset_idx=0):
-
-        input_ids, attention_mask, pixel_values, image_sizes, labels = batch
+        # Move inputs to the correct device
+        input_ids, attention_mask, pixel_values, image_sizes, labels = [x.to(self.device) for x in batch]
 
         outputs = self.model(input_ids=input_ids,
                             attention_mask=attention_mask,
@@ -139,7 +140,7 @@ class LlavaNextModelPLModule(L.LightningModule):
                           )
         loss = outputs.loss
 
-        self.log("train_loss", loss)
+        self.log("val_loss", loss)  # Changed to log validation loss
 
         return loss
     
@@ -149,7 +150,9 @@ class LlavaNextModelPLModule(L.LightningModule):
         return optimizer
 
     def train_dataloader(self):
-        return DataLoader(train_dataset, collate_fn=train_collate_fn, batch_size=self.batch_size, shuffle=True, num_workers=NUM_WORKERS)
+        train_sampler = DistributedSampler(train_dataset)  # Use DistributedSampler
+        return DataLoader(train_dataset, collate_fn=train_collate_fn, batch_size=self.batch_size, sampler=train_sampler, num_workers=NUM_WORKERS)
 
     def val_dataloader(self):
-        return DataLoader(val_dataset, collate_fn=eval_collate_fn, batch_size=self.batch_size, shuffle=False, num_workers=NUM_WORKERS)
+        val_sampler = DistributedSampler(val_dataset)  # Use DistributedSampler
+        return DataLoader(val_dataset, collate_fn=eval_collate_fn, batch_size=self.batch_size, sampler=val_sampler, num_workers=NUM_WORKERS)
