@@ -1,6 +1,6 @@
 from transformers import AutoProcessor
 from peft import LoraConfig, prepare_model_for_kbit_training, get_peft_model
-from transformers import BitsAndBytesConfig, LlavaForConditionalGeneration, AutoModelForVision2Seq
+from transformers import BitsAndBytesConfig, AutoModelForVision2Seq
 import torch
 import lightning as L
 from lightning.pytorch.callbacks import Callback
@@ -11,6 +11,7 @@ import json
 import os
 
 from train_utils.lightning_cls import LlavaModelPLModule
+from train_utils.llava_next_cls import LlavaNextModelPLModule
 
 """
 Refer - https://github.com/NielsRogge/Transformers-Tutorials/blob/master/LLaVa/Fine_tune_LLaVa_on_a_custom_dataset_(with_PyTorch_Lightning).ipynb
@@ -105,7 +106,10 @@ config = {"max_epochs": EPOCHS,
           "verbose": True,
 }
 
-model_module = LlavaModelPLModule(config, processor, model)
+if 'mistral' in MODEL_ID:
+    model_module = LlavaNextModelPLModule(config, processor, model)
+else:
+    model_module = LlavaModelPLModule(config, processor, model)
 
 api = HfApi()
 
