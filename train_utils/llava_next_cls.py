@@ -108,7 +108,6 @@ class LlavaNextModelPLModule(L.LightningModule):
         self.config = config
         self.processor = processor
         self.model = model
-        self.device = 'cuda'
 
         self.batch_size = config.get("batch_size")
 
