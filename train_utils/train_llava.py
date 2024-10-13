@@ -106,7 +106,7 @@ config = {"max_epochs": EPOCHS,
           "verbose": True,
 }
 
-if 'mistral' in MODEL_ID:
+if 'mistral' or 'vicuna' in MODEL_ID:
     model_module = LlavaNextModelPLModule(config, processor, model)
 else:
     model_module = LlavaModelPLModule(config, processor, model)
