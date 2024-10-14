@@ -5,7 +5,8 @@ import json
 from tqdm import tqdm
 from transformers import AutoProcessor, BitsAndBytesConfig, AutoModelForVision2Seq
 import torch
-import argparse  # Add this import
+import argparse 
+import numpy as np
 
 # LEVEL = 'easy'
 # BOARD_SIZE = 18
@@ -53,8 +54,8 @@ class LLaVAEval():
         for i in tqdm(range(len(self.metadata))):
             metadata_obj = self.metadata[i]
             info = metadata_obj['info']
-            agent_start_pos = metadata_obj['agent_start_pos']
-            target_pos = metadata_obj['target_pos']
+            agent_start_pos = np.array(metadata_obj['agent_start_pos'])
+            target_pos = np.array(metadata_obj['target_pos'])
 
             target_shape = metadata_obj['target_shape']
             target_color = metadata_obj['target_color']
