@@ -64,8 +64,27 @@ class LLaVAEval():
 
         return step_val
     
+    @staticmethod
+    def get_next_position(prediction, predicted_position):
+        if prediction == 'right':
+            predicted_position[0] += 1
+        elif prediction == 'left':
+            predicted_position[0] -= 1
+        elif prediction == 'up':
+            predicted_position[1] -= 1
+        elif prediction == 'down':
+            predicted_position[1] += 1
+
+        return predicted_position
+
+    
     def evaluate(self, model, processor):
         MODEL_ID = self.model_name
+
+        final_moves = []
+        final_positions = []
+        target_positions = []
+        
         for i in tqdm(range(len(self.metadata))):
             metadata_obj = self.metadata[i]
             info = metadata_obj['info']
@@ -87,6 +106,8 @@ class LLaVAEval():
             image = env.render()
             image = Image.fromarray(image)
 
+            predicted_position = agent_start_pos
+            final_move = ""
             for i in range(self.max_moves):
                 inputs = processor(text=prompt, images=[image], return_tensors="pt").to("cuda")
                 generated_ids = model.generate(**inputs, max_new_tokens=self.max_len)
@@ -99,12 +120,20 @@ class LLaVAEval():
                 image = env.render()
                 image = Image.fromarray(image)
 
-                print(move, i)
+                predicted_position = self.get_next_position(move, predicted_position)
 
+                print(move, predicted_position, target_pos)
                 if move == 'grip':
+                    final_move = 'grip'
                     break
 
+                final_move = move
+                
+
             break
+
+            
+
 
 
 if __name__ == '__main__':
