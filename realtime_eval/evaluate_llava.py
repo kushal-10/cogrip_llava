@@ -49,6 +49,21 @@ class LLaVAEval():
 
         return model, processor
     
+    @staticmethod
+    def convert_move_to_step(move_str):
+        if move_str == 'up':
+            step_val = 3
+        elif move_str == 'down':
+            step_val = 1
+        elif move_str == 'left':
+            step_val = 2
+        elif move_str == 'right':
+            step_val = 0
+        else:
+            step_val = 4 # Do nothing/Grip
+
+        return step_val
+    
     def evaluate(self, model, processor):
         MODEL_ID = self.model_name
         for i in tqdm(range(len(self.metadata))):
@@ -72,15 +87,22 @@ class LLaVAEval():
             image = env.render()
             image = Image.fromarray(image)
 
+            for i in range(self.max_moves):
+                inputs = processor(text=prompt, images=[image], return_tensors="pt").to("cuda")
+                generated_ids = model.generate(**inputs, max_new_tokens=self.max_len)
+                generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
+                # Extract move
+                move = generated_texts[0].split('ASSISTANT:')[-1].strip()
+                move = move.lower()
 
-            inputs = processor(text=prompt, images=[image], return_tensors="pt").to("cuda")
-            generated_ids = model.generate(**inputs, max_new_tokens=self.max_len)
-            generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
-            # Extract move
-            move = generated_texts[0].split('ASSISTANT:')[-1].strip()
-            move = move.lower()
+                env.step(self.convert_move_to_step(move))
+                image = env.render()
+                image = Image.fromarray(image)
 
-            print(move)
+                print(move, i)
+
+                if move == 'grip':
+                    break
 
             break
 
