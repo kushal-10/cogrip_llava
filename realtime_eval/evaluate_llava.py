@@ -144,7 +144,7 @@ class LLaVAEval():
 
             break
         
-        model_save_name = MODEL_ID.split('/')[-1].aplit('.csv')[0]
+        model_save_name = MODEL_ID.split('/')[-1].split('.csv')[0]
         prediciton_data = {
             'last_move': final_moves,
             'predicted_position': final_positions,
