@@ -141,8 +141,6 @@ class LLaVAEval():
             target_colours.append(target_color)
             target_regions.append(target_region)
             target_shapes.append(target_shape)
-
-            break
         
         model_save_name = MODEL_ID.split('/')[-1].split('.csv')[0]
         prediciton_data = {
