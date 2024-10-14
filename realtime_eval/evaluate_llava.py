@@ -7,9 +7,13 @@ from transformers import AutoProcessor, BitsAndBytesConfig, AutoModelForVision2S
 import torch
 import argparse 
 import numpy as np
+import pandas as pd
 
 # LEVEL = 'easy'
 # BOARD_SIZE = 18
+
+if not os.path.exists('realtime_results'):
+    os.makedirs('realtime_results')
 
 class LLaVAEval():
 
@@ -84,6 +88,9 @@ class LLaVAEval():
         final_moves = []
         final_positions = []
         target_positions = []
+        target_shapes = []
+        target_colours = []
+        target_regions = []
         
         for i in tqdm(range(len(self.metadata))):
             metadata_obj = self.metadata[i]
@@ -107,7 +114,7 @@ class LLaVAEval():
             image = Image.fromarray(image)
 
             predicted_position = agent_start_pos
-            final_move = ""
+   
             for i in range(self.max_moves):
                 inputs = processor(text=prompt, images=[image], return_tensors="pt").to("cuda")
                 generated_ids = model.generate(**inputs, max_new_tokens=self.max_len)
@@ -122,18 +129,33 @@ class LLaVAEval():
 
                 predicted_position = self.get_next_position(move, predicted_position)
 
-                print(move, predicted_position, target_pos)
-                if move == 'grip':
-                    final_move = 'grip'
-                    break
-
                 final_move = move
-                
+                final_position = predicted_position
+
+                if move == 'grip':
+                    break
+            
+            final_moves.append(final_move)
+            final_positions.append(final_position)
+            target_positions.append(target_pos)
+            target_colours.append(target_color)
+            target_regions.append(target_region)
+            target_shapes.append(target_shape)
 
             break
+        
+        model_save_name = MODEL_ID.split('/')[-1].aplit('.csv')[0]
+        prediciton_data = {
+            'last_move': final_moves,
+            'predicted_position': final_positions,
+            'target_position': target_positions,
+            'shape': target_shapes,
+            'region': target_regions,
+            'color': target_colours
+        }
 
-            
-
+        pred_df = pd.DataFrame(prediciton_data)
+        pred_df.to_csv(os.path.join('realtime_results', f'{model_save_name}.csv'))
 
 
 if __name__ == '__main__':
