@@ -93,4 +93,51 @@ This saves `hf_dataset_{level}` under `training_data`. Set the level parameter i
 python3 train_utils/train_llava.py
 ```
 
-Setup WandB, HF repo credentials accordingly
+Setup training details like model name, HF repo, wandb details etc. in `train_utils/train_config.json` 
+
+
+#### Evaluation
+
+##### 1) Evaluate llava models
+
+```bash
+python3 inference_utils/infer.py --level easy --model llava-hf/llava-1.5-7b-hf 
+```
+Similary evaluation can be done for other levels and other (finetuned + base) models. A list of fine tuned models can be found here - [https://huggingface.co/collections/Koshti10/ft-llava-pentomino-6709232fab7608a3f0c622d6](huggingface.co/collections/Koshti10/ft-llava-pentomino)
+
+This saves a model.csv file under `results` that contains the ground truths and predictions
+
+##### 2) Evaluate GPT models
+
+```bash
+export OPENAI_API_KEY="sk-....."
+python3 inference_utils/gpt.py --level easy
+```
+
+This saves a gpt.csv file under `results` that contains the ground truths and predictions
+
+
+##### 3) Tabulate results
+
+```bash
+python3 inference_utils/eval.py
+```
+To generate a csv file containing the accuracy and success rate scores for all available models and saves as `results/results.csv`
+
+
+#### Real-time Evaluation - Offline RL
+
+##### 1) Create test board data
+
+```bash
+ python realtime_eval/create_boards.py --board_size 18 --num_pieces 4 --shapes "P T X Z U W" --colours "red blue green yellow magenta cyan" --num_boards 20 --level easy --path realtime_eval
+```
+
+This saves a metadata_level.json under `realtime_eval` folder
+
+##### 2) Evaluate models
+
+
+
+
+
