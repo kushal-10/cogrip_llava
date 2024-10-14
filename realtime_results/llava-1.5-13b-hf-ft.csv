@@ -1,2 +1,721 @@
 ,last_move,predicted_position,target_position,shape,region,color
 0,grip,[7 3],[7 3],P,top,red
+1,grip,[13  2],[13  2],P,top right,red
+2,grip,[11  8],[11  8],P,center,red
+3,grip,[13  2],[13  2],P,top right,red
+4,grip,[ 5 13],[ 5 13],P,bottom left,red
+5,grip,[10  6],[10  6],P,center,red
+6,grip,[4 5],[4 5],P,top left,red
+7,grip,[8 8],[8 8],P,center,red
+8,grip,[ 6 11],[ 6 11],P,center,red
+9,grip,[6 3],[6 3],P,top,red
+10,grip,[ 5 15],[ 5 15],P,bottom left,red
+11,grip,[4 5],[4 5],P,top left,red
+12,grip,[12  2],[12  2],P,top,red
+13,grip,[8 4],[8 4],P,top,red
+14,grip,[16  7],[16  7],P,right,red
+15,grip,[9 4],[9 4],P,top,red
+16,grip,[10 15],[10 15],P,bottom,red
+17,right down right,[12  9],[16 13],P,bottom right,red
+18,down left,[6 9],[ 3 15],P,bottom left,red
+19,grip,[11 16],[11 16],P,bottom,red
+20,grip,[ 4 12],[ 4 12],P,left,blue
+21,grip,[ 4 13],[ 4 13],P,bottom left,blue
+22,grip,[13  8],[13  8],P,right,blue
+23,grip,[10  8],[10  8],P,center,blue
+24,down left,[4 9],[ 2 13],P,bottom left,blue
+25,grip,[6 2],[6 2],P,top,blue
+26,grip,[14  9],[14  9],P,right,blue
+27,grip,[13 12],[13 12],P,right,blue
+28,grip,[4 6],[4 6],P,left,blue
+29,down right,[10  9],[15 16],P,bottom right,blue
+30,grip,[ 4 13],[ 4 13],P,bottom left,blue
+31,grip,[16  5],[16  5],P,top right,blue
+32,grip,[9 3],[9 3],P,top,blue
+33,grip,[10  5],[10  5],P,top,blue
+34,down left,[9 9],[ 3 16],P,bottom left,blue
+35,grip,[15  8],[15  8],P,right,blue
+36,grip,[8 2],[8 2],P,top,blue
+37,grip,[15  6],[15  6],P,right,blue
+38,grip,[6 2],[6 2],P,top,blue
+39,down right,[9 9],[13 15],P,bottom right,blue
+40,grip,[9 7],[9 7],P,center,green
+41,grip,[10  8],[10  8],P,center,green
+42,grip,[12  6],[12  6],P,center,green
+43,grip,[14  3],[14  3],P,top right,green
+44,down right,[10 10],[14 16],P,bottom right,green
+45,grip,[10 16],[10 16],P,bottom,green
+46,grip,[6 4],[6 4],P,top,green
+47,right,[14  9],[15 11],P,right,green
+48,grip,[9 6],[9 6],P,center,green
+49,grip,[14  9],[14  9],P,right,green
+50,up left,[4 9],[2 7],P,left,green
+51,grip,[ 9 12],[ 9 12],P,center,green
+52,grip,[6 9],[6 9],P,center,green
+53,up left,[6 9],[2 2],P,top left,green
+54,grip,[ 9 13],[ 9 13],P,bottom,green
+55,down right,[11  9],[13 14],P,bottom right,green
+56,grip,[2 9],[2 9],P,left,green
+57,down right,[12  9],[13 14],P,bottom right,green
+58,grip,[12  6],[12  6],P,center,green
+59,grip,[5 3],[5 3],P,top left,green
+60,grip,[ 2 11],[ 2 11],P,left,yellow
+61,grip,[12  9],[12  9],P,center,yellow
+62,grip,[ 3 10],[ 3 10],P,left,yellow
+63,grip,[11  3],[11  3],P,top,yellow
+64,grip,[14  8],[14  8],P,right,yellow
+65,grip,[13  7],[13  7],P,right,yellow
+66,down left,[3 9],[ 2 13],P,bottom left,yellow
+67,right down right,[13  9],[15 11],P,right,yellow
+68,down right,[11 10],[13 14],P,bottom right,yellow
+69,grip,[ 6 16],[ 6 16],P,bottom,yellow
+70,down left,[4 9],[ 2 14],P,bottom left,yellow
+71,down left,[4 9],[ 2 15],P,bottom left,yellow
+72,grip,[10  7],[10  7],P,center,yellow
+73,grip,[11  8],[11  8],P,center,yellow
+74,grip,[ 8 10],[ 8 10],P,center,yellow
+75,grip,[2 5],[2 5],P,top left,yellow
+76,grip,[12  2],[12  2],P,top,yellow
+77,grip,[15  8],[15  8],P,right,yellow
+78,grip,[ 9 10],[ 9 10],P,center,yellow
+79,grip,[8 6],[8 6],P,center,yellow
+80,grip,[ 2 11],[ 2 11],P,left,cyan
+81,grip,[ 7 10],[ 7 10],P,center,cyan
+82,grip,[ 6 14],[ 6 14],P,bottom,cyan
+83,grip,[12  4],[12  4],P,top,cyan
+84,grip,[2 3],[2 3],P,top left,cyan
+85,right right right right right right right right right right,[12  9],[16  9],P,right,cyan
+86,grip,[16  7],[16  7],P,right,cyan
+87,grip,[3 7],[3 7],P,left,cyan
+88,grip,[11 14],[11 14],P,bottom,cyan
+89,grip,[14  6],[14  6],P,right,cyan
+90,grip,[4 7],[4 7],P,left,cyan
+91,grip,[11  4],[11  4],P,top,cyan
+92,grip,[11  4],[11  4],P,top,cyan
+93,down right,[14  9],[15 11],P,right,cyan
+94,grip,[10 12],[10 12],P,center,cyan
+95,grip,[16  9],[16  9],P,right,cyan
+96,grip,[16  7],[16  7],P,right,cyan
+97,down left,[5 9],[ 2 15],P,bottom left,cyan
+98,grip,[13  9],[13  9],P,right,cyan
+99,grip,[6 4],[6 4],P,top,cyan
+100,grip,[4 2],[4 2],P,top left,magenta
+101,grip,[ 5 13],[ 5 13],P,bottom left,magenta
+102,down right,[12  9],[16 15],P,bottom right,magenta
+103,down right,[14  9],[16 13],P,bottom right,magenta
+104,grip,[4 4],[4 4],P,top left,magenta
+105,grip,[14  6],[14  6],P,right,magenta
+106,grip,[ 9 11],[ 9 11],P,center,magenta
+107,right down,[11 13],[13 15],P,bottom right,magenta
+108,grip,[3 8],[3 8],P,left,magenta
+109,right down,[12 12],[13 13],P,bottom right,magenta
+110,grip,[8 8],[8 8],P,center,magenta
+111,down right,[12 11],[13 14],P,bottom right,magenta
+112,grip,[10  2],[10  2],P,top,magenta
+113,grip,[ 7 15],[ 7 15],P,bottom,magenta
+114,grip,[13  8],[13  8],P,right,magenta
+115,grip,[10 14],[10 14],P,bottom,magenta
+116,down left,[4 9],[ 2 14],P,bottom left,magenta
+117,grip,[15  2],[15  2],P,top right,magenta
+118,grip,[9 4],[9 4],P,top,magenta
+119,grip,[15  6],[15  6],P,right,magenta
+120,grip,[14  6],[14  6],T,right,red
+121,left,[3 2],[3 2],T,top left,red
+122,grip,[ 7 13],[ 7 13],T,bottom,red
+123,grip,[13 11],[13 11],T,right,red
+124,grip,[ 4 11],[ 4 11],T,left,red
+125,grip,[ 6 16],[ 6 16],T,bottom,red
+126,grip,[ 9 15],[ 9 15],T,bottom,red
+127,grip,[16 12],[16 12],T,right,red
+128,grip,[5 4],[5 4],T,top left,red
+129,grip,[15  9],[15  9],T,right,red
+130,grip,[15  9],[15  9],T,right,red
+131,grip,[8 9],[8 9],T,center,red
+132,grip,[8 3],[8 3],T,top,red
+133,grip,[ 8 14],[ 8 14],T,bottom,red
+134,grip,[11 13],[11 13],T,bottom,red
+135,grip,[ 6 13],[ 6 13],T,bottom,red
+136,grip,[10 16],[10 16],T,bottom,red
+137,grip,[ 7 11],[ 7 11],T,center,red
+138,grip,[ 4 11],[ 4 11],T,left,red
+139,grip,[5 7],[5 7],T,left,red
+140,grip,[6 5],[6 5],T,top,blue
+141,grip,[ 8 13],[ 8 13],T,bottom,blue
+142,grip,[5 2],[5 2],T,top left,blue
+143,down right,[12 10],[14 14],T,bottom right,blue
+144,down,[16 10],[16 12],T,right,blue
+145,grip,[ 3 11],[ 3 11],T,left,blue
+146,grip,[2 7],[2 7],T,left,blue
+147,grip,[8 3],[8 3],T,top,blue
+148,grip,[2 9],[2 9],T,left,blue
+149,grip,[15  2],[15  2],T,top right,blue
+150,grip,[6 3],[6 3],T,top,blue
+151,grip,[11  4],[11  4],T,top,blue
+152,grip,[7 5],[7 5],T,top,blue
+153,grip,[3 6],[3 6],T,left,blue
+154,grip,[ 7 16],[ 7 16],T,bottom,blue
+155,grip,[ 7 10],[ 7 10],T,center,blue
+156,grip,[11  7],[11  7],T,center,blue
+157,grip,[9 3],[9 3],T,top,blue
+158,grip,[6 7],[6 7],T,center,blue
+159,grip,[ 6 13],[ 6 13],T,bottom,blue
+160,grip,[4 7],[4 7],T,left,green
+161,grip,[ 9 11],[ 9 11],T,center,green
+162,grip,[6 8],[6 8],T,center,green
+163,grip,[12  7],[12  7],T,center,green
+164,grip,[12 10],[12 10],T,center,green
+165,up left,[8 7],[2 2],T,top left,green
+166,grip,[ 8 12],[ 8 12],T,center,green
+167,grip,[11  6],[11  6],T,center,green
+168,down,[12 12],[13 13],T,bottom right,green
+169,right right right right right right right right right right,[12  9],[16  9],T,right,green
+170,grip,[ 6 14],[ 6 14],T,bottom,green
+171,grip,[16  8],[16  8],T,right,green
+172,grip,[6 8],[6 8],T,center,green
+173,grip,[6 8],[6 8],T,center,green
+174,grip,[6 7],[6 7],T,center,green
+175,grip,[ 5 13],[ 5 13],T,bottom left,green
+176,grip,[4 5],[4 5],T,top left,green
+177,grip,[13  8],[13  8],T,right,green
+178,down right,[14  9],[16 14],T,bottom right,green
+179,grip,[3 8],[3 8],T,left,green
+180,grip,[ 7 14],[ 7 14],T,bottom,yellow
+181,down,[12 10],[14 15],T,bottom right,yellow
+182,grip,[12 11],[12 11],T,center,yellow
+183,grip,[13 13],[13 13],T,bottom right,yellow
+184,grip,[9 7],[9 7],T,center,yellow
+185,grip,[8 5],[8 5],T,top,yellow
+186,grip,[ 9 10],[ 9 10],T,center,yellow
+187,grip,[4 9],[4 9],T,left,yellow
+188,grip,[6 7],[6 7],T,center,yellow
+189,grip,[ 3 10],[ 3 10],T,left,yellow
+190,grip,[9 7],[9 7],T,center,yellow
+191,grip,[14  4],[14  4],T,top right,yellow
+192,grip,[ 8 15],[ 8 15],T,bottom,yellow
+193,grip,[ 5 10],[ 5 10],T,left,yellow
+194,grip,[13  7],[13  7],T,right,yellow
+195,grip,[ 9 12],[ 9 12],T,center,yellow
+196,grip,[13  6],[13  6],T,right,yellow
+197,grip,[ 5 11],[ 5 11],T,left,yellow
+198,grip,[11 10],[11 10],T,center,yellow
+199,down right,[12  9],[15 16],T,bottom right,yellow
+200,grip,[5 2],[5 2],T,top left,cyan
+201,grip,[12 14],[12 14],T,bottom,cyan
+202,up,[4 3],[2 3],T,top left,cyan
+203,down left,[3 9],[ 2 13],T,bottom left,cyan
+204,grip,[ 3 10],[ 3 10],T,left,cyan
+205,grip,[15  5],[15  5],T,top right,cyan
+206,grip,[ 6 13],[ 6 13],T,bottom,cyan
+207,right,[13 10],[14 14],T,bottom right,cyan
+208,grip,[7 9],[7 9],T,center,cyan
+209,grip,[7 5],[7 5],T,top,cyan
+210,grip,[2 6],[2 6],T,left,cyan
+211,down right,[ 9 11],[14 16],T,bottom right,cyan
+212,grip,[6 3],[6 3],T,top,cyan
+213,grip,[8 6],[8 6],T,center,cyan
+214,up,[6 5],[2 2],T,top left,cyan
+215,grip,[13 12],[13 12],T,right,cyan
+216,right down right,[12  9],[16 13],T,bottom right,cyan
+217,grip,[8 5],[8 5],T,top,cyan
+218,grip,[ 7 14],[ 7 14],T,bottom,cyan
+219,grip,[15 11],[15 11],T,right,cyan
+220,grip,[4 6],[4 6],T,left,magenta
+221,grip,[12 11],[12 11],T,center,magenta
+222,down left,[7 9],[ 3 15],T,bottom left,magenta
+223,grip,[12  3],[12  3],T,top,magenta
+224,grip,[ 8 13],[ 8 13],T,bottom,magenta
+225,grip,[6 2],[6 2],T,top,magenta
+226,down left,[ 8 11],[ 4 15],T,bottom left,magenta
+227,grip,[12  5],[12  5],T,top,magenta
+228,grip,[15  5],[15  5],T,top right,magenta
+229,right right right right right right right right right right,[12  9],[15 10],T,right,magenta
+230,grip,[12  8],[12  8],T,center,magenta
+231,grip,[ 6 13],[ 6 13],T,bottom,magenta
+232,grip,[13  5],[13  5],T,top right,magenta
+233,grip,[ 7 11],[ 7 11],T,center,magenta
+234,grip,[2 6],[2 6],T,left,magenta
+235,grip,[12  2],[12  2],T,top,magenta
+236,grip,[3 7],[3 7],T,left,magenta
+237,grip,[8 7],[8 7],T,center,magenta
+238,grip,[10 15],[10 15],T,bottom,magenta
+239,grip,[12 12],[12 12],T,center,magenta
+240,right down right,[12  9],[16 13],U,bottom right,red
+241,down left,[ 9 11],[ 5 15],U,bottom left,red
+242,grip,[ 9 16],[ 9 16],U,bottom,red
+243,grip,[9 8],[9 8],U,center,red
+244,grip,[13 11],[13 11],U,right,red
+245,grip,[13 10],[13 10],U,right,red
+246,grip,[2 3],[2 3],U,top left,red
+247,grip,[ 6 15],[ 6 15],U,bottom,red
+248,grip,[10  3],[10  3],U,top,red
+249,grip,[ 9 11],[ 9 11],U,center,red
+250,grip,[ 4 11],[ 4 11],U,left,red
+251,grip,[14 10],[14 10],U,right,red
+252,grip,[13  6],[13  6],U,right,red
+253,grip,[10 10],[10 10],U,center,red
+254,grip,[ 6 10],[ 6 10],U,center,red
+255,right right right right right right right right right right,[11  9],[16 10],U,right,red
+256,grip,[11 13],[11 13],U,bottom,red
+257,grip,[15  5],[15  5],U,top right,red
+258,grip,[13 11],[13 11],U,right,red
+259,right,[15  6],[16  3],U,top right,red
+260,grip,[14  8],[14  8],U,right,blue
+261,left down,[ 7 11],[ 5 14],U,bottom left,blue
+262,right,[12  9],[13 11],U,right,blue
+263,down left,[8 9],[ 4 14],U,bottom left,blue
+264,grip,[4 4],[4 4],U,top left,blue
+265,grip,[8 9],[7 9],U,center,blue
+266,down right,[11  9],[15 16],U,bottom right,blue
+267,grip,[11  8],[11  8],U,center,blue
+268,grip,[11 10],[11 10],U,center,blue
+269,up left,[6 4],[5 3],U,top left,blue
+270,grip,[ 6 16],[ 6 16],U,bottom,blue
+271,down right,[ 9 11],[13 16],U,bottom right,blue
+272,down left,[ 8 11],[ 3 16],U,bottom left,blue
+273,grip,[ 4 12],[ 4 12],U,left,blue
+274,left down,[7 9],[ 2 16],U,bottom left,blue
+275,grip,[14  7],[14  7],U,right,blue
+276,grip,[4 6],[4 6],U,left,blue
+277,grip,[11  8],[11  8],U,center,blue
+278,grip,[14  3],[14  3],U,top right,blue
+279,down left,[4 9],[ 2 13],U,bottom left,blue
+280,grip,[13  4],[13  4],U,top right,green
+281,grip,[12  3],[12  3],U,top,green
+282,grip,[12  8],[12  8],U,center,green
+283,grip,[10  2],[10  2],U,top,green
+284,grip,[ 3 10],[ 3 10],U,left,green
+285,grip,[7 7],[7 7],U,center,green
+286,grip,[6 4],[6 4],U,top,green
+287,grip,[10 12],[10 12],U,center,green
+288,grip,[16  5],[16  5],U,top right,green
+289,down right,[12  9],[16 16],U,bottom right,green
+290,right down,[12  9],[15 12],U,right,green
+291,grip,[14  2],[14  2],U,top right,green
+292,grip,[9 4],[9 4],U,top,green
+293,grip,[12  5],[12  5],U,top,green
+294,grip,[ 9 15],[ 9 15],U,bottom,green
+295,grip,[10  6],[10  6],U,center,green
+296,up right,[12  7],[14  3],U,top right,green
+297,grip,[ 8 16],[ 8 16],U,bottom,green
+298,grip,[ 8 16],[ 8 16],U,bottom,green
+299,grip,[10 11],[10 11],U,center,green
+300,grip,[ 5 12],[ 5 12],U,left,yellow
+301,right down right,[11  9],[16 13],U,bottom right,yellow
+302,grip,[11  9],[11  9],U,center,yellow
+303,grip,[4 8],[4 8],U,left,yellow
+304,grip,[8 3],[8 3],U,top,yellow
+305,grip,[ 8 13],[ 8 13],U,bottom,yellow
+306,grip,[7 5],[7 5],U,top,yellow
+307,left,[6 8],[3 2],U,top left,yellow
+308,grip,[10  8],[10  8],U,center,yellow
+309,grip,[ 2 12],[ 2 12],U,left,yellow
+310,grip,[10 13],[10 13],U,bottom,yellow
+311,grip,[ 2 10],[ 2 10],U,left,yellow
+312,down left,[4 9],[ 2 14],U,bottom left,yellow
+313,grip,[15  8],[15  8],U,right,yellow
+314,grip,[9 7],[9 7],U,center,yellow
+315,grip,[11  9],[11  9],U,center,yellow
+316,grip,[15  5],[15  5],U,top right,yellow
+317,grip,[11  8],[11  8],U,center,yellow
+318,left,[6 8],[3 4],U,top left,yellow
+319,grip,[16  6],[16  6],U,right,yellow
+320,down right,[10  9],[15 16],U,bottom right,cyan
+321,left,[4 9],[ 3 12],U,left,cyan
+322,grip,[8 2],[8 2],U,top,cyan
+323,grip,[10 11],[10 11],U,center,cyan
+324,grip,[14  8],[14  8],U,right,cyan
+325,grip,[13  7],[13  7],U,right,cyan
+326,down,[ 3 12],[ 2 13],U,bottom left,cyan
+327,right down right,[12  9],[15 11],U,right,cyan
+328,down right,[10 10],[13 14],U,bottom right,cyan
+329,grip,[ 6 16],[ 6 16],U,bottom,cyan
+330,left down,[5 9],[ 2 14],U,bottom left,cyan
+331,down left,[6 9],[ 2 15],U,bottom left,cyan
+332,grip,[10  7],[10  7],U,center,cyan
+333,grip,[11  8],[11  8],U,center,cyan
+334,grip,[ 8 10],[ 8 10],U,center,cyan
+335,grip,[2 5],[2 5],U,top left,cyan
+336,grip,[12  2],[12  2],U,top,cyan
+337,grip,[15  8],[15  8],U,right,cyan
+338,grip,[ 9 10],[ 9 10],U,center,cyan
+339,grip,[8 6],[8 6],U,center,cyan
+340,grip,[ 2 11],[ 2 11],U,left,magenta
+341,grip,[ 7 10],[ 7 10],U,center,magenta
+342,grip,[ 6 14],[ 6 14],U,bottom,magenta
+343,grip,[12  4],[12  4],U,top,magenta
+344,left,[4 6],[2 3],U,top left,magenta
+345,grip,[16  9],[16  9],U,right,magenta
+346,grip,[16  7],[16  7],U,right,magenta
+347,grip,[3 7],[3 7],U,left,magenta
+348,grip,[11 14],[11 14],U,bottom,magenta
+349,grip,[14  6],[14  6],U,right,magenta
+350,grip,[4 7],[4 7],U,left,magenta
+351,grip,[11  4],[11  4],U,top,magenta
+352,grip,[11  4],[11  4],U,top,magenta
+353,right down right,[12  9],[15 11],U,right,magenta
+354,grip,[10 12],[10 12],U,center,magenta
+355,grip,[16  9],[16  9],U,right,magenta
+356,grip,[16  7],[16  7],U,right,magenta
+357,down left,[5 9],[ 2 15],U,bottom left,magenta
+358,grip,[13  9],[13  9],U,right,magenta
+359,grip,[6 4],[6 4],U,top,magenta
+360,grip,[4 2],[4 2],W,top left,red
+361,grip,[ 5 13],[ 5 13],W,bottom left,red
+362,down right,[13  9],[16 15],W,bottom right,red
+363,right down right,[14  9],[16 13],W,bottom right,red
+364,grip,[4 4],[4 4],W,top left,red
+365,grip,[14  6],[14  6],W,right,red
+366,grip,[ 9 11],[ 9 11],W,center,red
+367,grip,[13 15],[13 15],W,bottom right,red
+368,grip,[3 8],[3 8],W,left,red
+369,grip,[13 13],[13 13],W,bottom right,red
+370,grip,[8 8],[8 8],W,center,red
+371,down right,[11 11],[13 14],W,bottom right,red
+372,grip,[10  2],[10  2],W,top,red
+373,grip,[ 7 15],[ 7 15],W,bottom,red
+374,grip,[13  8],[13  8],W,right,red
+375,grip,[10 14],[10 14],W,bottom,red
+376,down left,[ 4 10],[ 2 14],W,bottom left,red
+377,grip,[15  2],[15  2],W,top right,red
+378,grip,[9 4],[9 4],W,top,red
+379,grip,[15  6],[15  6],W,right,red
+380,grip,[14  6],[14  6],W,right,blue
+381,left,[5 5],[3 2],W,top left,blue
+382,grip,[ 7 13],[ 7 13],W,bottom,blue
+383,grip,[13 11],[13 11],W,right,blue
+384,grip,[ 4 11],[ 4 11],W,left,blue
+385,grip,[ 6 16],[ 6 16],W,bottom,blue
+386,grip,[ 9 15],[ 9 15],W,bottom,blue
+387,down right,[15  9],[16 12],W,right,blue
+388,grip,[5 4],[5 4],W,top left,blue
+389,grip,[15  9],[15  9],W,right,blue
+390,grip,[15  9],[15  9],W,right,blue
+391,grip,[8 9],[8 9],W,center,blue
+392,grip,[8 3],[8 3],W,top,blue
+393,grip,[ 8 14],[ 8 14],W,bottom,blue
+394,grip,[11 13],[11 13],W,bottom,blue
+395,grip,[ 6 13],[ 6 13],W,bottom,blue
+396,grip,[10 16],[10 16],W,bottom,blue
+397,grip,[ 7 11],[ 7 11],W,center,blue
+398,grip,[ 4 11],[ 4 11],W,left,blue
+399,grip,[5 7],[5 7],W,left,blue
+400,grip,[6 5],[6 5],W,top,green
+401,grip,[ 8 13],[ 8 13],W,bottom,green
+402,up,[6 3],[5 2],W,top left,green
+403,down right,[12  9],[14 14],W,bottom right,green
+404,grip,[16 12],[16 12],W,right,green
+405,grip,[ 3 11],[ 3 11],W,left,green
+406,grip,[2 7],[2 7],W,left,green
+407,grip,[8 3],[8 3],W,top,green
+408,grip,[2 9],[2 9],W,left,green
+409,right,[15  3],[15  2],W,top right,green
+410,grip,[6 3],[6 3],W,top,green
+411,grip,[11  4],[11  4],W,top,green
+412,grip,[7 5],[7 5],W,top,green
+413,left,[5 7],[3 6],W,left,green
+414,grip,[ 7 16],[ 7 16],W,bottom,green
+415,grip,[ 7 10],[ 7 10],W,center,green
+416,grip,[11  7],[11  7],W,center,green
+417,grip,[9 3],[9 3],W,top,green
+418,up,[ 5 -7],[6 7],W,center,green
+419,grip,[ 6 13],[ 6 13],W,bottom,green
+420,grip,[4 7],[4 7],W,left,yellow
+421,grip,[ 9 11],[ 9 11],W,center,yellow
+422,grip,[6 8],[6 8],W,center,yellow
+423,grip,[11  7],[12  7],W,center,yellow
+424,grip,[12 10],[12 10],W,center,yellow
+425,up left,[6 9],[2 2],W,top left,yellow
+426,grip,[ 8 12],[ 8 12],W,center,yellow
+427,grip,[11  6],[11  6],W,center,yellow
+428,down,[12 13],[13 13],W,bottom right,yellow
+429,grip,[16  9],[16  9],W,right,yellow
+430,grip,[ 6 14],[ 6 14],W,bottom,yellow
+431,grip,[16  8],[16  8],W,right,yellow
+432,grip,[6 8],[6 8],W,center,yellow
+433,grip,[6 8],[6 8],W,center,yellow
+434,grip,[6 7],[6 7],W,center,yellow
+435,down left,[ 7 10],[ 5 13],W,bottom left,yellow
+436,grip,[4 5],[4 5],W,top left,yellow
+437,grip,[13  8],[13  8],W,right,yellow
+438,down right,[13  9],[16 14],W,bottom right,yellow
+439,grip,[3 8],[3 8],W,left,yellow
+440,grip,[ 7 14],[ 7 14],W,bottom,cyan
+441,down right,[ 9 10],[14 15],W,bottom right,cyan
+442,grip,[12 11],[12 11],W,center,cyan
+443,grip,[13 13],[13 13],W,bottom right,cyan
+444,grip,[9 7],[9 7],W,center,cyan
+445,grip,[8 5],[8 5],W,top,cyan
+446,grip,[ 9 10],[ 9 10],W,center,cyan
+447,grip,[4 9],[4 9],W,left,cyan
+448,grip,[6 7],[6 7],W,center,cyan
+449,grip,[ 3 10],[ 3 10],W,left,cyan
+450,grip,[9 7],[9 7],W,center,cyan
+451,grip,[14  4],[14  4],W,top right,cyan
+452,grip,[ 8 15],[ 8 15],W,bottom,cyan
+453,grip,[ 5 10],[ 5 10],W,left,cyan
+454,grip,[13  7],[13  7],W,right,cyan
+455,grip,[ 9 12],[ 9 12],W,center,cyan
+456,grip,[13  6],[13  6],W,right,cyan
+457,grip,[ 5 11],[ 5 11],W,left,cyan
+458,grip,[11 10],[11 10],W,center,cyan
+459,down right,[9 9],[15 16],W,bottom right,cyan
+460,grip,[5 2],[5 2],W,top left,magenta
+461,grip,[12 14],[12 14],W,bottom,magenta
+462,up left,[5 7],[2 3],W,top left,magenta
+463,left down,[5 9],[ 2 13],W,bottom left,magenta
+464,grip,[ 3 10],[ 3 10],W,left,magenta
+465,grip,[15  5],[15  5],W,top right,magenta
+466,grip,[ 6 13],[ 6 13],W,bottom,magenta
+467,down right,[12 11],[14 14],W,bottom right,magenta
+468,grip,[7 9],[7 9],W,center,magenta
+469,grip,[7 5],[7 5],W,top,magenta
+470,grip,[2 6],[2 6],W,left,magenta
+471,down right,[9 9],[14 16],W,bottom right,magenta
+472,grip,[6 3],[6 3],W,top,magenta
+473,grip,[8 6],[8 6],W,center,magenta
+474,up left,[4 4],[2 2],W,top left,magenta
+475,grip,[13 12],[13 12],W,right,magenta
+476,down right,[14  9],[16 13],W,bottom right,magenta
+477,grip,[8 5],[8 5],W,top,magenta
+478,grip,[ 7 14],[ 7 14],W,bottom,magenta
+479,right down,[14 10],[15 11],W,right,magenta
+480,grip,[4 6],[4 6],X,left,red
+481,grip,[12 11],[12 11],X,center,red
+482,down left,[ 6 10],[ 3 15],X,bottom left,red
+483,grip,[12  3],[12  3],X,top,red
+484,grip,[ 8 13],[ 8 13],X,bottom,red
+485,grip,[6 2],[6 2],X,top,red
+486,down left,[ 9 11],[ 4 15],X,bottom left,red
+487,grip,[12  5],[12  5],X,top,red
+488,grip,[15  5],[15  5],X,top right,red
+489,right right right right right right right right right right,[12  9],[15 10],X,right,red
+490,grip,[12  8],[12  8],X,center,red
+491,grip,[ 6 13],[ 6 13],X,bottom,red
+492,grip,[13  5],[13  5],X,top right,red
+493,grip,[ 7 11],[ 7 11],X,center,red
+494,grip,[2 6],[2 6],X,left,red
+495,grip,[12  2],[12  2],X,top,red
+496,grip,[3 7],[3 7],X,left,red
+497,grip,[8 7],[8 7],X,center,red
+498,grip,[10 15],[10 15],X,bottom,red
+499,grip,[12 12],[12 12],X,center,red
+500,right down right,[12  9],[16 13],X,bottom right,blue
+501,down left,[ 8 12],[ 5 15],X,bottom left,blue
+502,grip,[ 9 16],[ 9 16],X,bottom,blue
+503,grip,[9 8],[9 8],X,center,blue
+504,grip,[13 11],[13 11],X,right,blue
+505,grip,[13 10],[13 10],X,right,blue
+506,grip,[2 3],[2 3],X,top left,blue
+507,grip,[ 6 15],[ 6 15],X,bottom,blue
+508,grip,[10  3],[10  3],X,top,blue
+509,grip,[ 9 11],[ 9 11],X,center,blue
+510,grip,[ 4 11],[ 4 11],X,left,blue
+511,grip,[14 10],[14 10],X,right,blue
+512,grip,[13  6],[13  6],X,right,blue
+513,grip,[10 10],[10 10],X,center,blue
+514,grip,[ 6 10],[ 6 10],X,center,blue
+515,right right right right right right right right right right,[12  9],[16 10],X,right,blue
+516,grip,[11 13],[11 13],X,bottom,blue
+517,grip,[15  5],[15  5],X,top right,blue
+518,grip,[13 11],[13 11],X,right,blue
+519,up right,[13  7],[16  3],X,top right,blue
+520,grip,[14  8],[14  8],X,right,green
+521,down left,[ 7 12],[ 5 14],X,bottom left,green
+522,grip,[13 11],[13 11],X,right,green
+523,down left,[9 9],[ 4 14],X,bottom left,green
+524,grip,[4 4],[4 4],X,top left,green
+525,grip,[7 9],[7 9],X,center,green
+526,down right,[11 10],[15 16],X,bottom right,green
+527,grip,[11  8],[11  8],X,center,green
+528,grip,[11 10],[11 10],X,center,green
+529,grip,[5 3],[5 3],X,top left,green
+530,grip,[ 6 16],[ 6 16],X,bottom,green
+531,down right,[ 9 10],[13 16],X,bottom right,green
+532,down left,[ 5 14],[ 3 16],X,bottom left,green
+533,grip,[ 4 12],[ 4 12],X,left,green
+534,down left,[6 9],[ 2 16],X,bottom left,green
+535,grip,[14  7],[14  7],X,right,green
+536,grip,[4 6],[4 6],X,left,green
+537,grip,[11  8],[11  8],X,center,green
+538,grip,[14  3],[14  3],X,top right,green
+539,down left,[4 9],[ 2 13],X,bottom left,green
+540,grip,[13  4],[13  4],X,top right,yellow
+541,grip,[12  3],[12  3],X,top,yellow
+542,grip,[12  8],[12  8],X,center,yellow
+543,grip,[10  2],[10  2],X,top,yellow
+544,grip,[ 3 10],[ 3 10],X,left,yellow
+545,grip,[7 7],[7 7],X,center,yellow
+546,grip,[6 4],[6 4],X,top,yellow
+547,grip,[10 12],[10 12],X,center,yellow
+548,right,[16  6],[16  5],X,top right,yellow
+549,down right,[13  9],[16 16],X,bottom right,yellow
+550,right down,[12  9],[15 12],X,right,yellow
+551,grip,[14  2],[14  2],X,top right,yellow
+552,grip,[9 4],[9 4],X,top,yellow
+553,grip,[12  5],[12  5],X,top,yellow
+554,grip,[ 9 15],[ 9 15],X,bottom,yellow
+555,grip,[10  6],[10  6],X,center,yellow
+556,grip,[14  3],[14  3],X,top right,yellow
+557,grip,[ 8 16],[ 8 16],X,bottom,yellow
+558,grip,[ 8 16],[ 8 16],X,bottom,yellow
+559,grip,[10 11],[10 11],X,center,yellow
+560,grip,[ 5 12],[ 5 12],X,left,cyan
+561,down right,[15  9],[16 13],X,bottom right,cyan
+562,grip,[11  9],[11  9],X,center,cyan
+563,grip,[4 8],[4 8],X,left,cyan
+564,grip,[8 3],[8 3],X,top,cyan
+565,grip,[ 8 13],[ 8 13],X,bottom,cyan
+566,grip,[7 5],[7 5],X,top,cyan
+567,up,[4 2],[3 2],X,top left,cyan
+568,grip,[10  8],[10  8],X,center,cyan
+569,grip,[ 2 12],[ 2 12],X,left,cyan
+570,grip,[10 13],[10 13],X,bottom,cyan
+571,grip,[ 2 10],[ 2 10],X,left,cyan
+572,down left,[4 9],[ 2 14],X,bottom left,cyan
+573,grip,[15  8],[15  8],X,right,cyan
+574,grip,[9 7],[9 7],X,center,cyan
+575,grip,[11  9],[11  9],X,center,cyan
+576,grip,[15  5],[15  5],X,top right,cyan
+577,grip,[11  8],[11  8],X,center,cyan
+578,left,[3 4],[3 4],X,top left,cyan
+579,grip,[16  6],[16  6],X,right,cyan
+580,down right,[9 9],[15 16],X,bottom right,magenta
+581,grip,[ 3 12],[ 3 12],X,left,magenta
+582,grip,[8 2],[8 2],X,top,magenta
+583,grip,[10 11],[10 11],X,center,magenta
+584,grip,[14  8],[14  8],X,right,magenta
+585,grip,[13  7],[13  7],X,right,magenta
+586,down,[ 3 12],[ 2 13],X,bottom left,magenta
+587,grip,[15 11],[15 11],X,right,magenta
+588,right down,[11 12],[13 14],X,bottom right,magenta
+589,grip,[ 6 16],[ 6 16],X,bottom,magenta
+590,down left,[4 9],[ 2 14],X,bottom left,magenta
+591,down left,[6 9],[ 2 15],X,bottom left,magenta
+592,grip,[10  7],[10  7],X,center,magenta
+593,grip,[11  8],[11  8],X,center,magenta
+594,grip,[ 8 10],[ 8 10],X,center,magenta
+595,grip,[2 5],[2 5],X,top left,magenta
+596,grip,[12  2],[12  2],X,top,magenta
+597,grip,[15  8],[15  8],X,right,magenta
+598,grip,[ 9 10],[ 9 10],X,center,magenta
+599,grip,[8 6],[8 6],X,center,magenta
+600,grip,[ 2 11],[ 2 11],Z,left,red
+601,grip,[ 7 10],[ 7 10],Z,center,red
+602,grip,[ 6 14],[ 6 14],Z,bottom,red
+603,grip,[12  4],[12  4],Z,top,red
+604,up left,[4 8],[2 3],Z,top left,red
+605,right,[15  9],[16  9],Z,right,red
+606,grip,[16  7],[16  7],Z,right,red
+607,grip,[3 7],[3 7],Z,left,red
+608,grip,[11 14],[11 14],Z,bottom,red
+609,grip,[14  6],[14  6],Z,right,red
+610,grip,[4 7],[4 7],Z,left,red
+611,grip,[11  4],[11  4],Z,top,red
+612,grip,[11  4],[11  4],Z,top,red
+613,right down right,[13  9],[15 11],Z,right,red
+614,grip,[10 12],[10 12],Z,center,red
+615,right right right right right right right right right right,[13  9],[16  9],Z,right,red
+616,grip,[16  7],[16  7],Z,right,red
+617,down left,[ 4 10],[ 2 15],Z,bottom left,red
+618,grip,[13  9],[13  9],Z,right,red
+619,grip,[6 4],[6 4],Z,top,red
+620,up left,[6 4],[4 2],Z,top left,blue
+621,down left,[ 7 12],[ 5 13],Z,bottom left,blue
+622,down right,[12  9],[16 15],Z,bottom right,blue
+623,right down right,[11  9],[16 13],Z,bottom right,blue
+624,grip,[4 4],[4 4],Z,top left,blue
+625,grip,[14  6],[14  6],Z,right,blue
+626,grip,[ 9 11],[ 9 11],Z,center,blue
+627,down right,[11 13],[13 15],Z,bottom right,blue
+628,grip,[3 8],[3 8],Z,left,blue
+629,right down down right down right down right down right,[11 11],[13 13],Z,bottom right,blue
+630,grip,[8 8],[8 8],Z,center,blue
+631,down right,[10 10],[13 14],Z,bottom right,blue
+632,grip,[10  2],[10  2],Z,top,blue
+633,grip,[ 7 15],[ 7 15],Z,bottom,blue
+634,grip,[13  8],[13  8],Z,right,blue
+635,grip,[10 14],[10 14],Z,bottom,blue
+636,down left,[5 9],[ 2 14],Z,bottom left,blue
+637,grip,[15  2],[15  2],Z,top right,blue
+638,grip,[9 4],[9 4],Z,top,blue
+639,grip,[15  6],[15  6],Z,right,blue
+640,grip,[14  6],[14  6],Z,right,green
+641,up left,[6 7],[3 2],Z,top left,green
+642,grip,[ 7 13],[ 7 13],Z,bottom,green
+643,grip,[13 11],[13 11],Z,right,green
+644,grip,[ 4 11],[ 4 11],Z,left,green
+645,grip,[ 6 16],[ 6 16],Z,bottom,green
+646,grip,[ 9 15],[ 9 15],Z,bottom,green
+647,right right down right,[11  9],[16 12],Z,right,green
+648,grip,[5 4],[5 4],Z,top left,green
+649,grip,[15  9],[15  9],Z,right,green
+650,right right right right right right right right right right,[12  9],[15  9],Z,right,green
+651,grip,[8 9],[8 9],Z,center,green
+652,grip,[8 3],[8 3],Z,top,green
+653,grip,[ 8 14],[ 8 14],Z,bottom,green
+654,grip,[11 13],[11 13],Z,bottom,green
+655,grip,[ 6 13],[ 6 13],Z,bottom,green
+656,grip,[10 16],[10 16],Z,bottom,green
+657,grip,[ 7 11],[ 7 11],Z,center,green
+658,grip,[ 4 11],[ 4 11],Z,left,green
+659,grip,[5 7],[5 7],Z,left,green
+660,grip,[6 5],[6 5],Z,top,yellow
+661,grip,[ 8 13],[ 8 13],Z,bottom,yellow
+662,grip,[5 2],[5 2],Z,top left,yellow
+663,down right,[12  9],[14 14],Z,bottom right,yellow
+664,right right right right right right right right right right,[11  9],[16 12],Z,right,yellow
+665,grip,[ 3 11],[ 3 11],Z,left,yellow
+666,grip,[2 7],[2 7],Z,left,yellow
+667,grip,[8 3],[8 3],Z,top,yellow
+668,grip,[2 9],[2 9],Z,left,yellow
+669,up,[14  4],[15  2],Z,top right,yellow
+670,grip,[6 3],[6 3],Z,top,yellow
+671,grip,[11  4],[11  4],Z,top,yellow
+672,grip,[7 5],[7 5],Z,top,yellow
+673,grip,[3 6],[3 6],Z,left,yellow
+674,grip,[ 7 16],[ 7 16],Z,bottom,yellow
+675,grip,[ 7 10],[ 7 10],Z,center,yellow
+676,grip,[11  7],[11  7],Z,center,yellow
+677,grip,[9 3],[9 3],Z,top,yellow
+678,grip,[6 7],[6 7],Z,center,yellow
+679,grip,[ 6 13],[ 6 13],Z,bottom,yellow
+680,grip,[4 7],[4 7],Z,left,cyan
+681,grip,[ 9 11],[ 9 11],Z,center,cyan
+682,grip,[6 8],[6 8],Z,center,cyan
+683,grip,[12  7],[12  7],Z,center,cyan
+684,grip,[12 10],[12 10],Z,center,cyan
+685,left,[3 3],[2 2],Z,top left,cyan
+686,grip,[ 8 12],[ 8 12],Z,center,cyan
+687,grip,[11  6],[11  6],Z,center,cyan
+688,down right,[11 11],[13 13],Z,bottom right,cyan
+689,right,[14  9],[16  9],Z,right,cyan
+690,grip,[ 6 14],[ 6 14],Z,bottom,cyan
+691,grip,[16  8],[16  8],Z,right,cyan
+692,grip,[6 8],[6 8],Z,center,cyan
+693,grip,[6 8],[6 8],Z,center,cyan
+694,grip,[6 7],[6 7],Z,center,cyan
+695,down left,[ 7 10],[ 5 13],Z,bottom left,cyan
+696,grip,[4 5],[4 5],Z,top left,cyan
+697,grip,[13  8],[13  8],Z,right,cyan
+698,right down right,[11  9],[16 14],Z,bottom right,cyan
+699,grip,[3 8],[3 8],Z,left,cyan
+700,grip,[ 7 14],[ 7 14],Z,bottom,magenta
+701,down right,[10  9],[14 15],Z,bottom right,magenta
+702,grip,[12 11],[12 11],Z,center,magenta
+703,right,[12 10],[13 13],Z,bottom right,magenta
+704,grip,[9 7],[9 7],Z,center,magenta
+705,grip,[8 5],[8 5],Z,top,magenta
+706,grip,[ 9 10],[ 9 10],Z,center,magenta
+707,grip,[4 9],[4 9],Z,left,magenta
+708,grip,[6 7],[6 7],Z,center,magenta
+709,grip,[ 3 10],[ 3 10],Z,left,magenta
+710,grip,[9 7],[9 7],Z,center,magenta
+711,grip,[14  4],[14  4],Z,top right,magenta
+712,grip,[ 8 15],[ 8 15],Z,bottom,magenta
+713,grip,[ 5 10],[ 5 10],Z,left,magenta
+714,grip,[13  7],[13  7],Z,right,magenta
+715,grip,[ 9 12],[ 9 12],Z,center,magenta
+716,grip,[13  6],[13  6],Z,right,magenta
+717,grip,[ 5 11],[ 5 11],Z,left,magenta
+718,grip,[11 10],[11 10],Z,center,magenta
+719,down right,[9 9],[15 16],Z,bottom right,magenta
