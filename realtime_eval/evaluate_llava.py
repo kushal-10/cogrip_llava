@@ -19,7 +19,7 @@ class LLaVAEval():
         self.max_moves = max_moves
         self.max_len = max_length
 
-        metadata_path = os.path.join('realtime_eval', f'metadata_{self.level}')
+        metadata_path = os.path.join('realtime_eval', f'metadata_{self.level}.json')
         with open(metadata_path, 'r') as f:
             self.metadata = json.load(f)
 
