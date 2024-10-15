@@ -83,7 +83,7 @@ def evaluate(level, model):
             logging.info(f'Accuracy at step {i}: {check_acc/(i+1)}')
 
     
-    save_name =MODEL_ID.split('/')[-1] + ".csv"
+    save_name =MODEL_ID.split('/')[-1] + "_" + level + ".csv"
     infer_data = {
         "predictions": predictions,
         "gts": ground_truths,

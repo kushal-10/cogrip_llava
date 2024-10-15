@@ -137,7 +137,11 @@ This saves a metadata_level.json under `realtime_eval` folder
 
 ##### 2) Evaluate models
 
+```bash
+python realtime_eval/evaluate_gpt.py --level easy --board_size 18 --max_moves 20 --max_length 10
 
+python realtime_eval/evaluate_llava.py --level easy --board_size 18 --model_name llava-hf/llava-1.5-7b-hf --max_moves 20 --max_length 10
+```
 
-
+This saves result csv file sunder `realtime_results`
 

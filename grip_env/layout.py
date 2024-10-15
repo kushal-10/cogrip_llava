@@ -121,7 +121,13 @@ class BoardLayout():
                 available_colours.remove(colour_name)  # Remove the selected colour from the available colours
                 piece_rotation = np.random.randint(0, 4) # Random rotation            
             else:
-                # Hard level, allow same shape and colour repitition
+                # Hard level, allow same shape or colour repitition, based on randomness
+                random_value = np.random.int(0, 2)
+                if random_value:
+                    available_colours.remove(colour_name)  # Remove the selected colour from the available colours
+                else:
+                    available_shapes.remove(piece_shape)  # Remove the selected shape from the available shapes
+
                 piece_rotation = np.random.randint(0, 4) # Random rotation
 
             piece = PentominoPiece(piece_shape, piece_rotation, piece_position)
