@@ -122,7 +122,7 @@ class BoardLayout():
                 piece_rotation = np.random.randint(0, 4) # Random rotation            
             else:
                 # Hard level, allow same shape or colour repitition, based on randomness
-                random_value = np.random.int(0, 2)
+                random_value = np.random.randint(0, 2)
                 if random_value:
                     available_colours.remove(colour_name)  # Remove the selected colour from the available colours
                 else:
