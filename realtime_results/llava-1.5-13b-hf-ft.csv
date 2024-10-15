@@ -1,721 +1,721 @@
-,last_move,predicted_position,target_position,shape,region,color
-0,grip,[7 3],[7 3],P,top,red
-1,grip,[13  2],[13  2],P,top right,red
-2,grip,[11  8],[11  8],P,center,red
-3,grip,[13  2],[13  2],P,top right,red
-4,grip,[ 5 13],[ 5 13],P,bottom left,red
-5,grip,[10  6],[10  6],P,center,red
-6,grip,[4 5],[4 5],P,top left,red
-7,grip,[8 8],[8 8],P,center,red
-8,grip,[ 6 11],[ 6 11],P,center,red
-9,grip,[6 3],[6 3],P,top,red
-10,grip,[ 5 15],[ 5 15],P,bottom left,red
-11,grip,[4 5],[4 5],P,top left,red
-12,grip,[12  2],[12  2],P,top,red
-13,grip,[8 4],[8 4],P,top,red
-14,grip,[16  7],[16  7],P,right,red
-15,grip,[9 4],[9 4],P,top,red
-16,grip,[10 15],[10 15],P,bottom,red
-17,right down right,[12  9],[16 13],P,bottom right,red
-18,down left,[6 9],[ 3 15],P,bottom left,red
-19,grip,[11 16],[11 16],P,bottom,red
-20,grip,[ 4 12],[ 4 12],P,left,blue
-21,grip,[ 4 13],[ 4 13],P,bottom left,blue
-22,grip,[13  8],[13  8],P,right,blue
-23,grip,[10  8],[10  8],P,center,blue
-24,down left,[4 9],[ 2 13],P,bottom left,blue
-25,grip,[6 2],[6 2],P,top,blue
-26,grip,[14  9],[14  9],P,right,blue
-27,grip,[13 12],[13 12],P,right,blue
-28,grip,[4 6],[4 6],P,left,blue
-29,down right,[10  9],[15 16],P,bottom right,blue
-30,grip,[ 4 13],[ 4 13],P,bottom left,blue
-31,grip,[16  5],[16  5],P,top right,blue
-32,grip,[9 3],[9 3],P,top,blue
-33,grip,[10  5],[10  5],P,top,blue
-34,down left,[9 9],[ 3 16],P,bottom left,blue
-35,grip,[15  8],[15  8],P,right,blue
-36,grip,[8 2],[8 2],P,top,blue
-37,grip,[15  6],[15  6],P,right,blue
-38,grip,[6 2],[6 2],P,top,blue
-39,down right,[9 9],[13 15],P,bottom right,blue
-40,grip,[9 7],[9 7],P,center,green
-41,grip,[10  8],[10  8],P,center,green
-42,grip,[12  6],[12  6],P,center,green
-43,grip,[14  3],[14  3],P,top right,green
-44,down right,[10 10],[14 16],P,bottom right,green
-45,grip,[10 16],[10 16],P,bottom,green
-46,grip,[6 4],[6 4],P,top,green
-47,right,[14  9],[15 11],P,right,green
-48,grip,[9 6],[9 6],P,center,green
-49,grip,[14  9],[14  9],P,right,green
-50,up left,[4 9],[2 7],P,left,green
-51,grip,[ 9 12],[ 9 12],P,center,green
-52,grip,[6 9],[6 9],P,center,green
-53,up left,[6 9],[2 2],P,top left,green
-54,grip,[ 9 13],[ 9 13],P,bottom,green
-55,down right,[11  9],[13 14],P,bottom right,green
-56,grip,[2 9],[2 9],P,left,green
-57,down right,[12  9],[13 14],P,bottom right,green
-58,grip,[12  6],[12  6],P,center,green
-59,grip,[5 3],[5 3],P,top left,green
-60,grip,[ 2 11],[ 2 11],P,left,yellow
-61,grip,[12  9],[12  9],P,center,yellow
-62,grip,[ 3 10],[ 3 10],P,left,yellow
-63,grip,[11  3],[11  3],P,top,yellow
-64,grip,[14  8],[14  8],P,right,yellow
-65,grip,[13  7],[13  7],P,right,yellow
-66,down left,[3 9],[ 2 13],P,bottom left,yellow
-67,right down right,[13  9],[15 11],P,right,yellow
-68,down right,[11 10],[13 14],P,bottom right,yellow
-69,grip,[ 6 16],[ 6 16],P,bottom,yellow
-70,down left,[4 9],[ 2 14],P,bottom left,yellow
-71,down left,[4 9],[ 2 15],P,bottom left,yellow
-72,grip,[10  7],[10  7],P,center,yellow
-73,grip,[11  8],[11  8],P,center,yellow
-74,grip,[ 8 10],[ 8 10],P,center,yellow
-75,grip,[2 5],[2 5],P,top left,yellow
-76,grip,[12  2],[12  2],P,top,yellow
-77,grip,[15  8],[15  8],P,right,yellow
-78,grip,[ 9 10],[ 9 10],P,center,yellow
-79,grip,[8 6],[8 6],P,center,yellow
-80,grip,[ 2 11],[ 2 11],P,left,cyan
-81,grip,[ 7 10],[ 7 10],P,center,cyan
-82,grip,[ 6 14],[ 6 14],P,bottom,cyan
-83,grip,[12  4],[12  4],P,top,cyan
-84,grip,[2 3],[2 3],P,top left,cyan
-85,right right right right right right right right right right,[12  9],[16  9],P,right,cyan
-86,grip,[16  7],[16  7],P,right,cyan
-87,grip,[3 7],[3 7],P,left,cyan
-88,grip,[11 14],[11 14],P,bottom,cyan
-89,grip,[14  6],[14  6],P,right,cyan
-90,grip,[4 7],[4 7],P,left,cyan
-91,grip,[11  4],[11  4],P,top,cyan
-92,grip,[11  4],[11  4],P,top,cyan
-93,down right,[14  9],[15 11],P,right,cyan
-94,grip,[10 12],[10 12],P,center,cyan
-95,grip,[16  9],[16  9],P,right,cyan
-96,grip,[16  7],[16  7],P,right,cyan
-97,down left,[5 9],[ 2 15],P,bottom left,cyan
-98,grip,[13  9],[13  9],P,right,cyan
-99,grip,[6 4],[6 4],P,top,cyan
-100,grip,[4 2],[4 2],P,top left,magenta
-101,grip,[ 5 13],[ 5 13],P,bottom left,magenta
-102,down right,[12  9],[16 15],P,bottom right,magenta
-103,down right,[14  9],[16 13],P,bottom right,magenta
-104,grip,[4 4],[4 4],P,top left,magenta
-105,grip,[14  6],[14  6],P,right,magenta
-106,grip,[ 9 11],[ 9 11],P,center,magenta
-107,right down,[11 13],[13 15],P,bottom right,magenta
-108,grip,[3 8],[3 8],P,left,magenta
-109,right down,[12 12],[13 13],P,bottom right,magenta
-110,grip,[8 8],[8 8],P,center,magenta
-111,down right,[12 11],[13 14],P,bottom right,magenta
-112,grip,[10  2],[10  2],P,top,magenta
-113,grip,[ 7 15],[ 7 15],P,bottom,magenta
-114,grip,[13  8],[13  8],P,right,magenta
-115,grip,[10 14],[10 14],P,bottom,magenta
-116,down left,[4 9],[ 2 14],P,bottom left,magenta
-117,grip,[15  2],[15  2],P,top right,magenta
-118,grip,[9 4],[9 4],P,top,magenta
-119,grip,[15  6],[15  6],P,right,magenta
-120,grip,[14  6],[14  6],T,right,red
-121,left,[3 2],[3 2],T,top left,red
-122,grip,[ 7 13],[ 7 13],T,bottom,red
-123,grip,[13 11],[13 11],T,right,red
-124,grip,[ 4 11],[ 4 11],T,left,red
-125,grip,[ 6 16],[ 6 16],T,bottom,red
-126,grip,[ 9 15],[ 9 15],T,bottom,red
-127,grip,[16 12],[16 12],T,right,red
-128,grip,[5 4],[5 4],T,top left,red
-129,grip,[15  9],[15  9],T,right,red
-130,grip,[15  9],[15  9],T,right,red
-131,grip,[8 9],[8 9],T,center,red
-132,grip,[8 3],[8 3],T,top,red
-133,grip,[ 8 14],[ 8 14],T,bottom,red
-134,grip,[11 13],[11 13],T,bottom,red
-135,grip,[ 6 13],[ 6 13],T,bottom,red
-136,grip,[10 16],[10 16],T,bottom,red
-137,grip,[ 7 11],[ 7 11],T,center,red
-138,grip,[ 4 11],[ 4 11],T,left,red
-139,grip,[5 7],[5 7],T,left,red
-140,grip,[6 5],[6 5],T,top,blue
-141,grip,[ 8 13],[ 8 13],T,bottom,blue
-142,grip,[5 2],[5 2],T,top left,blue
-143,down right,[12 10],[14 14],T,bottom right,blue
-144,down,[16 10],[16 12],T,right,blue
-145,grip,[ 3 11],[ 3 11],T,left,blue
-146,grip,[2 7],[2 7],T,left,blue
-147,grip,[8 3],[8 3],T,top,blue
-148,grip,[2 9],[2 9],T,left,blue
-149,grip,[15  2],[15  2],T,top right,blue
-150,grip,[6 3],[6 3],T,top,blue
-151,grip,[11  4],[11  4],T,top,blue
-152,grip,[7 5],[7 5],T,top,blue
-153,grip,[3 6],[3 6],T,left,blue
-154,grip,[ 7 16],[ 7 16],T,bottom,blue
-155,grip,[ 7 10],[ 7 10],T,center,blue
-156,grip,[11  7],[11  7],T,center,blue
-157,grip,[9 3],[9 3],T,top,blue
-158,grip,[6 7],[6 7],T,center,blue
-159,grip,[ 6 13],[ 6 13],T,bottom,blue
-160,grip,[4 7],[4 7],T,left,green
-161,grip,[ 9 11],[ 9 11],T,center,green
-162,grip,[6 8],[6 8],T,center,green
-163,grip,[12  7],[12  7],T,center,green
-164,grip,[12 10],[12 10],T,center,green
-165,up left,[8 7],[2 2],T,top left,green
-166,grip,[ 8 12],[ 8 12],T,center,green
-167,grip,[11  6],[11  6],T,center,green
-168,down,[12 12],[13 13],T,bottom right,green
-169,right right right right right right right right right right,[12  9],[16  9],T,right,green
-170,grip,[ 6 14],[ 6 14],T,bottom,green
-171,grip,[16  8],[16  8],T,right,green
-172,grip,[6 8],[6 8],T,center,green
-173,grip,[6 8],[6 8],T,center,green
-174,grip,[6 7],[6 7],T,center,green
-175,grip,[ 5 13],[ 5 13],T,bottom left,green
-176,grip,[4 5],[4 5],T,top left,green
-177,grip,[13  8],[13  8],T,right,green
-178,down right,[14  9],[16 14],T,bottom right,green
-179,grip,[3 8],[3 8],T,left,green
-180,grip,[ 7 14],[ 7 14],T,bottom,yellow
-181,down,[12 10],[14 15],T,bottom right,yellow
-182,grip,[12 11],[12 11],T,center,yellow
-183,grip,[13 13],[13 13],T,bottom right,yellow
-184,grip,[9 7],[9 7],T,center,yellow
-185,grip,[8 5],[8 5],T,top,yellow
-186,grip,[ 9 10],[ 9 10],T,center,yellow
-187,grip,[4 9],[4 9],T,left,yellow
-188,grip,[6 7],[6 7],T,center,yellow
-189,grip,[ 3 10],[ 3 10],T,left,yellow
-190,grip,[9 7],[9 7],T,center,yellow
-191,grip,[14  4],[14  4],T,top right,yellow
-192,grip,[ 8 15],[ 8 15],T,bottom,yellow
-193,grip,[ 5 10],[ 5 10],T,left,yellow
-194,grip,[13  7],[13  7],T,right,yellow
-195,grip,[ 9 12],[ 9 12],T,center,yellow
-196,grip,[13  6],[13  6],T,right,yellow
-197,grip,[ 5 11],[ 5 11],T,left,yellow
-198,grip,[11 10],[11 10],T,center,yellow
-199,down right,[12  9],[15 16],T,bottom right,yellow
-200,grip,[5 2],[5 2],T,top left,cyan
-201,grip,[12 14],[12 14],T,bottom,cyan
-202,up,[4 3],[2 3],T,top left,cyan
-203,down left,[3 9],[ 2 13],T,bottom left,cyan
-204,grip,[ 3 10],[ 3 10],T,left,cyan
-205,grip,[15  5],[15  5],T,top right,cyan
-206,grip,[ 6 13],[ 6 13],T,bottom,cyan
-207,right,[13 10],[14 14],T,bottom right,cyan
-208,grip,[7 9],[7 9],T,center,cyan
-209,grip,[7 5],[7 5],T,top,cyan
-210,grip,[2 6],[2 6],T,left,cyan
-211,down right,[ 9 11],[14 16],T,bottom right,cyan
-212,grip,[6 3],[6 3],T,top,cyan
-213,grip,[8 6],[8 6],T,center,cyan
-214,up,[6 5],[2 2],T,top left,cyan
-215,grip,[13 12],[13 12],T,right,cyan
-216,right down right,[12  9],[16 13],T,bottom right,cyan
-217,grip,[8 5],[8 5],T,top,cyan
-218,grip,[ 7 14],[ 7 14],T,bottom,cyan
-219,grip,[15 11],[15 11],T,right,cyan
-220,grip,[4 6],[4 6],T,left,magenta
-221,grip,[12 11],[12 11],T,center,magenta
-222,down left,[7 9],[ 3 15],T,bottom left,magenta
-223,grip,[12  3],[12  3],T,top,magenta
-224,grip,[ 8 13],[ 8 13],T,bottom,magenta
-225,grip,[6 2],[6 2],T,top,magenta
-226,down left,[ 8 11],[ 4 15],T,bottom left,magenta
-227,grip,[12  5],[12  5],T,top,magenta
-228,grip,[15  5],[15  5],T,top right,magenta
-229,right right right right right right right right right right,[12  9],[15 10],T,right,magenta
-230,grip,[12  8],[12  8],T,center,magenta
-231,grip,[ 6 13],[ 6 13],T,bottom,magenta
-232,grip,[13  5],[13  5],T,top right,magenta
-233,grip,[ 7 11],[ 7 11],T,center,magenta
-234,grip,[2 6],[2 6],T,left,magenta
-235,grip,[12  2],[12  2],T,top,magenta
-236,grip,[3 7],[3 7],T,left,magenta
-237,grip,[8 7],[8 7],T,center,magenta
-238,grip,[10 15],[10 15],T,bottom,magenta
-239,grip,[12 12],[12 12],T,center,magenta
-240,right down right,[12  9],[16 13],U,bottom right,red
-241,down left,[ 9 11],[ 5 15],U,bottom left,red
-242,grip,[ 9 16],[ 9 16],U,bottom,red
-243,grip,[9 8],[9 8],U,center,red
-244,grip,[13 11],[13 11],U,right,red
-245,grip,[13 10],[13 10],U,right,red
-246,grip,[2 3],[2 3],U,top left,red
-247,grip,[ 6 15],[ 6 15],U,bottom,red
-248,grip,[10  3],[10  3],U,top,red
-249,grip,[ 9 11],[ 9 11],U,center,red
-250,grip,[ 4 11],[ 4 11],U,left,red
-251,grip,[14 10],[14 10],U,right,red
-252,grip,[13  6],[13  6],U,right,red
-253,grip,[10 10],[10 10],U,center,red
-254,grip,[ 6 10],[ 6 10],U,center,red
-255,right right right right right right right right right right,[11  9],[16 10],U,right,red
-256,grip,[11 13],[11 13],U,bottom,red
-257,grip,[15  5],[15  5],U,top right,red
-258,grip,[13 11],[13 11],U,right,red
-259,right,[15  6],[16  3],U,top right,red
-260,grip,[14  8],[14  8],U,right,blue
-261,left down,[ 7 11],[ 5 14],U,bottom left,blue
-262,right,[12  9],[13 11],U,right,blue
-263,down left,[8 9],[ 4 14],U,bottom left,blue
-264,grip,[4 4],[4 4],U,top left,blue
-265,grip,[8 9],[7 9],U,center,blue
-266,down right,[11  9],[15 16],U,bottom right,blue
-267,grip,[11  8],[11  8],U,center,blue
-268,grip,[11 10],[11 10],U,center,blue
-269,up left,[6 4],[5 3],U,top left,blue
-270,grip,[ 6 16],[ 6 16],U,bottom,blue
-271,down right,[ 9 11],[13 16],U,bottom right,blue
-272,down left,[ 8 11],[ 3 16],U,bottom left,blue
-273,grip,[ 4 12],[ 4 12],U,left,blue
-274,left down,[7 9],[ 2 16],U,bottom left,blue
-275,grip,[14  7],[14  7],U,right,blue
-276,grip,[4 6],[4 6],U,left,blue
-277,grip,[11  8],[11  8],U,center,blue
-278,grip,[14  3],[14  3],U,top right,blue
-279,down left,[4 9],[ 2 13],U,bottom left,blue
-280,grip,[13  4],[13  4],U,top right,green
-281,grip,[12  3],[12  3],U,top,green
-282,grip,[12  8],[12  8],U,center,green
-283,grip,[10  2],[10  2],U,top,green
-284,grip,[ 3 10],[ 3 10],U,left,green
-285,grip,[7 7],[7 7],U,center,green
-286,grip,[6 4],[6 4],U,top,green
-287,grip,[10 12],[10 12],U,center,green
-288,grip,[16  5],[16  5],U,top right,green
-289,down right,[12  9],[16 16],U,bottom right,green
-290,right down,[12  9],[15 12],U,right,green
-291,grip,[14  2],[14  2],U,top right,green
-292,grip,[9 4],[9 4],U,top,green
-293,grip,[12  5],[12  5],U,top,green
-294,grip,[ 9 15],[ 9 15],U,bottom,green
-295,grip,[10  6],[10  6],U,center,green
-296,up right,[12  7],[14  3],U,top right,green
-297,grip,[ 8 16],[ 8 16],U,bottom,green
-298,grip,[ 8 16],[ 8 16],U,bottom,green
-299,grip,[10 11],[10 11],U,center,green
-300,grip,[ 5 12],[ 5 12],U,left,yellow
-301,right down right,[11  9],[16 13],U,bottom right,yellow
-302,grip,[11  9],[11  9],U,center,yellow
-303,grip,[4 8],[4 8],U,left,yellow
-304,grip,[8 3],[8 3],U,top,yellow
-305,grip,[ 8 13],[ 8 13],U,bottom,yellow
-306,grip,[7 5],[7 5],U,top,yellow
-307,left,[6 8],[3 2],U,top left,yellow
-308,grip,[10  8],[10  8],U,center,yellow
-309,grip,[ 2 12],[ 2 12],U,left,yellow
-310,grip,[10 13],[10 13],U,bottom,yellow
-311,grip,[ 2 10],[ 2 10],U,left,yellow
-312,down left,[4 9],[ 2 14],U,bottom left,yellow
-313,grip,[15  8],[15  8],U,right,yellow
-314,grip,[9 7],[9 7],U,center,yellow
-315,grip,[11  9],[11  9],U,center,yellow
-316,grip,[15  5],[15  5],U,top right,yellow
-317,grip,[11  8],[11  8],U,center,yellow
-318,left,[6 8],[3 4],U,top left,yellow
-319,grip,[16  6],[16  6],U,right,yellow
-320,down right,[10  9],[15 16],U,bottom right,cyan
-321,left,[4 9],[ 3 12],U,left,cyan
-322,grip,[8 2],[8 2],U,top,cyan
-323,grip,[10 11],[10 11],U,center,cyan
-324,grip,[14  8],[14  8],U,right,cyan
-325,grip,[13  7],[13  7],U,right,cyan
-326,down,[ 3 12],[ 2 13],U,bottom left,cyan
-327,right down right,[12  9],[15 11],U,right,cyan
-328,down right,[10 10],[13 14],U,bottom right,cyan
-329,grip,[ 6 16],[ 6 16],U,bottom,cyan
-330,left down,[5 9],[ 2 14],U,bottom left,cyan
-331,down left,[6 9],[ 2 15],U,bottom left,cyan
-332,grip,[10  7],[10  7],U,center,cyan
-333,grip,[11  8],[11  8],U,center,cyan
-334,grip,[ 8 10],[ 8 10],U,center,cyan
-335,grip,[2 5],[2 5],U,top left,cyan
-336,grip,[12  2],[12  2],U,top,cyan
-337,grip,[15  8],[15  8],U,right,cyan
-338,grip,[ 9 10],[ 9 10],U,center,cyan
-339,grip,[8 6],[8 6],U,center,cyan
-340,grip,[ 2 11],[ 2 11],U,left,magenta
-341,grip,[ 7 10],[ 7 10],U,center,magenta
-342,grip,[ 6 14],[ 6 14],U,bottom,magenta
-343,grip,[12  4],[12  4],U,top,magenta
-344,left,[4 6],[2 3],U,top left,magenta
-345,grip,[16  9],[16  9],U,right,magenta
-346,grip,[16  7],[16  7],U,right,magenta
-347,grip,[3 7],[3 7],U,left,magenta
-348,grip,[11 14],[11 14],U,bottom,magenta
-349,grip,[14  6],[14  6],U,right,magenta
-350,grip,[4 7],[4 7],U,left,magenta
-351,grip,[11  4],[11  4],U,top,magenta
-352,grip,[11  4],[11  4],U,top,magenta
-353,right down right,[12  9],[15 11],U,right,magenta
-354,grip,[10 12],[10 12],U,center,magenta
-355,grip,[16  9],[16  9],U,right,magenta
-356,grip,[16  7],[16  7],U,right,magenta
-357,down left,[5 9],[ 2 15],U,bottom left,magenta
-358,grip,[13  9],[13  9],U,right,magenta
-359,grip,[6 4],[6 4],U,top,magenta
-360,grip,[4 2],[4 2],W,top left,red
-361,grip,[ 5 13],[ 5 13],W,bottom left,red
-362,down right,[13  9],[16 15],W,bottom right,red
-363,right down right,[14  9],[16 13],W,bottom right,red
-364,grip,[4 4],[4 4],W,top left,red
-365,grip,[14  6],[14  6],W,right,red
-366,grip,[ 9 11],[ 9 11],W,center,red
-367,grip,[13 15],[13 15],W,bottom right,red
-368,grip,[3 8],[3 8],W,left,red
-369,grip,[13 13],[13 13],W,bottom right,red
-370,grip,[8 8],[8 8],W,center,red
-371,down right,[11 11],[13 14],W,bottom right,red
-372,grip,[10  2],[10  2],W,top,red
-373,grip,[ 7 15],[ 7 15],W,bottom,red
-374,grip,[13  8],[13  8],W,right,red
-375,grip,[10 14],[10 14],W,bottom,red
-376,down left,[ 4 10],[ 2 14],W,bottom left,red
-377,grip,[15  2],[15  2],W,top right,red
-378,grip,[9 4],[9 4],W,top,red
-379,grip,[15  6],[15  6],W,right,red
-380,grip,[14  6],[14  6],W,right,blue
-381,left,[5 5],[3 2],W,top left,blue
-382,grip,[ 7 13],[ 7 13],W,bottom,blue
-383,grip,[13 11],[13 11],W,right,blue
-384,grip,[ 4 11],[ 4 11],W,left,blue
-385,grip,[ 6 16],[ 6 16],W,bottom,blue
-386,grip,[ 9 15],[ 9 15],W,bottom,blue
-387,down right,[15  9],[16 12],W,right,blue
-388,grip,[5 4],[5 4],W,top left,blue
-389,grip,[15  9],[15  9],W,right,blue
-390,grip,[15  9],[15  9],W,right,blue
-391,grip,[8 9],[8 9],W,center,blue
-392,grip,[8 3],[8 3],W,top,blue
-393,grip,[ 8 14],[ 8 14],W,bottom,blue
-394,grip,[11 13],[11 13],W,bottom,blue
-395,grip,[ 6 13],[ 6 13],W,bottom,blue
-396,grip,[10 16],[10 16],W,bottom,blue
-397,grip,[ 7 11],[ 7 11],W,center,blue
-398,grip,[ 4 11],[ 4 11],W,left,blue
-399,grip,[5 7],[5 7],W,left,blue
-400,grip,[6 5],[6 5],W,top,green
-401,grip,[ 8 13],[ 8 13],W,bottom,green
-402,up,[6 3],[5 2],W,top left,green
-403,down right,[12  9],[14 14],W,bottom right,green
-404,grip,[16 12],[16 12],W,right,green
-405,grip,[ 3 11],[ 3 11],W,left,green
-406,grip,[2 7],[2 7],W,left,green
-407,grip,[8 3],[8 3],W,top,green
-408,grip,[2 9],[2 9],W,left,green
-409,right,[15  3],[15  2],W,top right,green
-410,grip,[6 3],[6 3],W,top,green
-411,grip,[11  4],[11  4],W,top,green
-412,grip,[7 5],[7 5],W,top,green
-413,left,[5 7],[3 6],W,left,green
-414,grip,[ 7 16],[ 7 16],W,bottom,green
-415,grip,[ 7 10],[ 7 10],W,center,green
-416,grip,[11  7],[11  7],W,center,green
-417,grip,[9 3],[9 3],W,top,green
-418,up,[ 5 -7],[6 7],W,center,green
-419,grip,[ 6 13],[ 6 13],W,bottom,green
-420,grip,[4 7],[4 7],W,left,yellow
-421,grip,[ 9 11],[ 9 11],W,center,yellow
-422,grip,[6 8],[6 8],W,center,yellow
-423,grip,[11  7],[12  7],W,center,yellow
-424,grip,[12 10],[12 10],W,center,yellow
-425,up left,[6 9],[2 2],W,top left,yellow
-426,grip,[ 8 12],[ 8 12],W,center,yellow
-427,grip,[11  6],[11  6],W,center,yellow
-428,down,[12 13],[13 13],W,bottom right,yellow
-429,grip,[16  9],[16  9],W,right,yellow
-430,grip,[ 6 14],[ 6 14],W,bottom,yellow
-431,grip,[16  8],[16  8],W,right,yellow
-432,grip,[6 8],[6 8],W,center,yellow
-433,grip,[6 8],[6 8],W,center,yellow
-434,grip,[6 7],[6 7],W,center,yellow
-435,down left,[ 7 10],[ 5 13],W,bottom left,yellow
-436,grip,[4 5],[4 5],W,top left,yellow
-437,grip,[13  8],[13  8],W,right,yellow
-438,down right,[13  9],[16 14],W,bottom right,yellow
-439,grip,[3 8],[3 8],W,left,yellow
-440,grip,[ 7 14],[ 7 14],W,bottom,cyan
-441,down right,[ 9 10],[14 15],W,bottom right,cyan
-442,grip,[12 11],[12 11],W,center,cyan
-443,grip,[13 13],[13 13],W,bottom right,cyan
-444,grip,[9 7],[9 7],W,center,cyan
-445,grip,[8 5],[8 5],W,top,cyan
-446,grip,[ 9 10],[ 9 10],W,center,cyan
-447,grip,[4 9],[4 9],W,left,cyan
-448,grip,[6 7],[6 7],W,center,cyan
-449,grip,[ 3 10],[ 3 10],W,left,cyan
-450,grip,[9 7],[9 7],W,center,cyan
-451,grip,[14  4],[14  4],W,top right,cyan
-452,grip,[ 8 15],[ 8 15],W,bottom,cyan
-453,grip,[ 5 10],[ 5 10],W,left,cyan
-454,grip,[13  7],[13  7],W,right,cyan
-455,grip,[ 9 12],[ 9 12],W,center,cyan
-456,grip,[13  6],[13  6],W,right,cyan
-457,grip,[ 5 11],[ 5 11],W,left,cyan
-458,grip,[11 10],[11 10],W,center,cyan
-459,down right,[9 9],[15 16],W,bottom right,cyan
-460,grip,[5 2],[5 2],W,top left,magenta
-461,grip,[12 14],[12 14],W,bottom,magenta
-462,up left,[5 7],[2 3],W,top left,magenta
-463,left down,[5 9],[ 2 13],W,bottom left,magenta
-464,grip,[ 3 10],[ 3 10],W,left,magenta
-465,grip,[15  5],[15  5],W,top right,magenta
-466,grip,[ 6 13],[ 6 13],W,bottom,magenta
-467,down right,[12 11],[14 14],W,bottom right,magenta
-468,grip,[7 9],[7 9],W,center,magenta
-469,grip,[7 5],[7 5],W,top,magenta
-470,grip,[2 6],[2 6],W,left,magenta
-471,down right,[9 9],[14 16],W,bottom right,magenta
-472,grip,[6 3],[6 3],W,top,magenta
-473,grip,[8 6],[8 6],W,center,magenta
-474,up left,[4 4],[2 2],W,top left,magenta
-475,grip,[13 12],[13 12],W,right,magenta
-476,down right,[14  9],[16 13],W,bottom right,magenta
-477,grip,[8 5],[8 5],W,top,magenta
-478,grip,[ 7 14],[ 7 14],W,bottom,magenta
-479,right down,[14 10],[15 11],W,right,magenta
-480,grip,[4 6],[4 6],X,left,red
-481,grip,[12 11],[12 11],X,center,red
-482,down left,[ 6 10],[ 3 15],X,bottom left,red
-483,grip,[12  3],[12  3],X,top,red
-484,grip,[ 8 13],[ 8 13],X,bottom,red
-485,grip,[6 2],[6 2],X,top,red
-486,down left,[ 9 11],[ 4 15],X,bottom left,red
-487,grip,[12  5],[12  5],X,top,red
-488,grip,[15  5],[15  5],X,top right,red
-489,right right right right right right right right right right,[12  9],[15 10],X,right,red
-490,grip,[12  8],[12  8],X,center,red
-491,grip,[ 6 13],[ 6 13],X,bottom,red
-492,grip,[13  5],[13  5],X,top right,red
-493,grip,[ 7 11],[ 7 11],X,center,red
-494,grip,[2 6],[2 6],X,left,red
-495,grip,[12  2],[12  2],X,top,red
-496,grip,[3 7],[3 7],X,left,red
-497,grip,[8 7],[8 7],X,center,red
-498,grip,[10 15],[10 15],X,bottom,red
-499,grip,[12 12],[12 12],X,center,red
-500,right down right,[12  9],[16 13],X,bottom right,blue
-501,down left,[ 8 12],[ 5 15],X,bottom left,blue
-502,grip,[ 9 16],[ 9 16],X,bottom,blue
-503,grip,[9 8],[9 8],X,center,blue
-504,grip,[13 11],[13 11],X,right,blue
-505,grip,[13 10],[13 10],X,right,blue
-506,grip,[2 3],[2 3],X,top left,blue
-507,grip,[ 6 15],[ 6 15],X,bottom,blue
-508,grip,[10  3],[10  3],X,top,blue
-509,grip,[ 9 11],[ 9 11],X,center,blue
-510,grip,[ 4 11],[ 4 11],X,left,blue
-511,grip,[14 10],[14 10],X,right,blue
-512,grip,[13  6],[13  6],X,right,blue
-513,grip,[10 10],[10 10],X,center,blue
-514,grip,[ 6 10],[ 6 10],X,center,blue
-515,right right right right right right right right right right,[12  9],[16 10],X,right,blue
-516,grip,[11 13],[11 13],X,bottom,blue
-517,grip,[15  5],[15  5],X,top right,blue
-518,grip,[13 11],[13 11],X,right,blue
-519,up right,[13  7],[16  3],X,top right,blue
-520,grip,[14  8],[14  8],X,right,green
-521,down left,[ 7 12],[ 5 14],X,bottom left,green
-522,grip,[13 11],[13 11],X,right,green
-523,down left,[9 9],[ 4 14],X,bottom left,green
-524,grip,[4 4],[4 4],X,top left,green
-525,grip,[7 9],[7 9],X,center,green
-526,down right,[11 10],[15 16],X,bottom right,green
-527,grip,[11  8],[11  8],X,center,green
-528,grip,[11 10],[11 10],X,center,green
-529,grip,[5 3],[5 3],X,top left,green
-530,grip,[ 6 16],[ 6 16],X,bottom,green
-531,down right,[ 9 10],[13 16],X,bottom right,green
-532,down left,[ 5 14],[ 3 16],X,bottom left,green
-533,grip,[ 4 12],[ 4 12],X,left,green
-534,down left,[6 9],[ 2 16],X,bottom left,green
-535,grip,[14  7],[14  7],X,right,green
-536,grip,[4 6],[4 6],X,left,green
-537,grip,[11  8],[11  8],X,center,green
-538,grip,[14  3],[14  3],X,top right,green
-539,down left,[4 9],[ 2 13],X,bottom left,green
-540,grip,[13  4],[13  4],X,top right,yellow
-541,grip,[12  3],[12  3],X,top,yellow
-542,grip,[12  8],[12  8],X,center,yellow
-543,grip,[10  2],[10  2],X,top,yellow
-544,grip,[ 3 10],[ 3 10],X,left,yellow
-545,grip,[7 7],[7 7],X,center,yellow
-546,grip,[6 4],[6 4],X,top,yellow
-547,grip,[10 12],[10 12],X,center,yellow
-548,right,[16  6],[16  5],X,top right,yellow
-549,down right,[13  9],[16 16],X,bottom right,yellow
-550,right down,[12  9],[15 12],X,right,yellow
-551,grip,[14  2],[14  2],X,top right,yellow
-552,grip,[9 4],[9 4],X,top,yellow
-553,grip,[12  5],[12  5],X,top,yellow
-554,grip,[ 9 15],[ 9 15],X,bottom,yellow
-555,grip,[10  6],[10  6],X,center,yellow
-556,grip,[14  3],[14  3],X,top right,yellow
-557,grip,[ 8 16],[ 8 16],X,bottom,yellow
-558,grip,[ 8 16],[ 8 16],X,bottom,yellow
-559,grip,[10 11],[10 11],X,center,yellow
-560,grip,[ 5 12],[ 5 12],X,left,cyan
-561,down right,[15  9],[16 13],X,bottom right,cyan
-562,grip,[11  9],[11  9],X,center,cyan
-563,grip,[4 8],[4 8],X,left,cyan
-564,grip,[8 3],[8 3],X,top,cyan
-565,grip,[ 8 13],[ 8 13],X,bottom,cyan
-566,grip,[7 5],[7 5],X,top,cyan
-567,up,[4 2],[3 2],X,top left,cyan
-568,grip,[10  8],[10  8],X,center,cyan
-569,grip,[ 2 12],[ 2 12],X,left,cyan
-570,grip,[10 13],[10 13],X,bottom,cyan
-571,grip,[ 2 10],[ 2 10],X,left,cyan
-572,down left,[4 9],[ 2 14],X,bottom left,cyan
-573,grip,[15  8],[15  8],X,right,cyan
-574,grip,[9 7],[9 7],X,center,cyan
-575,grip,[11  9],[11  9],X,center,cyan
-576,grip,[15  5],[15  5],X,top right,cyan
-577,grip,[11  8],[11  8],X,center,cyan
-578,left,[3 4],[3 4],X,top left,cyan
-579,grip,[16  6],[16  6],X,right,cyan
-580,down right,[9 9],[15 16],X,bottom right,magenta
-581,grip,[ 3 12],[ 3 12],X,left,magenta
-582,grip,[8 2],[8 2],X,top,magenta
-583,grip,[10 11],[10 11],X,center,magenta
-584,grip,[14  8],[14  8],X,right,magenta
-585,grip,[13  7],[13  7],X,right,magenta
-586,down,[ 3 12],[ 2 13],X,bottom left,magenta
-587,grip,[15 11],[15 11],X,right,magenta
-588,right down,[11 12],[13 14],X,bottom right,magenta
-589,grip,[ 6 16],[ 6 16],X,bottom,magenta
-590,down left,[4 9],[ 2 14],X,bottom left,magenta
-591,down left,[6 9],[ 2 15],X,bottom left,magenta
-592,grip,[10  7],[10  7],X,center,magenta
-593,grip,[11  8],[11  8],X,center,magenta
-594,grip,[ 8 10],[ 8 10],X,center,magenta
-595,grip,[2 5],[2 5],X,top left,magenta
-596,grip,[12  2],[12  2],X,top,magenta
-597,grip,[15  8],[15  8],X,right,magenta
-598,grip,[ 9 10],[ 9 10],X,center,magenta
-599,grip,[8 6],[8 6],X,center,magenta
-600,grip,[ 2 11],[ 2 11],Z,left,red
-601,grip,[ 7 10],[ 7 10],Z,center,red
-602,grip,[ 6 14],[ 6 14],Z,bottom,red
-603,grip,[12  4],[12  4],Z,top,red
-604,up left,[4 8],[2 3],Z,top left,red
-605,right,[15  9],[16  9],Z,right,red
-606,grip,[16  7],[16  7],Z,right,red
-607,grip,[3 7],[3 7],Z,left,red
-608,grip,[11 14],[11 14],Z,bottom,red
-609,grip,[14  6],[14  6],Z,right,red
-610,grip,[4 7],[4 7],Z,left,red
-611,grip,[11  4],[11  4],Z,top,red
-612,grip,[11  4],[11  4],Z,top,red
-613,right down right,[13  9],[15 11],Z,right,red
-614,grip,[10 12],[10 12],Z,center,red
-615,right right right right right right right right right right,[13  9],[16  9],Z,right,red
-616,grip,[16  7],[16  7],Z,right,red
-617,down left,[ 4 10],[ 2 15],Z,bottom left,red
-618,grip,[13  9],[13  9],Z,right,red
-619,grip,[6 4],[6 4],Z,top,red
-620,up left,[6 4],[4 2],Z,top left,blue
-621,down left,[ 7 12],[ 5 13],Z,bottom left,blue
-622,down right,[12  9],[16 15],Z,bottom right,blue
-623,right down right,[11  9],[16 13],Z,bottom right,blue
-624,grip,[4 4],[4 4],Z,top left,blue
-625,grip,[14  6],[14  6],Z,right,blue
-626,grip,[ 9 11],[ 9 11],Z,center,blue
-627,down right,[11 13],[13 15],Z,bottom right,blue
-628,grip,[3 8],[3 8],Z,left,blue
-629,right down down right down right down right down right,[11 11],[13 13],Z,bottom right,blue
-630,grip,[8 8],[8 8],Z,center,blue
-631,down right,[10 10],[13 14],Z,bottom right,blue
-632,grip,[10  2],[10  2],Z,top,blue
-633,grip,[ 7 15],[ 7 15],Z,bottom,blue
-634,grip,[13  8],[13  8],Z,right,blue
-635,grip,[10 14],[10 14],Z,bottom,blue
-636,down left,[5 9],[ 2 14],Z,bottom left,blue
-637,grip,[15  2],[15  2],Z,top right,blue
-638,grip,[9 4],[9 4],Z,top,blue
-639,grip,[15  6],[15  6],Z,right,blue
-640,grip,[14  6],[14  6],Z,right,green
-641,up left,[6 7],[3 2],Z,top left,green
-642,grip,[ 7 13],[ 7 13],Z,bottom,green
-643,grip,[13 11],[13 11],Z,right,green
-644,grip,[ 4 11],[ 4 11],Z,left,green
-645,grip,[ 6 16],[ 6 16],Z,bottom,green
-646,grip,[ 9 15],[ 9 15],Z,bottom,green
-647,right right down right,[11  9],[16 12],Z,right,green
-648,grip,[5 4],[5 4],Z,top left,green
-649,grip,[15  9],[15  9],Z,right,green
-650,right right right right right right right right right right,[12  9],[15  9],Z,right,green
-651,grip,[8 9],[8 9],Z,center,green
-652,grip,[8 3],[8 3],Z,top,green
-653,grip,[ 8 14],[ 8 14],Z,bottom,green
-654,grip,[11 13],[11 13],Z,bottom,green
-655,grip,[ 6 13],[ 6 13],Z,bottom,green
-656,grip,[10 16],[10 16],Z,bottom,green
-657,grip,[ 7 11],[ 7 11],Z,center,green
-658,grip,[ 4 11],[ 4 11],Z,left,green
-659,grip,[5 7],[5 7],Z,left,green
-660,grip,[6 5],[6 5],Z,top,yellow
-661,grip,[ 8 13],[ 8 13],Z,bottom,yellow
-662,grip,[5 2],[5 2],Z,top left,yellow
-663,down right,[12  9],[14 14],Z,bottom right,yellow
-664,right right right right right right right right right right,[11  9],[16 12],Z,right,yellow
-665,grip,[ 3 11],[ 3 11],Z,left,yellow
-666,grip,[2 7],[2 7],Z,left,yellow
-667,grip,[8 3],[8 3],Z,top,yellow
-668,grip,[2 9],[2 9],Z,left,yellow
-669,up,[14  4],[15  2],Z,top right,yellow
-670,grip,[6 3],[6 3],Z,top,yellow
-671,grip,[11  4],[11  4],Z,top,yellow
-672,grip,[7 5],[7 5],Z,top,yellow
-673,grip,[3 6],[3 6],Z,left,yellow
-674,grip,[ 7 16],[ 7 16],Z,bottom,yellow
-675,grip,[ 7 10],[ 7 10],Z,center,yellow
-676,grip,[11  7],[11  7],Z,center,yellow
-677,grip,[9 3],[9 3],Z,top,yellow
-678,grip,[6 7],[6 7],Z,center,yellow
-679,grip,[ 6 13],[ 6 13],Z,bottom,yellow
-680,grip,[4 7],[4 7],Z,left,cyan
-681,grip,[ 9 11],[ 9 11],Z,center,cyan
-682,grip,[6 8],[6 8],Z,center,cyan
-683,grip,[12  7],[12  7],Z,center,cyan
-684,grip,[12 10],[12 10],Z,center,cyan
-685,left,[3 3],[2 2],Z,top left,cyan
-686,grip,[ 8 12],[ 8 12],Z,center,cyan
-687,grip,[11  6],[11  6],Z,center,cyan
-688,down right,[11 11],[13 13],Z,bottom right,cyan
-689,right,[14  9],[16  9],Z,right,cyan
-690,grip,[ 6 14],[ 6 14],Z,bottom,cyan
-691,grip,[16  8],[16  8],Z,right,cyan
-692,grip,[6 8],[6 8],Z,center,cyan
-693,grip,[6 8],[6 8],Z,center,cyan
-694,grip,[6 7],[6 7],Z,center,cyan
-695,down left,[ 7 10],[ 5 13],Z,bottom left,cyan
-696,grip,[4 5],[4 5],Z,top left,cyan
-697,grip,[13  8],[13  8],Z,right,cyan
-698,right down right,[11  9],[16 14],Z,bottom right,cyan
-699,grip,[3 8],[3 8],Z,left,cyan
-700,grip,[ 7 14],[ 7 14],Z,bottom,magenta
-701,down right,[10  9],[14 15],Z,bottom right,magenta
-702,grip,[12 11],[12 11],Z,center,magenta
-703,right,[12 10],[13 13],Z,bottom right,magenta
-704,grip,[9 7],[9 7],Z,center,magenta
-705,grip,[8 5],[8 5],Z,top,magenta
-706,grip,[ 9 10],[ 9 10],Z,center,magenta
-707,grip,[4 9],[4 9],Z,left,magenta
-708,grip,[6 7],[6 7],Z,center,magenta
-709,grip,[ 3 10],[ 3 10],Z,left,magenta
-710,grip,[9 7],[9 7],Z,center,magenta
-711,grip,[14  4],[14  4],Z,top right,magenta
-712,grip,[ 8 15],[ 8 15],Z,bottom,magenta
-713,grip,[ 5 10],[ 5 10],Z,left,magenta
-714,grip,[13  7],[13  7],Z,right,magenta
-715,grip,[ 9 12],[ 9 12],Z,center,magenta
-716,grip,[13  6],[13  6],Z,right,magenta
-717,grip,[ 5 11],[ 5 11],Z,left,magenta
-718,grip,[11 10],[11 10],Z,center,magenta
-719,down right,[9 9],[15 16],Z,bottom right,magenta
+,last_move,predicted_position,target_position,shape,region,color,steps,time
+0,grip,[7 3],[7 3],P,top,red,9,4.522150754928589
+1,grip,[13  2],[13  2],P,top right,red,12,4.862878322601318
+2,grip,[11  8],[11  8],P,center,red,4,1.7049705982208252
+3,grip,[13  2],[13  2],P,top right,red,12,4.8361921310424805
+4,grip,[ 5 13],[ 5 13],P,bottom left,red,12,5.243546724319458
+5,grip,[10  6],[10  6],P,center,red,5,2.104612112045288
+6,grip,[4 5],[4 5],P,top left,red,10,4.063756704330444
+7,grip,[8 8],[8 8],P,center,red,3,1.3151144981384277
+8,grip,[ 6 11],[ 6 11],P,center,red,6,2.539738178253174
+9,grip,[6 3],[6 3],P,top,red,10,4.075821161270142
+10,down,[ 6 15],[ 5 15],P,bottom left,red,20,9.327171087265015
+11,grip,[4 5],[4 5],P,top left,red,12,5.121942520141602
+12,grip,[12  2],[12  2],P,top,red,11,4.469449996948242
+13,grip,[8 4],[8 4],P,top,red,7,2.8927931785583496
+14,grip,[16  7],[16  7],P,right,red,10,4.073702096939087
+15,grip,[9 4],[9 4],P,top,red,6,2.4977433681488037
+16,grip,[10 15],[10 15],P,bottom,red,8,3.291628122329712
+17,right down right,[11  9],[16 13],P,bottom right,red,20,12.01371693611145
+18,down left,[6 9],[ 3 15],P,bottom left,red,20,10.143569231033325
+19,grip,[11 16],[11 16],P,bottom,red,10,4.143774747848511
+20,grip,[ 4 12],[ 4 12],P,left,blue,18,8.430715084075928
+21,grip,[ 4 13],[ 4 13],P,bottom left,blue,20,9.343624830245972
+22,grip,[13  8],[13  8],P,right,blue,6,2.498305082321167
+23,grip,[10  8],[10  8],P,center,blue,3,1.3160042762756348
+24,down left,[3 9],[ 2 13],P,bottom left,blue,20,9.877591848373413
+25,grip,[6 2],[6 2],P,top,blue,11,4.473914384841919
+26,grip,[14  9],[14  9],P,right,blue,7,3.9670541286468506
+27,right down right,[12 11],[13 12],P,right,blue,20,12.175438642501831
+28,grip,[4 6],[4 6],P,left,blue,12,5.328642129898071
+29,down right,[11  9],[15 16],P,bottom right,blue,20,10.300435543060303
+30,grip,[ 4 13],[ 4 13],P,bottom left,blue,12,5.123929023742676
+31,grip,[16  5],[16  5],P,top right,blue,17,7.512473821640015
+32,grip,[9 3],[9 3],P,top,blue,7,2.89223051071167
+33,grip,[10  5],[10  5],P,top,blue,6,2.4979705810546875
+34,down left,[9 9],[ 3 16],P,bottom left,blue,20,10.549823760986328
+35,grip,[15  8],[15  8],P,right,blue,8,3.2893974781036377
+36,grip,[8 2],[8 2],P,top,blue,9,3.6836423873901367
+37,grip,[15  6],[15  6],P,right,blue,10,4.0882933139801025
+38,grip,[6 2],[6 2],P,top,blue,11,4.481764793395996
+39,down right,[9 9],[13 15],P,bottom right,blue,20,10.60109829902649
+40,grip,[9 7],[9 7],P,center,green,3,1.321138858795166
+41,grip,[10  8],[10  8],P,center,green,3,1.3169147968292236
+42,grip,[12  6],[12  6],P,center,green,7,2.904259443283081
+43,grip,[14  3],[14  3],P,top right,green,19,8.54580807685852
+44,down right,[10 11],[14 16],P,bottom right,green,20,10.137870788574219
+45,grip,[10 16],[10 16],P,bottom,green,9,3.6817009449005127
+46,grip,[6 4],[6 4],P,top,green,9,3.680786371231079
+47,down,[15 10],[15 11],P,right,green,20,10.834049224853516
+48,grip,[9 6],[9 6],P,center,green,4,1.711153507232666
+49,grip,[14  9],[14  9],P,right,green,8,5.430353403091431
+50,grip,[2 7],[2 7],P,left,green,15,6.796001195907593
+51,grip,[ 9 12],[ 9 12],P,center,green,4,1.7151803970336914
+52,grip,[6 9],[6 9],P,center,green,4,1.7142629623413086
+53,up left,[7 9],[2 2],P,top left,green,20,10.231632232666016
+54,grip,[ 9 13],[ 9 13],P,bottom,green,5,2.097468614578247
+55,down right,[11 10],[13 14],P,bottom right,green,20,10.103201866149902
+56,grip,[2 9],[2 9],P,left,green,8,3.2717602252960205
+57,down right,[12  9],[13 14],P,bottom right,green,20,10.089554071426392
+58,grip,[12  6],[12  6],P,center,green,7,2.8857338428497314
+59,up left,[7 5],[5 3],P,top left,green,20,9.73382830619812
+60,grip,[ 2 11],[ 2 11],P,left,yellow,11,4.596370458602905
+61,grip,[12  9],[12  9],P,center,yellow,4,1.7505130767822266
+62,grip,[ 3 10],[ 3 10],P,left,yellow,8,3.305262327194214
+63,grip,[11  3],[11  3],P,top,yellow,9,3.6800196170806885
+64,grip,[14  8],[14  8],P,right,yellow,7,2.8916919231414795
+65,grip,[13  7],[13  7],P,right,yellow,7,2.8911523818969727
+66,down left,[3 9],[ 2 13],P,bottom left,yellow,20,9.741793394088745
+67,right right down right,[12  9],[15 11],P,right,yellow,20,14.98139476776123
+68,down right,[11 11],[13 14],P,bottom right,yellow,20,11.21025013923645
+69,grip,[ 6 16],[ 6 16],P,bottom,yellow,11,4.475692272186279
+70,down left,[4 9],[ 2 14],P,bottom left,yellow,20,9.933403968811035
+71,down left,[4 9],[ 2 15],P,bottom left,yellow,20,9.871461391448975
+72,grip,[10  7],[10  7],P,center,yellow,4,1.7083415985107422
+73,grip,[11  8],[11  8],P,center,yellow,4,1.7101309299468994
+74,grip,[ 8 10],[ 8 10],P,center,yellow,3,1.315490484237671
+75,grip,[2 5],[2 5],P,top left,yellow,13,5.377019643783569
+76,grip,[12  2],[12  2],P,top,yellow,11,4.468146562576294
+77,grip,[15  8],[15  8],P,right,yellow,8,3.2852566242218018
+78,grip,[ 9 10],[ 9 10],P,center,yellow,2,0.9230873584747314
+79,grip,[8 6],[8 6],P,center,yellow,5,2.104501724243164
+80,grip,[ 2 11],[ 2 11],P,left,cyan,15,6.691812992095947
+81,grip,[ 7 10],[ 7 10],P,center,cyan,4,1.7090098857879639
+82,grip,[ 6 14],[ 6 14],P,bottom,cyan,9,3.669149160385132
+83,grip,[12  4],[12  4],P,top,cyan,9,3.6689627170562744
+84,up,[4 4],[2 3],P,top left,cyan,20,9.645936012268066
+85,right right right right right right right right right right,[12  9],[16  9],P,right,cyan,20,26.10640048980713
+86,grip,[16  7],[16  7],P,right,cyan,10,4.060697793960571
+87,grip,[3 7],[3 7],P,left,cyan,10,4.204606771469116
+88,grip,[11 14],[11 14],P,bottom,cyan,8,3.2813327312469482
+89,grip,[14  6],[14  6],P,right,cyan,9,3.673684597015381
+90,grip,[4 7],[4 7],P,left,cyan,8,3.277116060256958
+91,grip,[11  4],[11  4],P,top,cyan,8,3.2785823345184326
+92,grip,[11  4],[11  4],P,top,cyan,8,3.2765228748321533
+93,right down,[13  9],[15 11],P,right,cyan,20,12.02699899673462
+94,grip,[10 12],[10 12],P,center,cyan,5,2.098707437515259
+95,grip,[16  9],[16  9],P,right,cyan,18,17.91351342201233
+96,grip,[16  7],[16  7],P,right,cyan,11,4.595029592514038
+97,down left,[ 5 11],[ 2 15],P,bottom left,cyan,20,10.155289649963379
+98,grip,[13  9],[13  9],P,right,cyan,5,2.097074031829834
+99,grip,[6 4],[6 4],P,top,cyan,9,3.6748178005218506
+100,grip,[4 2],[4 2],P,top left,magenta,17,7.714178800582886
+101,grip,[ 5 13],[ 5 13],P,bottom left,magenta,13,6.045859336853027
+102,down right,[13  9],[16 15],P,bottom right,magenta,20,10.46309208869934
+103,down right,[14  9],[16 13],P,bottom right,magenta,20,10.435881614685059
+104,grip,[4 4],[4 4],P,top left,magenta,11,4.686078071594238
+105,grip,[14  6],[14  6],P,right,magenta,9,3.6745173931121826
+106,grip,[ 9 11],[ 9 11],P,center,magenta,3,1.3153066635131836
+107,down right,[12 13],[13 15],P,bottom right,magenta,20,10.01905107498169
+108,grip,[3 8],[3 8],P,left,magenta,8,3.2799365520477295
+109,right down,[12 12],[13 13],P,bottom right,magenta,20,10.690716981887817
+110,grip,[8 8],[8 8],P,center,magenta,3,1.3142492771148682
+111,right down down right,[12 11],[13 14],P,bottom right,magenta,20,10.79070496559143
+112,grip,[10  2],[10  2],P,top,magenta,9,3.6730263233184814
+113,grip,[ 7 15],[ 7 15],P,bottom,magenta,9,3.6757795810699463
+114,grip,[13  8],[13  8],P,right,magenta,6,2.4941625595092773
+115,grip,[10 14],[10 14],P,bottom,magenta,7,2.8852803707122803
+116,down left,[ 4 10],[ 2 14],P,bottom left,magenta,20,10.159204483032227
+117,up,[14  4],[15  2],P,top right,magenta,20,9.628364086151123
+118,grip,[9 4],[9 4],P,top,magenta,6,2.4972686767578125
+119,grip,[15  6],[15  6],P,right,magenta,10,4.064974069595337
+120,grip,[14  6],[14  6],T,right,red,10,4.215684175491333
+121,up,[6 6],[3 2],T,top left,red,20,9.773120641708374
+122,grip,[ 7 13],[ 7 13],T,bottom,red,7,2.9137561321258545
+123,grip,[13 11],[13 11],T,right,red,7,2.9227006435394287
+124,grip,[ 4 11],[ 4 11],T,left,red,14,6.720275640487671
+125,grip,[ 6 16],[ 6 16],T,bottom,red,12,4.9883294105529785
+126,grip,[ 9 15],[ 9 15],T,bottom,red,7,2.883545160293579
+127,right right down right,[12  9],[16 12],T,right,red,20,20.459375619888306
+128,grip,[5 4],[5 4],T,top left,red,10,4.065350770950317
+129,grip,[15  9],[15  9],T,right,red,8,4.36113166809082
+130,grip,[15  9],[15  9],T,right,red,11,7.944950103759766
+131,grip,[8 9],[8 9],T,center,red,2,0.9228372573852539
+132,grip,[8 3],[8 3],T,top,red,8,3.2848987579345703
+133,grip,[ 8 14],[ 8 14],T,bottom,red,7,2.9621567726135254
+134,grip,[11 13],[11 13],T,bottom,red,8,3.4386510848999023
+135,grip,[ 6 13],[ 6 13],T,bottom,red,8,3.2879419326782227
+136,grip,[10 16],[10 16],T,bottom,red,9,3.6850786209106445
+137,grip,[ 7 11],[ 7 11],T,center,red,5,2.102849245071411
+138,grip,[ 4 11],[ 4 11],T,left,red,9,3.8126091957092285
+139,grip,[5 7],[5 7],T,left,red,7,2.885838747024536
+140,grip,[6 5],[6 5],T,top,blue,8,3.2871503829956055
+141,grip,[ 8 13],[ 8 13],T,bottom,blue,6,2.4979193210601807
+142,grip,[5 2],[5 2],T,top left,blue,13,5.377148866653442
+143,down right,[13 12],[14 14],T,bottom right,blue,20,9.730286836624146
+144,right right right right right right right right right right,[10  9],[16 12],T,right,blue,20,28.26806879043579
+145,grip,[ 3 11],[ 3 11],T,left,blue,9,3.6773288249969482
+146,grip,[2 7],[2 7],T,left,blue,12,5.131201267242432
+147,grip,[8 3],[8 3],T,top,blue,8,3.2844364643096924
+148,grip,[2 9],[2 9],T,left,blue,8,3.283904790878296
+149,grip,[15  2],[15  2],T,top right,blue,14,5.630020618438721
+150,grip,[6 3],[6 3],T,top,blue,10,4.0707666873931885
+151,grip,[11  4],[11  4],T,top,blue,8,3.283280372619629
+152,grip,[7 5],[7 5],T,top,blue,7,2.8932113647460938
+153,grip,[3 6],[3 6],T,left,blue,16,7.244757890701294
+154,grip,[ 7 16],[ 7 16],T,bottom,blue,11,4.603489875793457
+155,grip,[ 7 10],[ 7 10],T,center,blue,4,1.711435317993164
+156,grip,[11  7],[11  7],T,center,blue,5,2.103883743286133
+157,grip,[9 3],[9 3],T,top,blue,7,2.912738561630249
+158,grip,[6 7],[6 7],T,center,blue,6,2.525435447692871
+159,grip,[ 6 13],[ 6 13],T,bottom,blue,8,3.2838940620422363
+160,grip,[4 7],[4 7],T,left,green,8,3.2842888832092285
+161,grip,[ 9 11],[ 9 11],T,center,green,3,1.3159890174865723
+162,grip,[6 8],[6 8],T,center,green,5,2.1036105155944824
+163,grip,[12  7],[12  7],T,center,green,6,2.4965953826904297
+164,grip,[12 10],[12 10],T,center,green,5,2.103830337524414
+165,up left,[9 9],[2 2],T,top left,green,20,10.531930685043335
+166,grip,[ 8 12],[ 8 12],T,center,green,5,2.1042284965515137
+167,grip,[11  6],[11  6],T,center,green,6,2.4951694011688232
+168,right down down right right down down right right down,[12 12],[13 13],T,bottom right,green,20,10.948755502700806
+169,right right right right right right right right right right,[12  9],[16  9],T,right,green,20,26.135885000228882
+170,grip,[ 6 14],[ 6 14],T,bottom,green,9,3.6823716163635254
+171,grip,[16  8],[16  8],T,right,green,9,3.6789822578430176
+172,grip,[6 8],[6 8],T,center,green,5,2.101442337036133
+173,grip,[6 8],[6 8],T,center,green,5,2.104440212249756
+174,grip,[6 7],[6 7],T,center,green,6,2.4955527782440186
+175,grip,[ 5 13],[ 5 13],T,bottom left,green,14,6.303056478500366
+176,grip,[4 5],[4 5],T,top left,green,11,4.583250284194946
+177,grip,[13  8],[13  8],T,right,green,7,3.020529270172119
+178,down right,[13  9],[16 14],T,bottom right,green,20,10.261888265609741
+179,grip,[3 8],[3 8],T,left,green,8,3.2798757553100586
+180,grip,[ 7 14],[ 7 14],T,bottom,yellow,9,3.861924171447754
+181,down right,[11  9],[14 15],T,bottom right,yellow,20,10.289620399475098
+182,grip,[12 11],[12 11],T,center,yellow,6,2.4888088703155518
+183,grip,[13 13],[13 13],T,bottom right,yellow,10,4.177279472351074
+184,grip,[9 7],[9 7],T,center,yellow,3,1.3081958293914795
+185,grip,[8 5],[8 5],T,top,yellow,6,2.4822428226470947
+186,grip,[ 9 10],[ 9 10],T,center,yellow,2,0.9158709049224854
+187,grip,[4 9],[4 9],T,left,yellow,6,2.489121913909912
+188,grip,[6 7],[6 7],T,center,yellow,6,2.4909732341766357
+189,grip,[ 3 10],[ 3 10],T,left,yellow,8,3.2801594734191895
+190,grip,[9 7],[9 7],T,center,yellow,3,1.314749002456665
+191,grip,[14  4],[14  4],T,top right,yellow,11,4.454653739929199
+192,grip,[ 8 15],[ 8 15],T,bottom,yellow,8,3.284332275390625
+193,grip,[ 5 10],[ 5 10],T,left,yellow,6,2.497215986251831
+194,grip,[13  7],[13  7],T,right,yellow,7,2.8910224437713623
+195,grip,[ 9 12],[ 9 12],T,center,yellow,4,1.7093348503112793
+196,grip,[13  6],[13  6],T,right,yellow,8,3.2912371158599854
+197,grip,[ 5 11],[ 5 11],T,left,yellow,7,2.891388416290283
+198,grip,[11 10],[11 10],T,center,yellow,4,1.7085058689117432
+199,down right,[11  9],[15 16],T,bottom right,yellow,20,10.281010389328003
+200,grip,[5 2],[5 2],T,top left,cyan,12,5.1650354862213135
+201,grip,[12 14],[12 14],T,bottom,cyan,9,3.6768107414245605
+202,grip,[2 3],[2 3],T,top left,cyan,18,8.099642276763916
+203,down left,[3 9],[ 2 13],T,bottom left,cyan,20,10.073567390441895
+204,grip,[ 3 10],[ 3 10],T,left,cyan,8,3.272780179977417
+205,grip,[15  5],[15  5],T,top right,cyan,13,5.763202905654907
+206,grip,[ 6 13],[ 6 13],T,bottom,cyan,8,3.2723116874694824
+207,down right,[12  9],[14 14],T,bottom right,cyan,20,10.538386106491089
+208,grip,[7 9],[7 9],T,center,cyan,3,1.3122682571411133
+209,grip,[7 5],[7 5],T,top,cyan,7,2.885104179382324
+210,grip,[2 6],[2 6],T,left,cyan,17,7.6417131423950195
+211,down right,[ 9 10],[14 16],T,bottom right,cyan,20,10.820206880569458
+212,grip,[6 3],[6 3],T,top,cyan,10,4.069445371627808
+213,grip,[8 6],[8 6],T,center,cyan,5,2.1004931926727295
+214,up left,[6 6],[2 2],T,top left,cyan,20,10.148274898529053
+215,grip,[13 12],[13 12],T,right,cyan,9,3.805687427520752
+216,down right,[15  9],[16 13],T,bottom right,cyan,20,11.756736755371094
+217,grip,[8 5],[8 5],T,top,cyan,6,2.4915478229522705
+218,grip,[ 7 14],[ 7 14],T,bottom,cyan,8,3.2817041873931885
+219,right down,[14  9],[15 11],T,right,cyan,20,12.340267181396484
+220,grip,[4 6],[4 6],T,left,magenta,9,3.668546199798584
+221,grip,[12 11],[12 11],T,center,magenta,6,2.4870755672454834
+222,down left,[7 9],[ 3 15],T,bottom left,magenta,20,10.67770266532898
+223,grip,[12  3],[12  3],T,top,magenta,10,4.062067270278931
+224,grip,[ 8 13],[ 8 13],T,bottom,magenta,6,2.4927406311035156
+225,grip,[6 2],[6 2],T,top,magenta,11,4.456040859222412
+226,down left,[ 7 11],[ 4 15],T,bottom left,magenta,20,10.405455350875854
+227,grip,[12  5],[12  5],T,top,magenta,8,3.2742714881896973
+228,grip,[15  5],[15  5],T,top right,magenta,12,5.230821132659912
+229,right right down right,[13  9],[15 10],T,right,magenta,20,18.301785945892334
+230,grip,[12  8],[12  8],T,center,magenta,5,2.0981733798980713
+231,grip,[ 6 13],[ 6 13],T,bottom,magenta,8,3.2698981761932373
+232,grip,[13  5],[13  5],T,top right,magenta,9,3.8429923057556152
+233,grip,[ 7 11],[ 7 11],T,center,magenta,5,2.0899643898010254
+234,grip,[2 6],[2 6],T,left,magenta,11,4.4372687339782715
+235,grip,[12  2],[12  2],T,top,magenta,11,4.45837664604187
+236,grip,[3 7],[3 7],T,left,magenta,9,3.6658198833465576
+237,grip,[8 7],[8 7],T,center,magenta,4,1.7005233764648438
+238,grip,[10 15],[10 15],T,bottom,magenta,8,3.2745182514190674
+239,grip,[12 12],[12 12],T,center,magenta,7,2.8925957679748535
+240,right down right,[11  9],[16 13],U,bottom right,red,20,12.433105230331421
+241,down left,[ 9 11],[ 5 15],U,bottom left,red,20,10.272340297698975
+242,grip,[ 9 16],[ 9 16],U,bottom,red,8,3.2830429077148438
+243,grip,[9 8],[9 8],U,center,red,2,0.9228360652923584
+244,grip,[13 11],[13 11],U,right,red,20,10.958677530288696
+245,grip,[13 10],[13 10],U,right,red,7,3.295863628387451
+246,up left,[6 8],[2 3],U,top left,red,20,10.000205993652344
+247,grip,[ 6 15],[ 6 15],U,bottom,red,12,5.132965564727783
+248,grip,[10  3],[10  3],U,top,red,8,3.286653757095337
+249,grip,[ 9 11],[ 9 11],U,center,red,3,1.3160133361816406
+250,grip,[ 4 11],[ 4 11],U,left,red,13,5.932816505432129
+251,grip,[14 10],[14 10],U,right,red,9,5.823045253753662
+252,grip,[13  6],[13  6],U,right,red,8,3.2875404357910156
+253,grip,[10 10],[10 10],U,center,red,3,1.3164665699005127
+254,grip,[ 6 10],[ 6 10],U,center,red,5,2.1026430130004883
+255,right right right right right right right right right right,[11  9],[16 10],U,right,red,20,27.217507362365723
+256,grip,[11 13],[11 13],U,bottom,red,7,2.8878884315490723
+257,grip,[15  5],[15  5],U,top right,red,11,4.4662346839904785
+258,grip,[13 11],[13 11],U,right,red,7,2.8884546756744385
+259,up right,[13  9],[16  3],U,top right,red,20,9.996843338012695
+260,grip,[14  8],[14  8],U,right,blue,8,3.5529778003692627
+261,left down,[ 8 11],[ 5 14],U,bottom left,blue,20,10.119181632995605
+262,right down down right,[11  9],[13 11],U,right,blue,20,14.869898557662964
+263,down left,[8 9],[ 4 14],U,bottom left,blue,20,10.390229940414429
+264,grip,[4 4],[4 4],U,top left,blue,14,6.042728662490845
+265,grip,[7 9],[7 9],U,center,blue,3,1.3227739334106445
+266,right,[11  9],[15 16],U,bottom right,blue,20,10.266836166381836
+267,grip,[11  8],[11  8],U,center,blue,4,1.711731195449829
+268,grip,[11 10],[11 10],U,center,blue,4,1.7086844444274902
+269,left,[5 3],[5 3],U,top left,blue,20,9.196105480194092
+270,grip,[ 6 16],[ 6 16],U,bottom,blue,14,6.085091590881348
+271,down right,[10 12],[13 16],U,bottom right,blue,20,10.024832963943481
+272,down left,[ 8 11],[ 3 16],U,bottom left,blue,20,10.137216329574585
+273,grip,[ 4 12],[ 4 12],U,left,blue,11,4.73481297492981
+274,down left,[ 6 10],[ 2 16],U,bottom left,blue,20,10.00369143486023
+275,grip,[14  7],[14  7],U,right,blue,8,3.2864301204681396
+276,grip,[4 6],[4 6],U,left,blue,9,3.6796045303344727
+277,grip,[11  8],[11  8],U,center,blue,4,1.7088327407836914
+278,grip,[14  3],[14  3],U,top right,blue,14,5.902955770492554
+279,down left,[4 9],[ 2 13],U,bottom left,blue,20,9.88909363746643
+280,grip,[13  4],[13  4],U,top right,green,10,4.083221673965454
+281,grip,[12  3],[12  3],U,top,green,10,4.079559564590454
+282,grip,[12  8],[12  8],U,center,green,5,2.1047637462615967
+283,grip,[10  2],[10  2],U,top,green,9,3.678607702255249
+284,grip,[ 3 10],[ 3 10],U,left,green,8,3.284039258956909
+285,grip,[7 7],[7 7],U,center,green,5,2.104245185852051
+286,grip,[6 4],[6 4],U,top,green,10,4.206042289733887
+287,grip,[10 12],[10 12],U,center,green,5,2.1023550033569336
+288,grip,[16  5],[16  5],U,top right,green,14,5.899558782577515
+289,down right,[12  9],[16 16],U,bottom right,green,20,10.135700702667236
+290,down right,[13  9],[15 12],U,right,green,20,10.442843198776245
+291,right,[13  5],[14  2],U,top right,green,20,9.53168797492981
+292,grip,[9 4],[9 4],U,top,green,6,2.485582113265991
+293,grip,[12  5],[12  5],U,top,green,8,3.2713420391082764
+294,grip,[ 9 15],[ 9 15],U,bottom,green,7,2.8758842945098877
+295,grip,[10  6],[10  6],U,center,green,5,2.0903239250183105
+296,grip,[14  3],[14  3],U,top right,green,14,5.8737897872924805
+297,grip,[ 8 16],[ 8 16],U,bottom,green,9,3.663910388946533
+298,grip,[ 8 16],[ 8 16],U,bottom,green,9,3.667774200439453
+299,grip,[10 11],[10 11],U,center,green,4,1.705183744430542
+300,grip,[ 5 12],[ 5 12],U,left,yellow,10,4.337023735046387
+301,right down right,[11  9],[16 13],U,bottom right,yellow,20,12.816129446029663
+302,grip,[11  9],[11  9],U,center,yellow,3,1.3120930194854736
+303,grip,[4 8],[4 8],U,left,yellow,7,2.889819860458374
+304,grip,[8 3],[8 3],U,top,yellow,8,3.2864370346069336
+305,grip,[ 8 13],[ 8 13],U,bottom,yellow,6,2.495487928390503
+306,grip,[7 5],[7 5],U,top,yellow,7,2.8902173042297363
+307,up,[6 6],[3 2],U,top left,yellow,20,9.764159440994263
+308,grip,[10  8],[10  8],U,center,yellow,3,1.314317226409912
+309,grip,[ 2 12],[ 2 12],U,left,yellow,11,4.463201522827148
+310,grip,[10 13],[10 13],U,bottom,yellow,7,3.0228188037872314
+311,grip,[ 2 10],[ 2 10],U,left,yellow,9,3.6851227283477783
+312,down left,[4 9],[ 2 14],U,bottom left,yellow,20,9.862603187561035
+313,grip,[15  8],[15  8],U,right,yellow,9,3.814408779144287
+314,grip,[9 7],[9 7],U,center,yellow,3,1.3137798309326172
+315,grip,[11  9],[11  9],U,center,yellow,3,1.3156232833862305
+316,grip,[15  5],[15  5],U,top right,yellow,15,6.560099124908447
+317,grip,[11  8],[11  8],U,center,yellow,4,1.7089476585388184
+318,up left,[6 8],[3 4],U,top left,yellow,20,10.015246868133545
+319,grip,[16  6],[16  6],U,right,yellow,12,4.97609806060791
+320,down right,[10  9],[15 16],U,bottom right,cyan,20,10.877185344696045
+321,left,[4 9],[ 3 12],U,left,cyan,20,10.47245478630066
+322,grip,[8 2],[8 2],U,top,cyan,9,3.6537654399871826
+323,grip,[10 11],[10 11],U,center,cyan,4,1.6949572563171387
+324,grip,[14  8],[14  8],U,right,cyan,7,2.8666062355041504
+325,grip,[13  7],[13  7],U,right,cyan,8,3.391754388809204
+326,down left,[4 9],[ 2 13],U,bottom left,cyan,20,10.212085485458374
+327,right right down right,[11  9],[15 11],U,right,cyan,20,14.857805967330933
+328,down right,[10  9],[13 14],U,bottom right,cyan,20,10.856635808944702
+329,grip,[ 6 16],[ 6 16],U,bottom,cyan,12,4.982041120529175
+330,left,[4 9],[ 2 14],U,bottom left,cyan,20,10.279662132263184
+331,down left,[6 9],[ 2 15],U,bottom left,cyan,20,10.546430826187134
+332,grip,[10  7],[10  7],U,center,cyan,4,1.705981731414795
+333,grip,[11  8],[11  8],U,center,cyan,4,1.7065320014953613
+334,grip,[ 8 10],[ 8 10],U,center,cyan,3,1.3134374618530273
+335,grip,[2 5],[2 5],U,top left,cyan,12,5.103415489196777
+336,grip,[12  2],[12  2],U,top,cyan,11,4.4675774574279785
+337,grip,[15  8],[15  8],U,right,cyan,9,3.939065456390381
+338,grip,[ 9 10],[ 9 10],U,center,cyan,2,0.9190750122070312
+339,grip,[8 6],[8 6],U,center,cyan,5,2.1004440784454346
+340,grip,[ 2 11],[ 2 11],U,left,magenta,10,4.065467119216919
+341,grip,[ 7 10],[ 7 10],U,center,magenta,4,1.7327675819396973
+342,grip,[ 6 14],[ 6 14],U,bottom,magenta,9,3.670621156692505
+343,grip,[12  4],[12  4],U,top,magenta,9,3.675372838973999
+344,up,[5 8],[2 3],U,top left,magenta,20,10.280524492263794
+345,right right right right right right right right right right,[12  9],[16  9],U,right,magenta,20,26.056761026382446
+346,grip,[16  7],[16  7],U,right,magenta,11,4.587770223617554
+347,grip,[3 7],[3 7],U,left,magenta,9,3.6770405769348145
+348,grip,[11 14],[11 14],U,bottom,magenta,9,3.811401605606079
+349,grip,[14  6],[14  6],U,right,magenta,9,3.715656280517578
+350,grip,[4 7],[4 7],U,left,magenta,8,3.29731822013855
+351,grip,[11  4],[11  4],U,top,magenta,8,3.2782886028289795
+352,grip,[11  4],[11  4],U,top,magenta,8,3.2699239253997803
+353,right down,[12  9],[15 11],U,right,magenta,20,10.99056625366211
+354,grip,[10 12],[10 12],U,center,magenta,5,2.084380626678467
+355,grip,[16  9],[16  9],U,right,magenta,10,6.151935815811157
+356,grip,[16  7],[16  7],U,right,magenta,11,4.57013726234436
+357,down left,[5 9],[ 2 15],U,bottom left,magenta,20,10.394328117370605
+358,grip,[13  9],[13  9],U,right,magenta,5,2.0952746868133545
+359,grip,[6 4],[6 4],U,top,magenta,9,3.67132306098938
+360,grip,[4 2],[4 2],W,top left,red,13,5.254619598388672
+361,grip,[ 5 13],[ 5 13],W,bottom left,red,10,4.213602066040039
+362,down right,[12  9],[16 15],W,bottom right,red,20,10.164162635803223
+363,right down right,[13  9],[16 13],W,bottom right,red,20,12.138776779174805
+364,grip,[4 4],[4 4],W,top left,red,11,4.456089973449707
+365,grip,[14  6],[14  6],W,right,red,9,3.680424928665161
+366,grip,[ 9 11],[ 9 11],W,center,red,3,1.3145909309387207
+367,grip,[13 15],[13 15],W,bottom right,red,13,5.512234449386597
+368,grip,[3 8],[3 8],W,left,red,8,3.2864620685577393
+369,grip,[13 13],[13 13],W,bottom right,red,9,3.670814037322998
+370,grip,[8 8],[8 8],W,center,red,3,1.3178014755249023
+371,down right,[11 11],[13 14],W,bottom right,red,20,10.01478886604309
+372,grip,[10  2],[10  2],W,top,red,9,3.6847259998321533
+373,grip,[ 7 15],[ 7 15],W,bottom,red,9,3.7359619140625
+374,grip,[13  8],[13  8],W,right,red,6,2.497382640838623
+375,grip,[10 14],[10 14],W,bottom,red,7,2.8941187858581543
+376,down left,[4 9],[ 2 14],W,bottom left,red,20,9.87592887878418
+377,grip,[15  2],[15  2],W,top right,red,19,8.277488470077515
+378,grip,[9 4],[9 4],W,top,red,6,2.498699426651001
+379,grip,[15  6],[15  6],W,right,red,10,4.072998523712158
+380,grip,[14  6],[14  6],W,right,blue,9,3.681800603866577
+381,up left,[9 9],[3 2],W,top left,blue,20,10.534949779510498
+382,grip,[ 7 13],[ 7 13],W,bottom,blue,7,2.8932580947875977
+383,grip,[13 11],[13 11],W,right,blue,13,7.530757665634155
+384,grip,[ 4 11],[ 4 11],W,left,blue,12,5.480118274688721
+385,grip,[ 6 16],[ 6 16],W,bottom,blue,19,8.700583219528198
+386,grip,[ 9 15],[ 9 15],W,bottom,blue,7,2.893038272857666
+387,right,[14  9],[16 12],W,right,blue,20,11.898984432220459
+388,grip,[5 4],[5 4],W,top left,blue,11,4.595227956771851
+389,grip,[15  9],[15  9],W,right,blue,9,5.821421146392822
+390,grip,[15  9],[15  9],W,right,blue,7,2.8938093185424805
+391,grip,[8 9],[8 9],W,center,blue,2,0.9223723411560059
+392,grip,[8 3],[8 3],W,top,blue,8,3.2876906394958496
+393,grip,[ 8 14],[ 8 14],W,bottom,blue,7,2.893362283706665
+394,grip,[11 13],[11 13],W,bottom,blue,7,2.8921780586242676
+395,grip,[ 6 13],[ 6 13],W,bottom,blue,8,3.286726474761963
+396,grip,[10 16],[10 16],W,bottom,blue,9,3.6781606674194336
+397,grip,[ 7 11],[ 7 11],W,center,blue,5,2.1034834384918213
+398,grip,[ 4 11],[ 4 11],W,left,blue,10,4.40638542175293
+399,grip,[5 7],[5 7],W,left,blue,8,3.4019346237182617
+400,grip,[6 5],[6 5],W,top,green,8,3.2700507640838623
+401,grip,[ 8 13],[ 8 13],W,bottom,green,6,2.4823105335235596
+402,up left,[6 3],[5 2],W,top left,green,20,9.28823184967041
+403,down right,[11  9],[14 14],W,bottom right,green,20,10.227623224258423
+404,grip,[16 12],[16 12],W,right,green,16,7.769413948059082
+405,grip,[ 3 11],[ 3 11],W,left,green,10,4.206426382064819
+406,up,[3 7],[2 7],W,left,green,20,9.49517273902893
+407,grip,[8 3],[8 3],W,top,green,8,3.294405221939087
+408,grip,[2 9],[2 9],W,left,green,8,3.3108906745910645
+409,grip,[15  2],[15  2],W,top right,green,18,7.7088847160339355
+410,grip,[6 3],[6 3],W,top,green,11,4.572478532791138
+411,grip,[11  4],[11  4],W,top,green,8,3.2671594619750977
+412,grip,[7 5],[7 5],W,top,green,7,2.8720598220825195
+413,up left,[6 8],[3 6],W,left,green,20,9.974598169326782
+414,grip,[ 7 16],[ 7 16],W,bottom,green,10,4.068105697631836
+415,grip,[ 7 10],[ 7 10],W,center,green,4,1.7081844806671143
+416,grip,[11  7],[11  7],W,center,green,5,2.0989344120025635
+417,grip,[9 3],[9 3],W,top,green,7,2.8903236389160156
+418,up,[ 5 -7],[6 7],W,center,green,20,7.875946044921875
+419,grip,[ 6 13],[ 6 13],W,bottom,green,8,3.3098578453063965
+420,grip,[4 7],[4 7],W,left,yellow,8,3.285641670227051
+421,grip,[ 9 11],[ 9 11],W,center,yellow,3,1.3146140575408936
+422,grip,[6 8],[6 8],W,center,yellow,5,2.1040661334991455
+423,grip,[11  7],[12  7],W,center,yellow,5,2.117255210876465
+424,grip,[12 10],[12 10],W,center,yellow,5,2.1360013484954834
+425,up left,[7 9],[2 2],W,top left,yellow,20,10.25649905204773
+426,grip,[ 8 12],[ 8 12],W,center,yellow,5,2.1046314239501953
+427,grip,[11  6],[11  6],W,center,yellow,6,2.4971303939819336
+428,right down right,[11 11],[13 13],W,bottom right,yellow,20,10.669462203979492
+429,grip,[16  9],[16  9],W,right,yellow,19,19.393643379211426
+430,grip,[ 6 14],[ 6 14],W,bottom,yellow,9,3.6786978244781494
+431,grip,[16  8],[16  8],W,right,yellow,10,4.341020345687866
+432,grip,[6 8],[6 8],W,center,yellow,5,2.1028263568878174
+433,grip,[6 8],[6 8],W,center,yellow,5,2.101045846939087
+434,grip,[6 7],[6 7],W,center,yellow,6,2.5533547401428223
+435,grip,[ 5 13],[ 5 13],W,bottom left,yellow,20,9.465705871582031
+436,grip,[4 5],[4 5],W,top left,yellow,12,5.113476753234863
+437,grip,[13  8],[13  8],W,right,yellow,6,2.496389627456665
+438,down right,[13  9],[16 14],W,bottom right,yellow,20,9.997588157653809
+439,grip,[3 8],[3 8],W,left,yellow,8,3.28456711769104
+440,grip,[ 7 14],[ 7 14],W,bottom,cyan,8,3.275385856628418
+441,down right,[10 11],[14 15],W,bottom right,cyan,20,10.552906036376953
+442,grip,[12 11],[12 11],W,center,cyan,6,2.489278793334961
+443,grip,[13 13],[13 13],W,bottom right,cyan,10,4.401554107666016
+444,grip,[9 7],[9 7],W,center,cyan,3,1.3127505779266357
+445,grip,[8 5],[8 5],W,top,cyan,6,2.4930670261383057
+446,grip,[ 9 10],[ 9 10],W,center,cyan,2,0.9192850589752197
+447,grip,[4 9],[4 9],W,left,cyan,6,2.5073907375335693
+448,grip,[6 7],[6 7],W,center,cyan,6,2.5376975536346436
+449,grip,[ 3 10],[ 3 10],W,left,cyan,9,3.8070805072784424
+450,grip,[9 7],[9 7],W,center,cyan,3,1.3138737678527832
+451,grip,[14  4],[14  4],W,top right,cyan,20,9.617190837860107
+452,grip,[ 8 15],[ 8 15],W,bottom,cyan,8,3.27937650680542
+453,grip,[ 5 10],[ 5 10],W,left,cyan,6,2.4924709796905518
+454,grip,[13  7],[13  7],W,right,cyan,7,2.88328218460083
+455,grip,[ 9 12],[ 9 12],W,center,cyan,4,1.7071163654327393
+456,grip,[13  6],[13  6],W,right,cyan,9,3.8030593395233154
+457,grip,[ 5 11],[ 5 11],W,left,cyan,7,2.8831796646118164
+458,grip,[11 10],[11 10],W,center,cyan,4,1.7062785625457764
+459,down,[ 9 12],[15 16],W,bottom right,cyan,20,10.555919170379639
+460,grip,[5 2],[5 2],W,top left,magenta,12,5.097509145736694
+461,grip,[12 14],[12 14],W,bottom,magenta,9,3.670323610305786
+462,up left,[5 7],[2 3],W,top left,magenta,20,10.195268630981445
+463,left down,[5 9],[ 2 13],W,bottom left,magenta,20,10.415115118026733
+464,grip,[ 3 10],[ 3 10],W,left,magenta,8,3.2773079872131348
+465,grip,[15  5],[15  5],W,top right,magenta,12,5.228744983673096
+466,grip,[ 6 13],[ 6 13],W,bottom,magenta,8,3.2768051624298096
+467,down right,[12 10],[14 14],W,bottom right,magenta,20,10.420014381408691
+468,grip,[7 9],[7 9],W,center,magenta,3,1.312741994857788
+469,grip,[7 5],[7 5],W,top,magenta,7,2.8869359493255615
+470,grip,[2 6],[2 6],W,left,magenta,14,6.039840459823608
+471,down right,[9 9],[14 16],W,bottom right,magenta,20,10.977767705917358
+472,grip,[6 3],[6 3],W,top,magenta,10,4.134020805358887
+473,grip,[8 6],[8 6],W,center,magenta,5,2.099806070327759
+474,left,[4 5],[2 2],W,top left,magenta,20,9.748399019241333
+475,grip,[13 12],[13 12],W,right,magenta,10,4.330962896347046
+476,right,[15  9],[16 13],W,bottom right,magenta,20,10.146968603134155
+477,grip,[8 5],[8 5],W,top,magenta,6,2.491224527359009
+478,grip,[ 7 14],[ 7 14],W,bottom,magenta,8,3.280952215194702
+479,right,[15  9],[15 11],W,right,magenta,20,11.070487260818481
+480,grip,[4 6],[4 6],X,left,red,9,3.67795467376709
+481,grip,[12 11],[12 11],X,center,red,6,2.497702121734619
+482,left down,[ 6 12],[ 3 15],X,bottom left,red,20,9.778665542602539
+483,grip,[12  3],[12  3],X,top,red,10,4.072727680206299
+484,grip,[ 8 13],[ 8 13],X,bottom,red,6,2.496675491333008
+485,grip,[6 2],[6 2],X,top,red,11,4.466064691543579
+486,down left,[ 8 11],[ 4 15],X,bottom left,red,20,10.134246587753296
+487,grip,[12  5],[12  5],X,top,red,8,3.2818551063537598
+488,grip,[15  5],[15  5],X,top right,red,11,4.459449052810669
+489,right right down right,[12  9],[15 10],X,right,red,20,23.408523321151733
+490,grip,[12  8],[12  8],X,center,red,5,2.101341962814331
+491,grip,[ 6 13],[ 6 13],X,bottom,red,8,3.3051772117614746
+492,grip,[13  5],[13  5],X,top right,red,9,3.669543981552124
+493,grip,[ 7 11],[ 7 11],X,center,red,5,2.100125312805176
+494,grip,[2 6],[2 6],X,left,red,11,4.476924419403076
+495,grip,[12  2],[12  2],X,top,red,11,4.463882207870483
+496,grip,[3 7],[3 7],X,left,red,9,3.674548864364624
+497,grip,[8 7],[8 7],X,center,red,4,1.7075352668762207
+498,grip,[10 15],[10 15],X,bottom,red,8,3.283407688140869
+499,grip,[12 12],[12 12],X,center,red,7,2.8901352882385254
+500,down right,[14  9],[16 13],X,bottom right,blue,20,11.342825651168823
+501,down left,[ 8 12],[ 5 15],X,bottom left,blue,20,9.993438720703125
+502,grip,[ 9 16],[ 9 16],X,bottom,blue,8,3.2805519104003906
+503,grip,[9 8],[9 8],X,center,blue,2,0.9210472106933594
+504,grip,[13 11],[13 11],X,right,blue,8,3.421523332595825
+505,grip,[13 10],[13 10],X,right,blue,14,8.618086576461792
+506,up,[5 5],[2 3],X,top left,blue,20,9.397292137145996
+507,grip,[ 6 15],[ 6 15],X,bottom,blue,13,5.631051301956177
+508,grip,[10  3],[10  3],X,top,blue,8,3.2762176990509033
+509,grip,[ 9 11],[ 9 11],X,center,blue,3,1.3113243579864502
+510,grip,[ 4 11],[ 4 11],X,left,blue,8,3.277358293533325
+511,grip,[14 10],[14 10],X,right,blue,7,2.893991708755493
+512,grip,[13  6],[13  6],X,right,blue,8,3.286996841430664
+513,grip,[10 10],[10 10],X,center,blue,3,1.3165388107299805
+514,grip,[ 6 10],[ 6 10],X,center,blue,5,2.104368209838867
+515,right right right right right right right right right right,[12  9],[16 10],X,right,blue,20,26.113931894302368
+516,grip,[11 13],[11 13],X,bottom,blue,7,2.888221025466919
+517,grip,[15  5],[15  5],X,top right,blue,12,4.9797821044921875
+518,grip,[13 11],[13 11],X,right,blue,7,2.888437271118164
+519,grip,[16  3],[16  3],X,top right,blue,19,8.268813848495483
+520,grip,[14  8],[14  8],X,right,green,7,2.8895928859710693
+521,grip,[ 5 14],[ 5 14],X,bottom left,green,15,6.6979875564575195
+522,grip,[13 11],[13 11],X,right,green,7,2.8970890045166016
+523,down left,[8 9],[ 4 14],X,bottom left,green,20,10.400091648101807
+524,grip,[4 4],[4 4],X,top left,green,12,4.9821648597717285
+525,grip,[7 9],[7 9],X,center,green,3,1.3170959949493408
+526,down right,[12 11],[15 16],X,bottom right,green,20,9.927731275558472
+527,grip,[11  8],[11  8],X,center,green,4,1.73759126663208
+528,grip,[11 10],[11 10],X,center,green,4,1.706122636795044
+529,grip,[5 3],[5 3],X,top left,green,11,4.4544923305511475
+530,grip,[ 6 16],[ 6 16],X,bottom,green,12,4.992013216018677
+531,down right,[ 9 11],[13 16],X,bottom right,green,20,10.283753633499146
+532,left down,[ 8 14],[ 3 16],X,bottom left,green,20,9.729670524597168
+533,grip,[ 4 12],[ 4 12],X,left,green,9,3.6784560680389404
+534,down left,[ 5 10],[ 2 16],X,bottom left,green,20,9.870758295059204
+535,grip,[14  7],[14  7],X,right,green,8,3.292646646499634
+536,grip,[4 6],[4 6],X,left,green,12,5.259615659713745
+537,grip,[11  8],[11  8],X,center,green,4,1.711024522781372
+538,grip,[14  3],[14  3],X,top right,green,15,6.479954719543457
+539,down left,[4 9],[ 2 13],X,bottom left,green,20,9.998374223709106
+540,grip,[13  4],[13  4],X,top right,yellow,12,5.113390207290649
+541,grip,[12  3],[12  3],X,top,yellow,10,4.070658922195435
+542,grip,[12  8],[12  8],X,center,yellow,5,2.1008176803588867
+543,grip,[10  2],[10  2],X,top,yellow,9,3.6773881912231445
+544,grip,[ 3 10],[ 3 10],X,left,yellow,8,3.2801222801208496
+545,grip,[7 7],[7 7],X,center,yellow,5,2.100398063659668
+546,grip,[6 4],[6 4],X,top,yellow,9,3.677293539047241
+547,grip,[10 12],[10 12],X,center,yellow,5,2.1057159900665283
+548,grip,[16  5],[16  5],X,top right,yellow,14,5.902559518814087
+549,down right,[13  9],[16 16],X,bottom right,yellow,20,10.000044345855713
+550,right down right,[12  9],[15 12],X,right,yellow,20,11.417407035827637
+551,grip,[14  2],[14  2],X,top right,yellow,16,6.840784072875977
+552,grip,[9 4],[9 4],X,top,yellow,6,2.503032684326172
+553,grip,[12  5],[12  5],X,top,yellow,8,3.2885727882385254
+554,grip,[ 9 15],[ 9 15],X,bottom,yellow,7,2.8912036418914795
+555,grip,[10  6],[10  6],X,center,yellow,5,2.1053619384765625
+556,grip,[14  3],[14  3],X,top right,yellow,13,5.382014513015747
+557,grip,[ 9 16],[ 8 16],X,bottom,yellow,8,3.285632848739624
+558,grip,[ 8 16],[ 8 16],X,bottom,yellow,9,3.6789464950561523
+559,grip,[10 11],[10 11],X,center,yellow,4,1.7105584144592285
+560,grip,[ 5 12],[ 5 12],X,left,cyan,11,4.863352537155151
+561,down right,[15  9],[16 13],X,bottom right,cyan,20,11.108819246292114
+562,grip,[11  9],[11  9],X,center,cyan,3,1.3134057521820068
+563,grip,[4 8],[4 8],X,left,cyan,7,2.8873703479766846
+564,grip,[8 3],[8 3],X,top,cyan,8,3.3236923217773438
+565,grip,[ 8 13],[ 8 13],X,bottom,cyan,6,2.4939136505126953
+566,grip,[7 5],[7 5],X,top,cyan,7,2.8861403465270996
+567,left,[3 2],[3 2],X,top left,cyan,20,9.21128225326538
+568,grip,[10  8],[10  8],X,center,cyan,3,1.313788652420044
+569,grip,[ 2 12],[ 2 12],X,left,cyan,11,4.458293437957764
+570,grip,[10 13],[10 13],X,bottom,cyan,6,2.4936351776123047
+571,grip,[ 2 10],[ 2 10],X,left,cyan,11,4.731257200241089
+572,down left,[4 9],[ 2 14],X,bottom left,cyan,20,10.291503429412842
+573,grip,[15  8],[15  8],X,right,cyan,8,3.2823173999786377
+574,grip,[9 7],[9 7],X,center,cyan,3,1.3154492378234863
+575,grip,[11  9],[11  9],X,center,cyan,3,1.3142507076263428
+576,grip,[15  5],[15  5],X,top right,cyan,11,4.696313381195068
+577,grip,[11  8],[11  8],X,center,cyan,4,1.7109613418579102
+578,up,[7 7],[3 4],X,top left,cyan,20,10.493887662887573
+579,grip,[16  6],[16  6],X,right,cyan,11,4.466950178146362
+580,down right,[9 9],[15 16],X,bottom right,magenta,20,10.989563226699829
+581,grip,[ 3 12],[ 3 12],X,left,magenta,18,8.293053388595581
+582,grip,[8 2],[8 2],X,top,magenta,9,3.673640012741089
+583,grip,[10 11],[10 11],X,center,magenta,4,1.706761121749878
+584,grip,[14  8],[14  8],X,right,magenta,7,2.8909380435943604
+585,grip,[13  7],[13  7],X,right,magenta,7,2.8887014389038086
+586,down left,[3 9],[ 2 13],X,bottom left,magenta,20,10.162707090377808
+587,right down right,[12  9],[15 11],X,right,magenta,20,13.14353060722351
+588,down right,[11 11],[13 14],X,bottom right,magenta,20,10.555215120315552
+589,grip,[ 6 16],[ 6 16],X,bottom,magenta,13,5.514305353164673
+590,down left,[4 9],[ 2 14],X,bottom left,magenta,20,10.301799058914185
+591,down left,[5 9],[ 2 15],X,bottom left,magenta,20,10.428221940994263
+592,grip,[10  7],[10  7],X,center,magenta,4,1.7080767154693604
+593,grip,[11  8],[11  8],X,center,magenta,4,1.7097408771514893
+594,grip,[ 8 10],[ 8 10],X,center,magenta,3,1.3131489753723145
+595,grip,[2 5],[2 5],X,top left,magenta,13,5.65627646446228
+596,grip,[12  2],[12  2],X,top,magenta,11,4.462013006210327
+597,grip,[15  8],[15  8],X,right,magenta,8,3.2851884365081787
+598,grip,[ 9 10],[ 9 10],X,center,magenta,2,0.9200441837310791
+599,grip,[8 6],[8 6],X,center,magenta,5,2.1386616230010986
+600,grip,[ 2 11],[ 2 11],Z,left,red,13,5.693945646286011
+601,grip,[ 7 10],[ 7 10],Z,center,red,4,1.7055327892303467
+602,grip,[ 6 14],[ 6 14],Z,bottom,red,10,4.200950384140015
+603,grip,[12  4],[12  4],Z,top,red,9,3.676877975463867
+604,up left,[5 9],[2 3],Z,top left,red,20,9.953422784805298
+605,right right right right right right right right right right,[13  9],[16  9],Z,right,red,20,24.949790239334106
+606,grip,[16  7],[16  7],Z,right,red,10,4.074668645858765
+607,grip,[3 7],[3 7],Z,left,red,13,5.80513334274292
+608,grip,[11 14],[11 14],Z,bottom,red,8,3.342325210571289
+609,grip,[14  6],[14  6],Z,right,red,13,5.797126770019531
+610,grip,[4 7],[4 7],Z,left,red,11,4.874183654785156
+611,grip,[11  4],[11  4],Z,top,red,8,3.308971881866455
+612,grip,[11  4],[11  4],Z,top,red,8,3.2941734790802
+613,right right down right right down right down right down,[12  9],[15 11],Z,right,red,20,17.614748239517212
+614,grip,[10 12],[10 12],Z,center,red,5,2.1062941551208496
+615,right right right right right right right right right right,[12  9],[16  9],Z,right,red,20,25.872822999954224
+616,grip,[16  7],[16  7],Z,right,red,13,5.647006511688232
+617,down left,[ 5 10],[ 2 15],Z,bottom left,red,20,9.866951704025269
+618,grip,[13  9],[13  9],Z,right,red,5,2.1051411628723145
+619,grip,[6 4],[6 4],Z,top,red,9,3.683945894241333
+620,left,[4 2],[4 2],Z,top left,blue,20,8.956581592559814
+621,down left,[ 9 10],[ 5 13],Z,bottom left,blue,20,10.416069746017456
+622,down right,[13  9],[16 15],Z,bottom right,blue,20,10.011387348175049
+623,right down right,[11  9],[16 13],Z,bottom right,blue,20,15.51491641998291
+624,left,[4 4],[4 4],Z,top left,blue,20,9.206870317459106
+625,grip,[14  6],[14  6],Z,right,blue,10,4.217568397521973
+626,grip,[ 9 11],[ 9 11],Z,center,blue,3,1.3170013427734375
+627,down right,[11 13],[13 15],Z,bottom right,blue,20,12.041184186935425
+628,grip,[3 8],[3 8],Z,left,blue,8,3.295396566390991
+629,down right,[11 11],[13 13],Z,bottom right,blue,20,10.434452056884766
+630,grip,[8 8],[8 8],Z,center,blue,3,1.3427815437316895
+631,right down,[9 9],[13 14],Z,bottom right,blue,20,10.644439935684204
+632,grip,[10  2],[10  2],Z,top,blue,9,3.6853973865509033
+633,grip,[ 7 15],[ 7 15],Z,bottom,blue,9,3.6858980655670166
+634,grip,[13  8],[13  8],Z,right,blue,6,2.499746322631836
+635,grip,[10 14],[10 14],Z,bottom,blue,7,2.8964054584503174
+636,down left,[4 9],[ 2 14],Z,bottom left,blue,20,9.88824725151062
+637,up,[15  2],[15  2],Z,top right,blue,20,8.810222625732422
+638,grip,[9 4],[9 4],Z,top,blue,6,2.4979512691497803
+639,grip,[15  6],[15  6],Z,right,blue,11,4.6013758182525635
+640,grip,[14  6],[14  6],Z,right,green,9,3.683060884475708
+641,up left,[8 9],[3 2],Z,top left,green,20,10.460605144500732
+642,grip,[ 7 13],[ 7 13],Z,bottom,green,7,2.9056522846221924
+643,grip,[13 11],[13 11],Z,right,green,12,5.961887836456299
+644,grip,[ 4 11],[ 4 11],Z,left,green,10,4.4804933071136475
+645,grip,[ 6 16],[ 6 16],Z,bottom,green,13,5.526798248291016
+646,grip,[ 9 15],[ 9 15],Z,bottom,green,7,2.89638614654541
+647,right right down right,[10  9],[16 12],Z,right,green,20,15.395212173461914
+648,grip,[5 4],[5 4],Z,top left,green,10,4.069649696350098
+649,grip,[15  9],[15  9],Z,right,green,15,14.625750303268433
+650,grip,[15  9],[15  9],Z,right,green,13,11.714126110076904
+651,grip,[8 9],[8 9],Z,center,green,2,0.9226493835449219
+652,grip,[8 3],[8 3],Z,top,green,8,3.2885453701019287
+653,grip,[ 8 14],[ 8 14],Z,bottom,green,7,2.893784523010254
+654,grip,[11 13],[11 13],Z,bottom,green,7,2.889169692993164
+655,grip,[ 6 13],[ 6 13],Z,bottom,green,8,3.283294200897217
+656,grip,[10 16],[10 16],Z,bottom,green,9,3.6771838665008545
+657,grip,[ 7 11],[ 7 11],Z,center,green,5,2.1042094230651855
+658,grip,[ 4 11],[ 4 11],Z,left,green,8,3.287076473236084
+659,grip,[5 7],[5 7],Z,left,green,9,3.9510931968688965
+660,grip,[6 5],[6 5],Z,top,yellow,8,3.287304639816284
+661,grip,[ 8 13],[ 8 13],Z,bottom,yellow,6,2.500596523284912
+662,grip,[5 2],[5 2],Z,top left,yellow,20,9.066533088684082
+663,down right,[12  9],[14 14],Z,bottom right,yellow,20,10.281139850616455
+664,right right right right right right right right right right,[10  9],[16 12],Z,right,yellow,20,28.34370756149292
+665,grip,[ 3 11],[ 3 11],Z,left,yellow,11,4.8048741817474365
+666,grip,[2 7],[2 7],Z,left,yellow,10,4.071788311004639
+667,grip,[8 3],[8 3],Z,top,yellow,8,3.2879440784454346
+668,grip,[2 9],[2 9],Z,left,yellow,8,3.2865843772888184
+669,up right,[13  6],[15  2],Z,top right,yellow,20,9.60326623916626
+670,grip,[6 3],[6 3],Z,top,yellow,10,4.074893236160278
+671,grip,[11  4],[11  4],Z,top,yellow,8,3.2878880500793457
+672,grip,[7 5],[7 5],Z,top,yellow,7,2.9235334396362305
+673,grip,[3 6],[3 6],Z,left,yellow,16,7.288890361785889
+674,grip,[ 7 16],[ 7 16],Z,bottom,yellow,10,4.077296257019043
+675,grip,[ 7 10],[ 7 10],Z,center,yellow,4,1.7110207080841064
+676,grip,[11  7],[11  7],Z,center,yellow,5,2.1040093898773193
+677,grip,[9 3],[9 3],Z,top,yellow,7,2.901087522506714
+678,grip,[6 7],[6 7],Z,center,yellow,6,2.4995269775390625
+679,grip,[ 6 13],[ 6 13],Z,bottom,yellow,8,3.295802593231201
+680,grip,[4 7],[4 7],Z,left,cyan,13,5.918687105178833
+681,grip,[ 9 11],[ 9 11],Z,center,cyan,3,1.314009189605713
+682,grip,[6 8],[6 8],Z,center,cyan,5,2.098168134689331
+683,grip,[12  7],[12  7],Z,center,cyan,6,2.493631601333618
+684,grip,[12 10],[12 10],Z,center,cyan,5,2.103210210800171
+685,up left,[6 8],[2 2],Z,top left,cyan,20,10.414818286895752
+686,grip,[ 8 12],[ 8 12],Z,center,cyan,5,2.0985374450683594
+687,grip,[11  6],[11  6],Z,center,cyan,6,2.4970476627349854
+688,down right,[11 10],[13 13],Z,bottom right,cyan,20,10.866622924804688
+689,right right right right right right right right right right,[12  9],[16  9],Z,right,cyan,20,26.07971692085266
+690,grip,[ 6 14],[ 6 14],Z,bottom,cyan,9,3.671952724456787
+691,grip,[16  8],[16  8],Z,right,cyan,9,3.6698126792907715
+692,grip,[6 8],[6 8],Z,center,cyan,5,2.106379270553589
+693,grip,[6 8],[6 8],Z,center,cyan,5,2.1003174781799316
+694,grip,[6 7],[6 7],Z,center,cyan,6,2.4943647384643555
+695,down left,[ 7 10],[ 5 13],Z,bottom left,cyan,20,10.554271697998047
+696,grip,[4 5],[4 5],Z,top left,cyan,11,4.833289384841919
+697,grip,[13  8],[13  8],Z,right,cyan,6,2.5239055156707764
+698,down right,[12  9],[16 14],Z,bottom right,cyan,20,11.62543272972107
+699,grip,[3 8],[3 8],Z,left,cyan,8,3.279146194458008
+700,grip,[ 7 14],[ 7 14],Z,bottom,magenta,8,3.3012807369232178
+701,down right,[10  9],[14 15],Z,bottom right,magenta,20,10.81835126876831
+702,grip,[12 11],[12 11],Z,center,magenta,6,2.4942471981048584
+703,grip,[13 13],[13 13],Z,bottom right,magenta,20,10.283505201339722
+704,grip,[9 7],[9 7],Z,center,magenta,3,1.3121089935302734
+705,grip,[8 5],[8 5],Z,top,magenta,6,2.4909586906433105
+706,grip,[ 9 10],[ 9 10],Z,center,magenta,2,0.9232916831970215
+707,grip,[4 9],[4 9],Z,left,magenta,6,2.4951233863830566
+708,grip,[6 7],[6 7],Z,center,magenta,6,2.504639148712158
+709,grip,[ 3 10],[ 3 10],Z,left,magenta,8,3.2796149253845215
+710,grip,[9 7],[9 7],Z,center,magenta,3,1.314453363418579
+711,grip,[14  4],[14  4],Z,top right,magenta,18,8.569912195205688
+712,grip,[ 8 15],[ 8 15],Z,bottom,magenta,8,3.2791903018951416
+713,grip,[ 5 10],[ 5 10],Z,left,magenta,6,2.4936461448669434
+714,grip,[13  7],[13  7],Z,right,magenta,7,2.884415626525879
+715,grip,[ 9 12],[ 9 12],Z,center,magenta,4,1.707836627960205
+716,grip,[13  6],[13  6],Z,right,magenta,8,3.2856833934783936
+717,grip,[ 5 11],[ 5 11],Z,left,magenta,8,3.4138970375061035
+718,grip,[11 10],[11 10],Z,center,magenta,4,1.704965353012085
+719,down right,[9 9],[15 16],Z,bottom right,magenta,20,10.951903104782104
