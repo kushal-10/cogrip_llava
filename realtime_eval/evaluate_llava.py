@@ -8,6 +8,7 @@ import torch
 import argparse 
 import numpy as np
 import pandas as pd
+import time
 
 # LEVEL = 'easy'
 # BOARD_SIZE = 18
@@ -91,6 +92,8 @@ class LLaVAEval():
         target_shapes = []
         target_colours = []
         target_regions = []
+        steps = []
+        time_taken = []
         
         for i in tqdm(range(len(self.metadata))):
             metadata_obj = self.metadata[i]
@@ -115,7 +118,12 @@ class LLaVAEval():
 
             predicted_position = agent_start_pos
    
+            total_time = 0  
+            total_steps = 0  
+
+            start_time = time.time() 
             for i in range(self.max_moves):
+                total_steps += 1
                 inputs = processor(text=prompt, images=[image], return_tensors="pt").to("cuda")
                 generated_ids = model.generate(**inputs, max_new_tokens=self.max_len)
                 generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
@@ -135,12 +143,16 @@ class LLaVAEval():
                 if move == 'grip':
                     break
             
+            total_time = time.time() - start_time
+
             final_moves.append(final_move)
             final_positions.append(final_position)
             target_positions.append(target_pos)
             target_colours.append(target_color)
             target_regions.append(target_region)
             target_shapes.append(target_shape)
+            steps.append(total_steps)
+            time_taken.append(total_time)
         
         model_save_name = MODEL_ID.split('/')[-1].split('.csv')[0]
         prediciton_data = {
@@ -149,7 +161,9 @@ class LLaVAEval():
             'target_position': target_positions,
             'shape': target_shapes,
             'region': target_regions,
-            'color': target_colours
+            'color': target_colours,
+            'steps': steps,
+            'time': time_taken
         }
 
         pred_df = pd.DataFrame(prediciton_data)
