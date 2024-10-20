@@ -3,28 +3,6 @@
 ## Overview
 The `cogrip_llava` repository is designed for the Individual Module.
 
-#### Directory Structure
-Here is the general directory structure of the `cogrip_llava` repository:
-
-cogrip_llava/
-│
-├── dataset/
-│ ├── create_boards.py
-│ └── other_dataset_files/
-│
-├── grip_env/
-│ ├── init.py
-│ ├── environment.py
-│ ├── layout.py
-│ └── pieces.py
-│
-├── tests/
-│ ├── test_create_boards.py
-│ └── other_tests/
-│
-├── README.md
-└── requirements.txt
-
 #### Usage
 **Clone the Repository**:
    ```bash
@@ -144,4 +122,13 @@ python realtime_eval/evaluate_llava.py --level easy --board_size 18 --model_name
 ```
 
 This saves result csv file sunder `realtime_results`
+
+
+#### Paper Evaluation
+
+To generate the results used in the paper, run the following script:
+
+```bash
+python3 paper_eval.py
+```
 
