@@ -165,6 +165,12 @@ training_data/easy/boards
 training_data/hard/boards
 training_data/medium/boards
 training_data/sample/boards
+!*.json
+training_data/hf_dataset_easy
+training_data/hf_dataset_hard
+training_data/hf_dataset_medium
+
+training_data/
 temp.ipynb
 wandb
 exploration.ipynb
