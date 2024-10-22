@@ -18,22 +18,20 @@ def gen_hf_data(level="easy"):
     val_size = int(len(json_data) * 0.15)    # 15% for validation
     test_size = len(json_data) - train_size - val_size  # Remaining 15% for testing
 
-    # Convert list of lists and save the datasets as JSON files
-    os.makedirs(os.path.join('training_data', f'hf_metadata_{level}'), exist_ok=True)
     
     # Save train data
     train_data = json_data[:train_size]
-    with open(os.path.join('training_data', f'hf_metadata_{level}', 'train.json'), 'w') as f:
+    with open(os.path.join('training_data', level, 'train.json'), 'w') as f:
         json.dump(train_data, f)
 
     # Save validation data
     val_data = json_data[train_size:train_size + val_size]
-    with open(os.path.join('training_data', f'hf_metadata_{level}', 'val.json'), 'w') as f:
+    with open(os.path.join('training_data', level, 'val.json'), 'w') as f:
         json.dump(val_data, f)
 
     # Save test data
     test_data = json_data[train_size + val_size:]
-    with open(os.path.join('training_data', f'hf_metadata_{level}', 'test.json'), 'w') as f:
+    with open(os.path.join('training_data', level, 'test.json'), 'w') as f:
         json.dump(test_data, f)
 
     # Flatten the data for further processing
