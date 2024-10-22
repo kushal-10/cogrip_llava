@@ -137,7 +137,7 @@ class LLaVAEval():
 
             start_time = time.time()
             steps_taken = [] 
-            for i in range(self.max_moves):
+            for j in range(self.max_moves):
                 total_steps += 1
                 inputs = processor(text=prompt, images=[image], return_tensors="pt").to("cuda")
                 generated_ids = model.generate(**inputs, max_new_tokens=self.max_len)
@@ -169,6 +169,7 @@ class LLaVAEval():
             steps.append(total_steps)
             time_taken.append(total_time)
             total_steps_taken.append(steps_taken)
+
             if i == 5:
                 break
         
