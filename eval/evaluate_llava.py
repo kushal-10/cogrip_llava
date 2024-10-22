@@ -149,7 +149,7 @@ class LLaVAEval():
                 image = Image.fromarray(image)
 
                 predicted_position = self.get_next_position(move, predicted_position)
-
+                print(move)
                 final_move = move
                 final_position = predicted_position
 
@@ -167,7 +167,8 @@ class LLaVAEval():
             steps.append(total_steps)
             time_taken.append(total_time)
             total_steps_taken.append(steps_taken)
-            break
+            if i == 5:
+                break
         
         prediciton_data = {
             'last_move': final_moves,
