@@ -151,7 +151,7 @@ class LLaVAEval():
                 image = Image.fromarray(image)
 
                 predicted_position = self.get_next_position(move, predicted_position)
-                print(move)
+     
                 final_move = move
                 final_position = predicted_position
 
