@@ -1,0 +1,7 @@
+,last_move,predicted_position,target_position,shape,region,color,steps,time,total_steps_taken
+0,grip,[10 12],[10 12],T,center,cyan,5,2.8932862281799316,"['down', 'down', 'right', 'down', 'grip']"
+1,grip,[15 16],[15 16],T,bottom right,blue,14,5.650674104690552,"['down', 'down', 'down', 'right', 'down', 'right', 'right', 'down', 'right', 'right', 'down', 'down', 'right', 'grip']"
+2,grip,[11 10],[11 10],T,center,magenta,4,1.695826768875122,"['right', 'down', 'right', 'grip']"
+3,grip,[ 5 15],[ 5 15],T,bottom left,magenta,11,4.6573097705841064,"['down', 'down', 'down', 'left', 'down', 'left', 'down', 'left', 'left', 'down', 'grip']"
+4,grip,[15  2],[15  2],Z,top right,blue,14,5.609946012496948,"['up', 'up', 'up', 'up', 'right', 'right', 'up', 'right', 'up', 'right', 'right', 'up', 'right', 'grip']"
+5,grip,[6 8],[6 8],T,center,green,5,2.094895362854004,"['left', 'up', 'left', 'left', 'grip']"
