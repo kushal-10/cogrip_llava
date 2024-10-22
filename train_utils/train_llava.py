@@ -110,7 +110,7 @@ config = {"max_epochs": EPOCHS,
 #     model_module = LlavaNextModelPLModule(config, processor, model)
 # else:
 #     model_module = LlavaModelPLModule(config, processor, model)
-model_module = LlavaNextModelPLModule(config, processor, model)
+model_module = LlavaModelPLModule(config, processor, model)
 
 api = HfApi()
 
