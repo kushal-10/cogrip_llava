@@ -161,8 +161,11 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-data
-training_data
+training_data/easy/boards
+training_data/hard/boards
+training_data/medium/boards
+training_data/sample/boards
 temp.ipynb
 wandb
 exploration.ipynb
+

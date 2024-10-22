@@ -49,20 +49,20 @@ python3 dataset/generate_paths.py --level 'easy'
 This will create a `data/level/metadata_path.json` that saves an additional key of `path` in the `metadata.json` file
 
 
-##### 3) Now with the paths generated, create the whole training/finetuning dataset that will be used for the llava models
+##### 3) Now with the paths generated, create the whole episode instances that will be used for training the llava models
 
-Run the follwing script with additional arguments, if required( level, size) from step1 - Create boards. This will create a folder `training_data/level/boards` and a meta data file that contains `image_path`, `prompt` and `response` for each instance under `training_data/level/training_metadata.json`
+Run the follwing script with additional arguments, if required( level, size) from step1 - Create boards. This will create a folder `training_data/level/boards` and a meta data file that contains `image_path`, `prompt`, `response` and `data_obj` for each instance under `training_data/level/training_metadata.json`
 
 ```bash
 python3 dataset/generate_episodes.py --size 18 --level 'easy'
 ```
 
-##### 4) Create splits
+##### 4) Create Huggingface compatible dataset
 
 ```bash
 python3 dataset/create_hf_dataset.py --level 'easy'
 ```
-This saves `hf_dataset_{level}` under `training_data`. Set the level parameter in the script accordingly
+This saves `hf_dataset_{level}` under `training_data`. Set the level parameter in the script accordingly. This also adds the split metadata under `training_data/{level}` that will be used to evaluate the models on the test split (real-tiem evaluation)
 
 
 ##### 5) Finetuning
