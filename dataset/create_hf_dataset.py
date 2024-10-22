@@ -21,67 +21,67 @@ def gen_hf_data(level="easy"):
     
     # Save train data
     train_data = json_data[:train_size]
-    with open(os.path.join('training_data', level, 'train.json'), 'w') as f:
+    with open(os.path.join('data', level, 'train.json'), 'w') as f:
         json.dump(train_data, f)
 
     # Save validation data
     val_data = json_data[train_size:train_size + val_size]
-    with open(os.path.join('training_data', level, 'val.json'), 'w') as f:
+    with open(os.path.join('data', level, 'val.json'), 'w') as f:
         json.dump(val_data, f)
 
     # Save test data
     test_data = json_data[train_size + val_size:]
-    with open(os.path.join('training_data', level, 'test.json'), 'w') as f:
+    with open(os.path.join('data', level, 'test.json'), 'w') as f:
         json.dump(test_data, f)
 
-    # # Flatten the data for further processing
-    # # Remove the additional metadata for the HF dataset
-    # train_data = [item for sublist in train_data for item in sublist if "info" not in item]
-    # val_data = [item for sublist in val_data for item in sublist if "info" not in item]
-    # test_data = [item for sublist in test_data for item in sublist if "info" not in item]
+    # Flatten the data for further processing
+    # Remove the additional metadata for the HF dataset
+    train_data = [item for sublist in train_data for item in sublist if "info" not in item]
+    val_data = [item for sublist in val_data for item in sublist if "info" not in item]
+    test_data = [item for sublist in test_data for item in sublist if "info" not in item]
 
-    # # Debugging: Print the sizes of each split
-    # print(f"Train size: {len(train_data)}, Validation size: {len(val_data)}, Test size: {len(test_data)}")
+    # Debugging: Print the sizes of each split
+    print(f"Train size: {len(train_data)}, Validation size: {len(val_data)}, Test size: {len(test_data)}")
 
-    # # Define dataset features
-    # features = Features({
-    #     'image': HfImage(),  # Keep the original HfImage
-    #     'image_string': Value(dtype='string'),  # Add a new field for the image as a string
-    #     'prompt': Value(dtype='string'),
-    #     'ground_truth': Value(dtype='string'),
-    # })
+    # Define dataset features
+    features = Features({
+        'image': HfImage(),  # Keep the original HfImage
+        'image_string': Value(dtype='string'),  # Add a new field for the image as a string
+        'prompt': Value(dtype='string'),
+        'ground_truth': Value(dtype='string'),
+    })
 
-    # # Create datasets using from_dict
-    # train_dataset = Dataset.from_dict({
-    #     'image': [item['image'] for item in train_data],  # Keep the original image
-    #     'image_string': [json.dumps(item['image']) for item in train_data],  # Convert image to string
-    #     'prompt': [item['prompt'] for item in train_data],
-    #     'ground_truth': [item['ground_truth'] for item in train_data],
-    # }, features=features)
+    # Create datasets using from_dict
+    train_dataset = Dataset.from_dict({
+        'image': [item['image'] for item in train_data],  # Keep the original image
+        'image_string': [json.dumps(item['image']) for item in train_data],  # Convert image to string
+        'prompt': [item['prompt'] for item in train_data],
+        'ground_truth': [item['ground_truth'] for item in train_data],
+    }, features=features)
 
-    # val_dataset = Dataset.from_dict({
-    #     'image': [item['image'] for item in val_data],  # Keep the original image
-    #     'image_string': [json.dumps(item['image']) for item in val_data],  # Convert image to string
-    #     'prompt': [item['prompt'] for item in val_data],
-    #     'ground_truth': [item['ground_truth'] for item in val_data],
-    # }, features=features)
+    val_dataset = Dataset.from_dict({
+        'image': [item['image'] for item in val_data],  # Keep the original image
+        'image_string': [json.dumps(item['image']) for item in val_data],  # Convert image to string
+        'prompt': [item['prompt'] for item in val_data],
+        'ground_truth': [item['ground_truth'] for item in val_data],
+    }, features=features)
 
-    # test_dataset = Dataset.from_dict({
-    #     'image': [item['image'] for item in test_data],  # Keep the original image
-    #     'image_string': [json.dumps(item['image']) for item in test_data],  # Convert image to string
-    #     'prompt': [item['prompt'] for item in test_data],
-    #     'ground_truth': [item['ground_truth'] for item in test_data],
-    # }, features=features)
+    test_dataset = Dataset.from_dict({
+        'image': [item['image'] for item in test_data],  # Keep the original image
+        'image_string': [json.dumps(item['image']) for item in test_data],  # Convert image to string
+        'prompt': [item['prompt'] for item in test_data],
+        'ground_truth': [item['ground_truth'] for item in test_data],
+    }, features=features)
 
-    # # Create DatasetDict for easy handling of splits
-    # dataset_dict = DatasetDict({
-    #     'train': train_dataset,
-    #     'validation': val_dataset,
-    #     'test': test_dataset,
-    # })
+    # Create DatasetDict for easy handling of splits
+    dataset_dict = DatasetDict({
+        'train': train_dataset,
+        'validation': val_dataset,
+        'test': test_dataset,
+    })
 
-    # # Save the dataset
-    # dataset_dict.save_to_disk(os.path.join('training_data', f'hf_dataset_{level}'))
+    # Save the dataset
+    dataset_dict.save_to_disk(os.path.join('training_data', f'hf_dataset_{level}'))
 
 
 if __name__=='__main__':
