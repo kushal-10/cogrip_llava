@@ -1,15 +1,15 @@
 {
     "LEVEL": "easy",
-    "REPO_ID": "Koshti10/llava-1.5-7b-hf-ft-pentomino",
-    "MODEL_ID": "llava-hf/llava-1.5-7b-hf",
+    "REPO_ID": "Koshti10/llava-1.5-13b-hf-ft-pentomino",
+    "MODEL_ID": "llava-hf/llava-1.5-13b-hf",
     "MAX_LENGTH": 32,
     "WANDB_PROJECT": "pentomino",
-    "WANDB_NAME": "llava-1.5-7b-hf-ft",
+    "WANDB_NAME": "llava-1.5-13b-hf-ft",
     "WORKERS": 0,
     "R": 8,
     "ALPHA": 8,
     "DROPOUT": 0.1,
     "EPOCHS": 5,
     "LR": 1e-4,
-    "BATCH_SIZE": 8
+    "BATCH_SIZE": 4
 }
