@@ -1,15 +1,15 @@
 {
     "LEVEL": "easy",
-    "REPO_ID": "Koshti10/llava-v1.6-mistral-7b-hf-ft",
-    "MODEL_ID": "llava-hf/llava-v1.6-mistral-7b-hf",
-    "MAX_LENGTH": 128,
-    "WANDB_PROJECT": "individual-module",
-    "WANDB_NAME": "ft_1.6_7b_mist",
+    "REPO_ID": "Koshti10/llava-1.5-7b-hf-ft-pentomino",
+    "MODEL_ID": "llava-hf/llava-1.5-7b-hf",
+    "MAX_LENGTH": 32,
+    "WANDB_PROJECT": "pentomino",
+    "WANDB_NAME": "llava-1.5-7b-hf-ft",
     "WORKERS": 0,
     "R": 8,
     "ALPHA": 8,
     "DROPOUT": 0.1,
-    "EPOCHS": 2,
+    "EPOCHS": 5,
     "LR": 1e-4,
-    "BATCH_SIZE": 1
+    "BATCH_SIZE": 8
 }
