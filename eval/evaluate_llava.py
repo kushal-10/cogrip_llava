@@ -170,8 +170,6 @@ class LLaVAEval():
             time_taken.append(total_time)
             total_steps_taken.append(steps_taken)
 
-            if i == 5:
-                break
         
         prediciton_data = {
             'last_move': final_moves,
