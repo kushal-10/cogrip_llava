@@ -3,34 +3,56 @@ from grip_env.environment import GridWorldEnv
 import os
 import json
 from tqdm import tqdm
+from transformers import AutoProcessor, BitsAndBytesConfig, AutoModelForVision2Seq
+import torch
 import argparse 
 import numpy as np
 import pandas as pd
 import time
-import base64
-from io import BytesIO
-import requests
 
 # LEVEL = 'easy'
 # BOARD_SIZE = 18
 
-api_key = os.getenv("OPENAI_API_KEY")
+if not os.path.exists('inference_results'):
+    os.makedirs('inference_results')
 
-if not os.path.exists('realtime_results'):
-    os.makedirs('realtime_results')
+class LLaVAEval():
 
-class GPTEval():
-
-    def __init__(self, level: str, board_size: int, max_moves: int, max_length: int):
+    def __init__(self, level: str, board_size: int, model_name: str, max_moves: int, max_length: int):
         self.level = level
         self.board_size = board_size
+        self.model_name = model_name
         self.max_moves = max_moves
         self.max_len = max_length
 
-        metadata_path = os.path.join('realtime_eval', f'metadata_{self.level}.json')
+        metadata_path = os.path.join('data', level, 'metadata.json')
         with open(metadata_path, 'r') as f:
             self.metadata = json.load(f)
 
+    def load_model_and_processor(self):
+        MODEL_ID = self.model_name
+
+        if "-ft" in MODEL_ID:
+            processor = AutoProcessor.from_pretrained(MODEL_ID)
+            # Define quantization config
+            quantization_config = BitsAndBytesConfig(
+                load_in_4bit=True, bnb_4bit_quant_type="nf4", bnb_4bit_compute_dtype=torch.float16
+            )
+            # Load the base model with adapters on top
+            model = AutoModelForVision2Seq.from_pretrained(
+                MODEL_ID,
+                torch_dtype=torch.float16,
+                quantization_config=quantization_config,
+            )
+        else:
+            processor = AutoProcessor.from_pretrained(MODEL_ID)
+            model = AutoModelForVision2Seq.from_pretrained(
+                MODEL_ID,
+                torch_dtype=torch.float16,
+            )
+            model.to("cuda")
+
+        return model, processor
     
     @staticmethod
     def convert_move_to_step(move_str):
@@ -59,52 +81,10 @@ class GPTEval():
             predicted_position[1] += 1
 
         return predicted_position
-    
-    @staticmethod
-    def get_gpt_response(image, base_prompt, max_new_tokens):
-        buffered = BytesIO()
-        image.save(buffered, format="PNG")
-        img_str = base64.b64encode(buffered.getvalue()).decode('utf-8')
-
-        headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}"
-        }
-
-        payload = {
-        "model": "gpt-4o-mini",
-        "messages": [
-            {
-            "role": "user",
-            "content": [
-                {
-                "type": "text",
-                "text": base_prompt + " Answer in one word only."
-                },
-                {
-                "type": "image_url",
-                "image_url": {
-                    "url": f"data:image/jpeg;base64,{img_str}"
-                }
-                }
-            ]
-            }
-        ],
-        "max_tokens": max_new_tokens
-        }
-
-        response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
-
-        if response:
-            generated_text = response.json()['choices'][0]['message']['content']
-            output = generated_text.lower()
-        else:
-            print("No response")
-        
-        return output
 
     
-    def evaluate(self):
+    def evaluate(self, model, processor):
+        MODEL_ID = self.model_name
 
         final_moves = []
         final_positions = []
@@ -114,7 +94,7 @@ class GPTEval():
         target_regions = []
         steps = []
         time_taken = []
-        
+        total_steps_taken = []
         for i in tqdm(range(len(self.metadata))):
             metadata_obj = self.metadata[i]
             info = metadata_obj['info']
@@ -126,25 +106,38 @@ class GPTEval():
             target_region = info[0]['piece_region']
 
             base_prompt = f"You are at the black dot in the board. The target is the {target_color} {target_shape} piece located at the {target_region}. Your task is to move towards the target and grab it. Predict your next move from up, down, left, right, grip."
-            
+            if "-ft" in MODEL_ID:
+                prompt = f"USER: <image>\n{base_prompt}.\nASSISTANT:"
+            else:
+                prompt = f"USER: <image>\n{base_prompt}. Answer in one word only.\nASSISTANT:"
+
             env = GridWorldEnv(render_mode="rgb_array", size=self.board_size, grid_info=info, agent_pos=agent_start_pos, target_pos=target_pos)
             env.reset()
             image = env.render()
             image = Image.fromarray(image)
 
             predicted_position = agent_start_pos
+   
             total_time = 0  
             total_steps = 0  
-            start_time = time.time() 
+
+            start_time = time.time()
+            steps_taken = [] 
             for i in range(self.max_moves):
                 total_steps += 1
-                
-                move = self.get_gpt_response(image, base_prompt, self.max_len)
+                inputs = processor(text=prompt, images=[image], return_tensors="pt").to("cuda")
+                generated_ids = model.generate(**inputs, max_new_tokens=self.max_len)
+                generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
+                # Extract move
+                move = generated_texts[0].split('ASSISTANT:')[-1].strip()
+                move = move.lower()
+                steps_taken.append(move)
                 env.step(self.convert_move_to_step(move))
                 image = env.render()
                 image = Image.fromarray(image)
 
                 predicted_position = self.get_next_position(move, predicted_position)
+
                 final_move = move
                 final_position = predicted_position
 
@@ -161,9 +154,9 @@ class GPTEval():
             target_shapes.append(target_shape)
             steps.append(total_steps)
             time_taken.append(total_time)
-
+            total_steps_taken.append(steps_taken)
         
-        model_save_name = 'gpt'
+        model_save_name = MODEL_ID.split('/')[-1].split('.csv')[0]
         prediciton_data = {
             'last_move': final_moves,
             'predicted_position': final_positions,
@@ -172,24 +165,27 @@ class GPTEval():
             'region': target_regions,
             'color': target_colours,
             'steps': steps,
-            'time': time_taken
+            'time': time_taken,
+            'total_steps_taken': total_steps_taken
         }
 
         pred_df = pd.DataFrame(prediciton_data)
-        pred_df.to_csv(os.path.join('realtime_results', f'{model_save_name}.csv'))
+        pred_df.to_csv(os.path.join('inference_results', f'{model_save_name}_{self.level}.csv'))
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='LLaVA Evaluation Parameters')
     parser.add_argument('--level', type=str, default='easy', help='Level of the game')
     parser.add_argument('--board_size', type=int, default=18, help='Size of the board')
+    parser.add_argument('--model_name', type=str, required=True, help='Name of the model to use')
     parser.add_argument('--max_moves', type=int, default=10, help='Maximum number of moves')
     parser.add_argument('--max_length', type=int, default=10, help='Maximum length of the output')
 
     args = parser.parse_args()  # Parse the arguments
 
-    eval = GPTEval(args.level, args.board_size, args.max_moves, args.max_length)
-    eval.evaluate()
+    eval = LLaVAEval(args.level, args.board_size, args.model_name, args.max_moves, args.max_length)
+    model, processor = eval.load_model_and_processor()
+    eval.evaluate(model, processor)
 
 
 
