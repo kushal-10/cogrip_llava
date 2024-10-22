@@ -3,16 +3,15 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt 
 from scipy.interpolate import griddata 
-from sklearn.metrics import mean_squared_error, pairwise
-
 
 with open("additional_jsons/easy/train.json", "r") as f:
     train_data = json.load(f)
 with open("additional_jsons/easy/val.json", "r") as f:
     val_data = json.load(f)
-
 with open("additional_jsons/easy/test.json", "r") as f:
     test_data = json.load(f)
+
+
 
 def get_valid_positions(target_shape, position):
     valid_positions = [position]
@@ -131,12 +130,4 @@ plt.xlabel('X Position')  # Label for x-axis
 plt.ylabel('Y Position')  # Label for y-axis
 plt.savefig('plots/target_positions_heatmap_test.png', bbox_inches='tight')  # Save the plot locally
 
-
-# Calculate Mean Squared Error
-mse = mean_squared_error(target_positions.flatten(), test_positions.flatten())
-print(f'Mean Squared Error between target_positions and test_positions: {mse}')
-# Calculate Cosine Similarity
-cosine_similarity = 1 - pairwise.cosine_similarity(target_positions.flatten().reshape(1, -1), 
-                                                    test_positions.flatten().reshape(1, -1))[0][0]
-print(f'Cosine Similarity between target_positions and test_positions: {cosine_similarity}')
 

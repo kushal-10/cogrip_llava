@@ -42,7 +42,7 @@ def plot_by_pos(csv_path):
             position_dict[(i, j)] = 0
             target_dict[(i, j)] = 0
 
-    df = pd.read_csv(csv_path)
+    df = pd.read_csv('realtime_results/' + csv_path)
     success_count = 0
     time_taken = 0
     steps = 0
@@ -99,11 +99,6 @@ def plot_by_pos(csv_path):
         if predicted_position in valid_positions and df.iloc[i]['last_move'] == 'grip':
             success_count += 1
             position_dict[tuple(predicted_position)] += 1
-    
-    # After processing the data, plot the heatmap
-    # Create a grid for the heatmap
-    heatmap_data = np.zeros((18, 18)) 
-    redact_data = np.zeros((18, 18))
 
     success_data = np.zeros((18, 18))
     fail_data = np.zeros((18, 18))
@@ -113,32 +108,29 @@ def plot_by_pos(csv_path):
             if target_dict[(i+1, j+1)]:
                     success_data[i, j] = position_dict[(i+1, j+1)]
                     fail_data[i, j] = target_dict[(i+1, j+1)] - position_dict[(i+1, j+1)]
-    
-    # New code to create continuous heatmaps using interpolation
-    x = np.arange(1, 19)
-    y = np.arange(1, 19)
-    X, Y = np.meshgrid(x, y)
+ 
+    plt.figure(figsize=(9, 9))
+    plt.imshow(success_data, cmap='cool', interpolation='bilinear', extent=(1, 18, 18, 1))  # Create the heatmap
+    plt.colorbar()  # Add a colorbar to indicate the scale
+    plt.title('Heatmap showing the layout of target pieces successfully gripped')  # Add a title
+    plt.xlabel('X Position')  # Label for x-axis
+    plt.ylabel('Y Position')  # Label for y-axis
+    save_name = csv_path.split('.csv')[0]
+    plt.savefig(f'plots/{save_name}_success.png', bbox_inches='tight')  # Save the plot locally
 
-    # Interpolating success and fail data
-    success_continuous = griddata((X.flatten(), Y.flatten()), success_data.flatten(), (X, Y), method='cubic')
-    fail_continuous = griddata((X.flatten(), Y.flatten()), fail_data.flatten(), (X, Y), method='cubic')
 
-    fig, axs = plt.subplots(1, 2, figsize=(12, 6))  # Create subplots
+    plt.figure(figsize=(9, 9))
+    plt.imshow(fail_data, cmap='cool', interpolation='bilinear', extent=(1, 18, 18, 1))  # Create the heatmap
+    plt.colorbar()  # Add a colorbar to indicate the scale
+    plt.title('Heatmap showing the layout of target pieces that were not gripped')  # Add a title
+    plt.xlabel('X Position')  # Label for x-axis
+    plt.ylabel('Y Position')  # Label for y-axis
+    plt.savefig(f'plots/{save_name}_fail.png', bbox_inches='tight')  # Save the plot locally
 
-    # First continuous heatmap
-    axs[0].imshow(success_continuous, cmap='cool', interpolation='bilinear', extent=(1, 18, 1, 18))
-    axs[0].set_title('Success cases (Continuous)')
-    
-    # Second continuous heatmap
-    axs[1].imshow(fail_continuous, cmap='inferno', interpolation='bilinear', extent=(1, 18, 1, 18))  
-    axs[1].set_title('Failed Cases (Continuous)')
 
-    plt.tight_layout()  # Adjust layout
-    plt.show()
 
 if __name__ == "__main__":
     dacc_folder = "realtime_results"
-    dacc_csvs = [os.path.join(dacc_folder, 'llava-1.5-7b-hf-ft.csv'), os.path.join(dacc_folder, 'llava-1.5-7b-hf-ft.csv')]
+    dacc_csvs = os.listdir(dacc_folder)
     for csv_path in dacc_csvs:
         plot_by_pos(csv_path)
-        break
