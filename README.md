@@ -105,15 +105,6 @@ To generate a csv file containing the accuracy and success rate scores for all a
 
 #### Real-time Evaluation - Offline RL
 
-##### 1) Create test board data
-
-```bash
- python realtime_eval/create_boards.py --board_size 18 --num_pieces 4 --shapes "P T X Z U W" --colours "red blue green yellow magenta cyan" --num_boards 20 --level easy --path realtime_eval
-```
-
-This saves a metadata_level.json under `realtime_eval` folder
-
-##### 2) Evaluate models
 
 ```bash
 python realtime_eval/evaluate_gpt.py --level easy --board_size 18 --max_moves 20 --max_length 10

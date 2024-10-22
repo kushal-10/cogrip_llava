@@ -56,7 +56,7 @@ def plot_by_pos(csv_path):
         predicted_position = df.iloc[i]['predicted_position']
         position = get_pos(position)
         predicted_position = get_pos(predicted_position)
-        target_dict[tuple(position)] += 1
+        # target_dict[tuple(position)] += 1
         
         if not predicted_position:
             continue
@@ -96,9 +96,13 @@ def plot_by_pos(csv_path):
             valid_positions.append([position[0], position[1]-1])
             valid_positions.append([position[0]+1, position[1]-1])
 
+        for pos in valid_positions:
+            target_dict[tuple(pos)] += 1
+
         if predicted_position in valid_positions and df.iloc[i]['last_move'] == 'grip':
             success_count += 1
-            position_dict[tuple(predicted_position)] += 1
+            for pos in valid_positions:
+                position_dict[tuple(pos)] += 1
 
     success_data = np.zeros((18, 18))
     fail_data = np.zeros((18, 18))
@@ -106,8 +110,8 @@ def plot_by_pos(csv_path):
     for i in range(18):
         for j in range(18):
             if target_dict[(i+1, j+1)]:
-                    success_data[i, j] = position_dict[(i+1, j+1)]
-                    fail_data[i, j] = target_dict[(i+1, j+1)] - position_dict[(i+1, j+1)]
+                    success_data[i, j] = position_dict[(i+1, j+1)]/target_dict[(i+1, j+1)]
+                    fail_data[i, j] = (target_dict[(i+1, j+1)] - position_dict[(i+1, j+1)])/target_dict[(i+1, j+1)]
  
     plt.figure(figsize=(9, 9))
     plt.imshow(success_data, cmap='cool', interpolation='bilinear', extent=(1, 18, 18, 1))  # Create the heatmap
