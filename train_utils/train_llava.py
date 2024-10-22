@@ -106,10 +106,11 @@ config = {"max_epochs": EPOCHS,
           "verbose": True,
 }
 
-if 'mistral' or 'vicuna' in MODEL_ID:
-    model_module = LlavaNextModelPLModule(config, processor, model)
-else:
-    model_module = LlavaModelPLModule(config, processor, model)
+# if 'mistral' or 'vicuna' in MODEL_ID:
+#     model_module = LlavaNextModelPLModule(config, processor, model)
+# else:
+#     model_module = LlavaModelPLModule(config, processor, model)
+model_module = LlavaModelPLModule(config, processor, model)
 
 api = HfApi()
 
