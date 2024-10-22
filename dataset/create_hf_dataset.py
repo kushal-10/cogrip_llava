@@ -37,9 +37,10 @@ def gen_hf_data(level="easy"):
         json.dump(test_data, f)
 
     # Flatten the data for further processing
-    train_data = [item for sublist in train_data for item in sublist]
-    val_data = [item for sublist in val_data for item in sublist]
-    test_data = [item for sublist in test_data for item in sublist]
+    # Remove the additional metadata for the HF dataset
+    train_data = [item for sublist in train_data for item in sublist if "info" not in sublist]
+    val_data = [item for sublist in val_data for item in sublist if "info" not in sublist]
+    test_data = [item for sublist in test_data for item in sublist if "info" not in sublist]
 
     # Debugging: Print the sizes of each split
     print(f"Train size: {len(train_data)}, Validation size: {len(val_data)}, Test size: {len(test_data)}")

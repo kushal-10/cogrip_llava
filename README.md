@@ -46,7 +46,7 @@ Set variables under `dataset/generate_paths`, then run
 python3 dataset/generate_paths.py --level 'easy'
 ```
 
-This will create a `data/level/metadata_path.json` that saves an additional field/key of `path` in the `metadata.json` file
+This will create a `data/level/metadata_path.json` that saves an additional key of `path` in the `metadata.json` file
 
 
 ##### 3) Now with the paths generated, create the whole training/finetuning dataset that will be used for the llava models
@@ -74,36 +74,7 @@ python3 train_utils/train_llava.py
 Setup training details like model name, HF repo, wandb details etc. in `train_utils/train_config.json` 
 
 
-#### Evaluation
-
-##### 1) Evaluate llava models
-
-```bash
-python3 inference_utils/infer.py --level easy --model llava-hf/llava-1.5-7b-hf 
-```
-Similary evaluation can be done for other levels and other (finetuned + base) models. A list of fine tuned models can be found here - [https://huggingface.co/collections/Koshti10/ft-llava-pentomino-6709232fab7608a3f0c622d6](huggingface.co/collections/Koshti10/ft-llava-pentomino)
-
-This saves a model.csv file under `results` that contains the ground truths and predictions
-
-##### 2) Evaluate GPT models
-
-```bash
-export OPENAI_API_KEY="sk-....."
-python3 inference_utils/gpt.py --level easy
-```
-
-This saves a gpt.csv file under `results` that contains the ground truths and predictions
-
-
-##### 3) Tabulate results
-
-```bash
-python3 inference_utils/eval.py
-```
-To generate a csv file containing the accuracy and success rate scores for all available models and saves as `results/results.csv`
-
-
-#### Real-time Evaluation - Offline RL
+##### 6) Real-time Evaluation
 
 
 ```bash
@@ -112,7 +83,7 @@ python realtime_eval/evaluate_gpt.py --level easy --board_size 18 --max_moves 20
 python realtime_eval/evaluate_llava.py --level easy --board_size 18 --model_name llava-hf/llava-1.5-7b-hf --max_moves 20 --max_length 10
 ```
 
-This saves result csv file sunder `realtime_results`
+This saves result csv file sunder `inference_results`
 
 
 #### Paper Evaluation

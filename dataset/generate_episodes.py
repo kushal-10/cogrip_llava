@@ -100,7 +100,7 @@ def episodes(level='sample', board_size=15):
         
         instance_object['ground_truth'] = 'grip'
         episode_obj.append(instance_object)
-        episode_obj.append(data_obj['info'])
+        episode_obj.append(data_obj)
 
         metadata.append(episode_obj)
     
