@@ -16,8 +16,8 @@ import requests
 
 api_key = os.getenv("OPENAI_API_KEY")
 
-if not os.path.exists('inference_results'):
-    os.makedirs('inference_results')
+if not os.path.exists('results'):
+    os.makedirs('results')
 
 class GPTEval():
 
@@ -31,7 +31,7 @@ class GPTEval():
             metadata_path = os.path.join('data', level, 'test.json')
         else:
             metadata_path = os.path.join('data', level, 'train.json')
-            
+
         with open(metadata_path, 'r') as f:
             self.metadata = json.load(f)
 
@@ -150,7 +150,7 @@ class GPTEval():
             total_steps = 0  
             start_time = time.time() 
             steps_taken = []
-            for i in range(self.max_moves):
+            for j in range(self.max_moves):
                 total_steps += 1
                 
                 move = self.get_gpt_response(image, base_prompt, self.max_len)
@@ -192,15 +192,15 @@ class GPTEval():
         }
 
         pred_df = pd.DataFrame(prediciton_data)
-        pred_df.to_csv(os.path.join('inference_results', f'{model_save_name}_{self.level}.csv'))
+        pred_df.to_csv(os.path.join('results', f'{model_save_name}_{self.level}.csv'))
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='LLaVA Evaluation Parameters')
     parser.add_argument('--level', type=str, default='easy', help='Level of the game')
     parser.add_argument('--board_size', type=int, default=18, help='Size of the board')
-    parser.add_argument('--max_moves', type=int, default=10, help='Maximum number of moves')
-    parser.add_argument('--max_length', type=int, default=10, help='Maximum length of the output')
+    parser.add_argument('--max_moves', type=int, default=20, help='Maximum number of moves')
+    parser.add_argument('--max_length', type=int, default=5, help='Maximum length of the output')
 
     args = parser.parse_args()  # Parse the arguments
 
