@@ -32,11 +32,13 @@ class LLaVAEval():
 
         with open(metadata_path, 'r') as f:
             self.metadata = json.load(f)
+
         new_metadata = []
         for i in range(len(self.metadata)):
             metadata_obj = self.metadata[i]
-            if "info" in metadata_obj:
-                new_metadata.append(metadata_obj)
+            for j in range(len(metadata_obj)):
+                if "info" in metadata_obj[j]:
+                    new_metadata.append(metadata_obj[j])
         self.metadata = new_metadata
 
 
