@@ -27,9 +27,21 @@ class GPTEval():
         self.max_moves = max_moves
         self.max_len = max_length
 
-        metadata_path = os.path.join('data', level, 'metadata.json')
+        if level == 'easy':
+            metadata_path = os.path.join('data', level, 'test.json')
+        else:
+            metadata_path = os.path.join('data', level, 'train.json')
+            
         with open(metadata_path, 'r') as f:
             self.metadata = json.load(f)
+
+        new_metadata = []
+        for i in range(len(self.metadata)):
+            metadata_obj = self.metadata[i]
+            for j in range(len(metadata_obj)):
+                if "info" in metadata_obj[j]:
+                    new_metadata.append(metadata_obj[j])
+        self.metadata = new_metadata
 
     
     @staticmethod
