@@ -13,8 +13,8 @@ import time
 # LEVEL = 'easy'
 # BOARD_SIZE = 18
 
-if not os.path.exists('inference_results'):
-    os.makedirs('inference_results')
+if not os.path.exists('results'):
+    os.makedirs('results')
 
 class LLaVAEval():
 
@@ -25,9 +25,20 @@ class LLaVAEval():
         self.max_moves = max_moves
         self.max_len = max_length
 
-        metadata_path = os.path.join('data', level, 'metadata.json')
+        if level == 'easy':
+            metadata_path = os.path.join('data', level, 'test.json')
+        else: ## The models are not actually finetuned on the hard/medium levels, so we use the training set for evaluation
+            metadata_path = os.path.join('data', level, 'train.json') ## Creates less boards (Change if trained on hard/medium levels)
+
         with open(metadata_path, 'r') as f:
             self.metadata = json.load(f)
+        new_metadata = []
+        for i in range(len(self.metadata)):
+            metadata_obj = self.metadata[i]
+            if "info" in metadata_obj:
+                new_metadata.append(metadata_obj)
+        self.metadata = new_metadata
+
 
     def load_model_and_processor(self):
         MODEL_ID = self.model_name
@@ -85,6 +96,7 @@ class LLaVAEval():
     
     def evaluate(self, model, processor):
         MODEL_ID = self.model_name
+        model_save_name = MODEL_ID.split('/')[-1].split('.csv')[0]
 
         final_moves = []
         final_positions = []
@@ -155,8 +167,8 @@ class LLaVAEval():
             steps.append(total_steps)
             time_taken.append(total_time)
             total_steps_taken.append(steps_taken)
+            break
         
-        model_save_name = MODEL_ID.split('/')[-1].split('.csv')[0]
         prediciton_data = {
             'last_move': final_moves,
             'predicted_position': final_positions,
@@ -170,7 +182,7 @@ class LLaVAEval():
         }
 
         pred_df = pd.DataFrame(prediciton_data)
-        pred_df.to_csv(os.path.join('inference_results', f'{model_save_name}_{self.level}.csv'))
+        pred_df.to_csv(os.path.join('results', f'{model_save_name}_{self.level}.csv'))
 
 
 if __name__ == '__main__':
