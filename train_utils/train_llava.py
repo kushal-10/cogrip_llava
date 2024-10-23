@@ -36,16 +36,11 @@ EPOCHS = train_config.get("EPOCHS")
 LR = train_config.get("LR")
 BATCH_SIZE = train_config.get("BATCH_SIZE")
 
-torch.set_float32_matmul_precision('high')
-
-
 processor = AutoProcessor.from_pretrained(MODEL_ID)
 processor.tokenizer.padding_side = "right" # during training, one always uses padding on the right
 
 USE_LORA = False
 USE_QLORA = True
-
-print("Loading the model.................")
 
 """
 Load model
@@ -77,7 +72,6 @@ def find_all_linear_names(model):
         lora_module_names.remove('lm_head')
     return list(lora_module_names)
 
-
 lora_config = LoraConfig(
     r=LORA_R,
     lora_alpha=LORA_ALPHA,
@@ -94,8 +88,8 @@ CONFIG
 """
 print("Setting Up CONFIG.............")
 config = {"max_epochs": EPOCHS,
-          "val_check_interval": 0.2,
-          "check_val_every_n_epoch": 1,
+          "val_check_interval": 0.01,
+          "check_val_every_n_epoch": 0.01,
           "gradient_clip_val": 1.0,
           "accumulate_grad_batches": 2,
           "lr": LR,
