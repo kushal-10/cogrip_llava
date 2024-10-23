@@ -144,6 +144,8 @@ class LLaVAEval():
                 generated_texts = processor.batch_decode(generated_ids, skip_special_tokens=True)
                 # Extract move
                 move = generated_texts[0].split('ASSISTANT:')[-1].strip()
+                print(f"Prompt: {prompt}\n\n")
+                print(f"Predicted move: {move}\n\n")
                 move = move.lower()
                 steps_taken.append(move)
                 env.step(self.convert_move_to_step(move))
