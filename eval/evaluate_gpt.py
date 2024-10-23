@@ -128,7 +128,7 @@ class GPTEval():
         time_taken = []
         total_steps_taken = []
         
-        for i in tqdm(range(len(self.metadata))):
+        for i in tqdm(range(90)):
             metadata_obj = self.metadata[i]
             info = metadata_obj['info']
             agent_start_pos = np.array(metadata_obj['agent_start_pos'])

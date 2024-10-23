@@ -128,5 +128,7 @@ plt.close()
 plot_overlay_data(train_data_colours, test_data_colours, "Distribution of target colours in the training and test sets", "Colour", "Count")
 plt.close()
 
-print(f"Train instances: {train_count}, Val instances: {val_count}, Test instances: {test_count}")
+total_count = train_count + val_count + test_count  # Calculate total instances
+
+print(f"Train instances: {train_count} ({(train_count / total_count) * 100:.2f}%), Val instances: {val_count} ({(val_count / total_count) * 100:.2f}%), Test instances: {test_count} ({(test_count / total_count) * 100:.2f}%)")
 print(f"Train episodes: {len(train_data)}, Val episodes: {len(val_data)}, Test episodes: {len(test_data)}")
