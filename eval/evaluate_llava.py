@@ -120,10 +120,10 @@ class LLaVAEval():
             target_region = info[0]['piece_region']
 
             base_prompt = f"You are at the black dot in the board. The target is the {target_color} {target_shape} piece located at the {target_region}. Your task is to move towards the target and grab it. Predict your next move from up, down, left, right, grip."
-            if "-ft" in MODEL_ID:
-                prompt = f"USER: <image>\n{base_prompt}.\nASSISTANT:"
-            else:
-                prompt = f"USER: <image>\n{base_prompt}. Answer in one word only.\nASSISTANT:"
+            # if "-ft" in MODEL_ID:
+            #     prompt = f"USER: <image>\n{base_prompt}.\nASSISTANT:"
+            # else:
+            prompt = f"USER: <image>\n{base_prompt}. Answer in one word only.\nASSISTANT:"
 
             env = GridWorldEnv(render_mode="rgb_array", size=self.board_size, grid_info=info, agent_pos=agent_start_pos, target_pos=target_pos)
             env.reset()
