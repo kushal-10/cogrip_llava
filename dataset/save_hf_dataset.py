@@ -32,7 +32,7 @@ if __name__ == "__main__":
     dataset_path = "training_data/hf_dataset_easy"
     
     # Specify your Hugging Face Hub repo name and token
-    repo_name = "Koshti10/llava-pentomino-easy"
+    repo_name = "Koshti10/llava-pentomino-easy-2"
     token = HfFolder.get_token() 
     
     # Load and upload the dataset
