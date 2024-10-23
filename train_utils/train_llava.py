@@ -106,21 +106,15 @@ config = {"max_epochs": EPOCHS,
           "verbose": True,
 }
 
-# if 'mistral' or 'vicuna' in MODEL_ID:
-#     model_module = LlavaNextModelPLModule(config, processor, model)
-# else:
-#     model_module = LlavaModelPLModule(config, processor, model)
 model_module = LlavaModelPLModule(config, processor, model)
 
 api = HfApi()
 
 class PushToHubCallback(Callback):
     def on_train_epoch_end(self, trainer, pl_module):
-        # Push model to the hub every 0.2 epochs
-        if trainer.current_epoch % 0.1 == 0:
-            print(f"Pushing model to the hub, epoch {trainer.current_epoch}")
-            pl_module.model.push_to_hub(REPO_ID,
-                                        commit_message=f"Training in progress, epoch {trainer.current_epoch}")
+        print(f"Pushing model to the hub, epoch {trainer.current_epoch}")
+        pl_module.model.push_to_hub(REPO_ID,
+                                    commit_message=f"Training in progress, epoch {trainer.current_epoch}")
 
     def on_train_end(self, trainer, pl_module):
         print(f"Pushing model to the hub after training")

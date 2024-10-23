@@ -34,6 +34,7 @@ def train_collate_fn(examples):
     images = []
     texts = []
     for example in examples:
+        print(example)
         image, image_id, prompt_str, ground_truth = example
         images.append(example[image])
 
